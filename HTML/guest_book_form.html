@@ -108,8 +108,63 @@
                 <input type="radio" name="best_thing" id="the_treasures" value="Elvis treasures">
                 <label for="the_treasures">The detailed list of all your Elvis memorabilia</label>
             </p>
+            <p>
+                <label for="the_worst">
+                    <span class="question">Please indicate the one thing I could improve about my website:</span>
+                </label>
+                <input type="text" id="the_worst" name="the_worst" placeholder="There's nothing bad, is there?"
+                    list="listOfBadChoices" size="50">
+            </p>
+            <p>
+                <label for="how_improve">
+                    <span class="question">What else would you like to see on my website?</span>
+                </label> <br>
+                <select name="how_improve" id="how_improve" size="4" multiple>
+                    <optgroup label="Preferred">
+                        <option value="Nothing. It's perfect.">
+                            Nothing. It's perfect.
+                        </option>
+                    </optgroup>
+                    <optgroup label="Likely">
+                        <option value="More about the animals.">
+                            More about the animals.
+                        </option>
+                        <option value="More about the dandelions.">
+                            More about the dandelions.
+                        </option>
+                    </optgroup>
+                    <optgroup label="Unlikely">
+                        <option value="More about Elvis.">
+                            More about Elvis.
+                        </option>
+                    </optgroup>
+                </select>
+            </p>
         </fieldest>
+        <fieldset>
+            <legend>Free for All!</legend>
+            <p>
+                <label for="message">
+                    <span class="question">
+                        Feel free to send more praise, gift offers, etc.:
+                    </span>
+                </label>
+                <textarea name="message" id="message" cols="55" rows="7">
+                </textarea>
+            </p>
+        </fieldset>
+        <div id="buttons">
+            <input type="submit" value="Click Here to Submit"> or
+            <input type="reset" value="Erase and Start Over"> or
+            <button type="button" id="standardValues">Fill in Standard Values</button> 
+        </div>
     </form>
+    <datalist id="listOfBadChoices">
+        <option value="nothing"></option>
+        <option value="nada"></option>
+        <option value="zip"></option>
+        <option value="zilch"></option>
+        <option value="I can't think of anything"></option>
+    </datalist>
 </body>
-
 </html>
