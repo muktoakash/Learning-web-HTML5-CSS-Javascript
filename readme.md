@@ -14,6 +14,10 @@ This is my first git repository. I am using this to store my learnings about
   - [ ] create a template that I can use in the future
   - [ ] try to incorporate other things such as Python3, etc. Update: currently planning on using django.
 
+## Learning Resources:
+1. https://www.udemy.com/course/the-web-developer-bootcamp
+2. Sams Teach Yourself HTML, CSS, and JavaScript All in One, Third Edition
+- by Julie C. Meloni, Jennifer Kyrnin
 ---
 
 ### More details coming soon!
