@@ -1,4 +1,10 @@
+* {
+    background-color: rgb(224, 225, 221);
+}
+
 h1 {
+    color: #0d1b2a;
+    letter-spacing: 0.5em;
     text-align: center;
     text-decoration: rgb(132, 0, 255) overline underline;
     font-size: 3em;
@@ -9,5 +15,10 @@ h2 {
 }
 
 a {
+    color: #002147;
     text-decoration: none;
+}
+
+footer {
+    text-align: right;
 }
