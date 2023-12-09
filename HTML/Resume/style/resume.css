@@ -10,9 +10,13 @@ h1 {
     font-size: 3em;
 }
 
-h2 {
+main h2 {
     background-color: rgba(90, 90, 134, 0.514);
 }
+
+/* main h2::first-letter {
+    font-size: xx-large;
+} */
 
 a {
     color: #002147;
@@ -22,3 +26,16 @@ a {
 footer {
     text-align: right;
 }
+
+.contact-bar li {
+    display: inline-block;
+}
+/* body{
+    font-size: medium;
+    color:rgb(13, 14, 14);
+    font-family:'Courier New', Courier, monospace;
+}
+
+head{
+    font-size: x-small;
+} */
