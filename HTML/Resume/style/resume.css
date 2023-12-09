@@ -27,9 +27,19 @@ footer {
     text-align: right;
 }
 
-.contact-bar li {
-    display: inline-block;
+.contact-bar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+/* .contact-bar li {
+    display: inline-block;
+} */
 /* body{
     font-size: medium;
     color:rgb(13, 14, 14);
