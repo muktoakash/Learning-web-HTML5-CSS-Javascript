@@ -37,6 +37,10 @@ hr {
     margin: 0;
     padding: 0;
 }
+
+.objective {
+    margin: 12px;
+}
 /* .contact-bar li {
     display: inline-block;
 } */
