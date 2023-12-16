@@ -2,12 +2,17 @@
     background-color: rgb(224, 225, 221);
 }
 
+header {
+    position: sticky;
+}
+
 h1 {
     color: #0d1b2a;
     letter-spacing: 0.5em;
     text-align: center;
     text-decoration: rgb(132, 0, 255) overline underline;
     font-size: 3em;
+    position: sticky;
 }
 
 main h2 {
