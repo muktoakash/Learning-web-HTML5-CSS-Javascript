@@ -5,6 +5,12 @@
 body {
     border-style: solid;
 }
+
+a {
+    color: #002147;
+    text-decoration: none;
+}
+
 header {
     position: sticky;
 
@@ -21,6 +27,25 @@ h1 {
     padding: auto;
 }
 
+.contact-bar {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+}
+.objective {
+    margin: 12px;
+}
+
+.contact-bar img{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+hr {
+    margin: 0;
+    padding: 0;
+}
+
 main {
 
 }
@@ -34,52 +59,12 @@ main h2 {
     font-size: xx-large;
 } */
 
-a {
-    color: #002147;
-    text-decoration: none;
-}
+
 
 footer {
     text-align: right;
     margin-bottom: 10px;
 }
-
-.contact-bar {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-hr {
-    margin: 0;
-    padding: 0;
-}
-
-.objective {
-    margin: 12px;
-}
-
-.contact-bar {
-    margin: auto;
-    padding: 0 10px;
-}
-.contact-bar img{
-    width: 20px;
-    height: 20px;
-    margin: auto;
-}
-/* .contact-bar li {
-    display: inline-block;
-} */
-/* body{
-    font-size: medium;
-    color:rgb(13, 14, 14);
-    font-family:'Courier New', Courier, monospace;
-}
-
-head{
-    font-size: x-small;
-} */
 
 footer img {
     width: 20px;
