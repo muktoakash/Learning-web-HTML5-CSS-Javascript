@@ -27,13 +27,20 @@ h1 {
     padding: auto;
 }
 
-.contact-bar {
+.contact {
     width: 100%;
-    margin: 0;
-    padding: 0 10px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-evenly; */
 }
-.objective {
-    margin: 12px;
+
+.contact-bar{
+    margin: 0;
+    padding: 0 2rem;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .contact-bar img{
@@ -48,6 +55,10 @@ hr {
 
 main {
 
+}
+
+.objective {
+    margin: 12px;
 }
 
 main h2 {
