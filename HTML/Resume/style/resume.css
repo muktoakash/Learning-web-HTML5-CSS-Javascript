@@ -2,8 +2,12 @@
     background-color: rgb(224, 225, 221);
 }
 
+body {
+    border-style: solid;
+}
 header {
     position: sticky;
+
 }
 
 h1 {
@@ -17,8 +21,13 @@ h1 {
     padding: auto;
 }
 
+main {
+
+}
+
 main h2 {
     background-color: rgba(90, 90, 134, 0.514);
+    padding: 10px;
 }
 
 /* main h2::first-letter {
@@ -32,6 +41,7 @@ a {
 
 footer {
     text-align: right;
+    margin-bottom: 10px;
 }
 
 .contact-bar {
@@ -51,7 +61,7 @@ hr {
 
 .contact-bar {
     margin: auto;
-    padding: auto;
+    padding: 0 10px;
 }
 .contact-bar img{
     width: 20px;
