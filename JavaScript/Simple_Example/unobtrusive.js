@@ -3,6 +3,10 @@ function getQuote() {
     quotes = new Array(3);
     sources = new Array(3);
 
+    // get the the elements to write to by their ID
+    blockquote = document.getElementById("quote");
+    source = document.getElementById("source");
+
     // Initialize the arrays with quotes
     quotes[0] = "When I was a boy of 14, my father was so " +
         "ignorant ... but when I got to be 21, I was astonished " +
@@ -21,9 +25,7 @@ function getQuote() {
     // Get a random index into the arrays
     i = Math.floor(Math.random() * quotes.length);
 
-    // Write out the quote as HTML
-    document.write("<p style = 'background-color: #ffb6c1' >\"");
-    document.write(quotes[i] + "\"");
-    document.write("<em>-" + sources[i] + "</em>");
-    document.write("</p>");
+    // Write the quote to the DOM
+    blockquote.innerHTML = quotes[i];
+    source.innerHTML = sources[i];
 }
