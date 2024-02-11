@@ -1,3 +1,3 @@
 function greet(who) {
-    alert("Greetings, " + who _ "!");
+    window.alert("Greetings, " + who + "!");
 }
