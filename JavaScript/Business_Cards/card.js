@@ -6,3 +6,11 @@ function printCard() {
     var phone_line = "<strong>Phone: </strong>" + this.phone + "<hr>\n";
     document.write(name_line, email_line, address_line, phone_line);
 }
+
+function Card(name, email, address, phone) {
+    this.name = name;
+    this.email = email;
+    this.address = address;
+    this.phone = phone;
+    this.printCard = printCard;
+}
