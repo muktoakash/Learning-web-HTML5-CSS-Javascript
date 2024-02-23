@@ -14,3 +14,16 @@ function Card(name, email, address, phone) {
     this.phone = phone;
     this.printCard = printCard;
 }
+
+// Create the objects
+var Sue = new Card("Sue Suthers",
+    "sue@suthers.com",
+    "123 Elm Street, Yourtown ST 99999",
+    "555-555-9876"
+);
+
+var Fred = new Card("Fred Fanboy",
+    "fred@fanboy.com",
+    "233 Oak Lane, Sometown, ST 99399",
+    "555-555-4444"
+);
