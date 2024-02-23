@@ -27,3 +27,8 @@ var Fred = new Card("Fred Fanboy",
     "233 Oak Lane, Sometown, ST 99399",
     "555-555-4444"
 );
+var Jimbo = new Card("Jimbo Jones",
+    "jimbo@jones.com",
+    "233 Walnut Circle, Anotherville ST 88999",
+    "555-555-1344"
+);
