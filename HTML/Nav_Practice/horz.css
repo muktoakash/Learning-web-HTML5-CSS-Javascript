@@ -1,0 +1,35 @@
+body {
+    font: 12pt Verdana, Arial, Georgia, sans-serif;
+}
+
+header {
+    width: auto;
+}
+
+#logo {
+    float: left;
+}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    display: inline;
+}
+
+nav li {
+    display: inline;
+}
+
+section {
+    width: auto;
+    float: left;
+    clear: left;
+}
+
+section a {
+    text-decoration: none;
+    font-weight: bold;
+}
