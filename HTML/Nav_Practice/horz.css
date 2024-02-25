@@ -12,15 +12,22 @@ header {
 
 nav {
     float: left;
+    margin: 85px 0px 0px 0px;
+    width: 400px;
+    background-color: #628794;
+    border: 1px solid black;
 }
 
 nav ul {
+    margin: 0px;
+    padding: 0px;
     list-style: none;
     display: inline;
 }
 
 nav li {
     display: inline;
+    line-height: 1.8em;
 }
 
 section {
@@ -47,8 +54,9 @@ nav ul li {
 nav ul li a:link, nav ul li a:visited {
     font-size: 10pt;
     font-weight: bold;
+    text-decoration: none;
     display: inline;
-    padding: 3px 0px 3px 3px;
+    padding: 7px 10px 7px 10px;
     background-color: #628794;
     color: #ffffff;
 }
@@ -56,9 +64,10 @@ nav ul li a:link, nav ul li a:visited {
 nav ul li a:hover, nav ul li a:active {
     font-size: 10pt;
     font-weight: bold;
+    text-decoration: none;
     display: inline;
-    padding: 3px 0px 3px 3px;
-    background-color: #c1a02e;
+    padding: 7px 10px 7px 10px;
+    background-color: #c6a548;
     color: #000000;
 }
 
