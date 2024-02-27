@@ -17,7 +17,7 @@ This is my first git repository. I am using this to store my learnings about
 ## Learning Resources:
 1. https://www.udemy.com/course/the-web-developer-bootcamp
 2. Sams Teach Yourself HTML, CSS, and JavaScript All in One, Third Edition
-- by Julie C. Meloni, Jennifer Kyrnin
+   by Julie C. Meloni, Jennifer Kyrnin
 ---
 
 ### More details coming soon!
