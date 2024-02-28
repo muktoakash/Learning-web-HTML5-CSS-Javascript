@@ -8,37 +8,23 @@ header {
     width: 100%;
 }
 footer{
-    position: relative;
-    float: left;
     width: 100%;
     background-color: #cccccc;
     text-align: center;
     font-style: italic;
 }
 #main {
-    float: left;
-    padding-left: 200px;
-    padding-right: 125px;
-    overflow: hidden;
+    width: 100%;
+    display: flex;
 }
 #secondary_content{
-    position: relative;
-    float: left;
-    width: 200px;
-    background-color: #52f471;
-    right: 200px;
-    margin-left: -100%;
-    margin-bottom: -2000px;
-    padding-bottom: 2000px;
+ order: -1;
+ width: 200px;
+ background-color: #52f471;
 }
 #tertiary_content{
-position: relative;
-float: left;
 width: 125px;
 background-color: #f452d5;
-margin-right: -125px;
-margin-bottom: -2000px;
-padding-bottom: 2000px;
 }
 #main_content{
     position: relative;
