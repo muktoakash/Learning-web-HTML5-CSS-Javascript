@@ -15,24 +15,22 @@ footer{
 }
 #main {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px auto 125px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "secondary_content main_content tertiary_content";
 }
 #secondary_content{
- order: -1;
- width: 200px;
+ grid-area: secondary_content;
  background-color: #52f471;
 }
 #tertiary_content{
-width: 125px;
+grid-area: tertiary_content;
 background-color: #f452d5;
 }
 #main_content{
-    position: relative;
-    float: left;
-    background-color: #ffffff;
-    width: 100%;
-    margin-bottom: -2000px;
-    padding-bottom: 2000px;
+    grid-area: main_content;
 }
 h1 {
     margin: 0;
