@@ -1,0 +1,20 @@
+.container{
+    width: 45rem;
+    margin: 0 auto;
+}
+
+.grad{
+    background-image: radial-gradient(
+        orange, white);
+        border: solid 1px black;
+        margin: 1rem;
+        float: left;
+}
+.one {
+    width: 10rem;
+    height: 30rem;
+}
+.two {
+    width: 10rem;
+    height: 30rem;
+}
