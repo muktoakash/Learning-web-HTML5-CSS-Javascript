@@ -1,0 +1,13 @@
+
+button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: solid 1 px #940c94;
+  background: linear-gradient(#cb2ff6 0%, #ffffff 100%);
+  padding: 0.25rem;
+  margin: 1rem;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
