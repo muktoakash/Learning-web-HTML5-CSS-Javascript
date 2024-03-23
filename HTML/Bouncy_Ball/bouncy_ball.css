@@ -1,0 +1,19 @@
+.ball {
+    position: relative;
+    left: calc(100% - 20rem);
+    background-color: #ffb33a;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+    animation: bounce 3s;
+    animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+    animation-direction: alternate;
+}
+@keyframes bounce {
+    0% {
+        left 0%;
+    }
+    100% {
+        left: calc(100% - 20rem);
+    }
+}
