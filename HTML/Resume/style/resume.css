@@ -15,7 +15,7 @@ header {
   position: sticky;
 }
 
-h1 {
+#name-big {
   text-align: center;
   text-decoration: rgb(132, 0, 255) underline;
 }
