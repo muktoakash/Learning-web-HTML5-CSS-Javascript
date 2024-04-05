@@ -38,21 +38,6 @@ header {
   height: 20px;
   margin: auto;
 }
-
-.contact-bar {
-  margin: 0;
-  padding: 0 2rem;
-  display: flex;
-  list-style-type: none;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.contact-bar img {
-  width: 20px;
-  height: 20px;
-  margin: auto;
-}
 hr {
   margin: 0;
   padding: 0;
