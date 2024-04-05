@@ -17,9 +17,17 @@ header {
 
 h1 {
   text-align: center;
-  text-decoration: rgb(132, 0, 255) overline underline;
+  text-decoration: rgb(132, 0, 255) underline;
 }
 
+#headshot {
+  border-radius: 50%;
+  background-color: rgb(224, 225, 221);
+}
+
+.list-group-flush {
+    background-color: rgb(225, 200, 220);
+}
 
 .contact {
   width: 100%;
