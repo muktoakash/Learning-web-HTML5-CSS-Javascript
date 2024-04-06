@@ -61,6 +61,12 @@ hr {
   margin: 12px;
 }
 
+li.list-group-item {
+    background-color: rgb(224, 225, 221);
+    text-decoration-color: rgb(224, 225, 221);
+    text-color: rgb(224, 225, 221);
+}
+
 /* main h2 {
   background-color: rgba(90, 90, 134, 0.514);
   padding: 10px;
