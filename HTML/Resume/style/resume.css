@@ -41,6 +41,16 @@ header {
   margin: auto;
 }
 
+.ficon {
+  width: 20px;
+  height: 20px;
+  /* float: left; */
+  /* padding-left: 10px; */
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 hr {
   margin: 0;
   padding: 0;
