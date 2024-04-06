@@ -20,17 +20,19 @@ header {
   text-decoration: rgb(132, 0, 255) underline;
 }
 
-#headshot {
+.headshot {
   border-radius: 50%;
   background-color: rgb(224, 225, 221);
 }
 
-.list-group-flush {
-    background-color: rgb(225, 200, 220);
-}
-
 .contact {
   width: 100%;
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
 }
 
 .navbar img {
@@ -38,6 +40,7 @@ header {
   height: 20px;
   margin: auto;
 }
+
 hr {
   margin: 0;
   padding: 0;
