@@ -11,9 +11,10 @@
     -webkit-animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 @keyframes bounce {
     0% {
-        left 0%;
+        left: 0%;
     }
     100% {
         left: calc(100% - 20rem);
