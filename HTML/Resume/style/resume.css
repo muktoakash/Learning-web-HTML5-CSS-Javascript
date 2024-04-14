@@ -21,6 +21,10 @@ header {
   text-decoration: rgb(132, 0, 255) underline;
 }
 
+.text-decoration-underline{
+  color: #0d6efd;
+}
+
 .headshot {
   border-radius: 50%;
   background-color: rgb(224, 225, 221);
@@ -67,6 +71,19 @@ li.list-group-item {
     text-color: rgb(224, 225, 221);
 }
 
+h2{
+  font-size: medium;
+}
+
+.h3{
+  font-size: larger;
+  margin: 0;
+  /* padding:0; */
+}
+
+.h4{
+  font-size: large;
+}
 /* main h2 {
   background-color: rgba(90, 90, 134, 0.514);
   padding: 10px;
@@ -93,6 +110,7 @@ footer img {
 
 summary {
   position: relative;
+  width: 99%;
 }
 summary::marker {
   content: none;
