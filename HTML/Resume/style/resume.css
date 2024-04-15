@@ -1,5 +1,9 @@
 * {
-  background-color: rgb(224, 225, 221);
+  margin: 0;
+  padding: 0;
+  background-color:
+   /* #e3c0d3; */
+   rgb(224, 225, 221);
 }
 
 body {
@@ -22,12 +26,14 @@ header {
 }
 
 .text-decoration-underline{
-  color: #0d6efd;
+  color: #122932;
+  /* #0d6efd; */
 }
 
 .headshot {
   border-radius: 50%;
-  background-color: rgb(224, 225, 221);
+  background-color: #e3c0d3;
+  /* rgb(224, 225, 221); */
 }
 
 .contact {
@@ -66,9 +72,15 @@ hr {
 }
 
 li.list-group-item {
-    background-color: rgb(224, 225, 221);
-    text-decoration-color: rgb(224, 225, 221);
-    text-color: rgb(224, 225, 221);
+    background-color:
+    /* #e3c0d3; */
+    rgb(224, 225, 221);
+    text-decoration-color: #e3c0d3;
+    /* rgb(224, 225, 221); */
+    color: #122932;
+    /* text-color: e3c0d3; */
+    /* rgb(224, 225, 221); */
+    border: none;
 }
 
 h2{
@@ -106,11 +118,15 @@ footer img {
   padding-right: 10px;
 }
 
+.primary-text {
+  color: #122932;
+}
 /* Summary Styling */
 
 summary {
   position: relative;
   width: 99%;
+  padding-left: 0.35cm;
 }
 summary::marker {
   content: none;
