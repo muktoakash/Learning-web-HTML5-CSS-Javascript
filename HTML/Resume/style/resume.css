@@ -10,7 +10,8 @@
 
 body {
   border-style: solid;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Cambria', 'Trebuchet MS', sans-serif;
+  font-family: 'Cambria', 'Gill Sans', 'Gill Sans MT', 'Cambria', 'Trebuchet MS', sans-serif;
+  /* background-color: linear-gradient(45deg, #DCE0D9 0%, #808F85 35%, #595959 100%); */
 }
 
 a {
@@ -136,11 +137,16 @@ footer img {
 
 .text-secondary-bg{
   background-color: #6B0F1A;
-  color: white
+  color: white;
+  text-align: center;
 }
 /* Summary Styling */
 
+details{
+  text-align: center;
+}
 summary {
+  text-align: start;
   position: relative;
   width: 99%;
   padding-left: 0.35cm;
