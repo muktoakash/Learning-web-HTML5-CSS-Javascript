@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
   background-color:
+  /* white */
    /* #e3c0d3; */
-   rgb(224, 225, 221);
+   #DCE0D9;
+   /* rgb(224, 225, 221); */
 }
 
 body {
@@ -26,7 +28,8 @@ header {
 }
 
 .text-decoration-underline{
-  color: #122932;
+  color: #31081f;
+  /* #122932; */
   /* #0d6efd; */
 }
 
@@ -65,6 +68,7 @@ header {
 hr {
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 .objective {
@@ -77,10 +81,17 @@ li.list-group-item {
     rgb(224, 225, 221);
     text-decoration-color: #e3c0d3;
     /* rgb(224, 225, 221); */
-    color: #122932;
+    color: #6B0F1A;
+     /* #31081f; */
+    /* #122932; */
     /* text-color: e3c0d3; */
     /* rgb(224, 225, 221); */
     border: none;
+}
+
+#card-item{
+  color: white;
+  background-color: #6B0F1A;
 }
 
 h2{
@@ -119,7 +130,13 @@ footer img {
 }
 
 .primary-text {
-  color: #122932;
+  color: #31081F;
+  /* #122932; */
+}
+
+.text-secondary-bg{
+  background-color: #6B0F1A;
+  color: white
 }
 /* Summary Styling */
 
