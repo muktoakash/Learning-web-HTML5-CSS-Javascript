@@ -10,7 +10,13 @@
 
 .gradient-bg{
   /* background: linear-gradient(135deg, #577590 0%, #F3CA40 20%, #F2A541 40%, #F08A4B 60%, #D78A76 80%, #F3CA40 90%); */
-  background: linear-gradient(90deg, #E0EFDA 0%, #EFC7E5 10%, #EEB1D5 40%, #E18AD4 50%, #D782BA 60%, #EEB1D5 90%, #EFC7E5 100%);
+  background: linear-gradient(90deg, #E0EFDA 0%, #EFC7E5 10%, #EEB1D5 50%, #EFC7E5 90%, #E0EFDA 100%);
+  /* background: linear-gradient(45deg, #EFC7E5 0%, #EEB1D5 40%, #E18AD4 50%, #D782BA 60%, #EEB1D5 70%, #EFC7E5 100%); */
+}
+
+.sun-bg{
+  background: linear-gradient(135deg, #577590 0%, #F3CA40 20%, #F2A541 40%, #F08A4B 60%, #D78A76 80%, #F3CA40 90%);
+  /* background: linear-gradient(90deg, #E0EFDA 0%, #EFC7E5 10%, #EEB1D5 40%, #E18AD4 50%, #D782BA 60%, #EEB1D5 90%, #EFC7E5 100%); */
   /* background: linear-gradient(45deg, #EFC7E5 0%, #EEB1D5 40%, #E18AD4 50%, #D782BA 60%, #EEB1D5 70%, #EFC7E5 100%); */
 }
 
@@ -21,7 +27,7 @@
 }
 
 body {
-  border-style: solid;
+  /* border-style: solid; */
   font-family:  'Gill Sans', 'Gill Sans MT', 'Cambria', 'Trebuchet MS', sans-serif;
   /* background-color: linear-gradient(45deg, #DCE0D9 0%, #808F85 35%, #595959 100%); */
 }
