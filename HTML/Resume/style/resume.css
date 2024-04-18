@@ -1,16 +1,28 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   background-color:
   /* white */
    /* #e3c0d3; */
-   #DCE0D9;
+   /* #DCE0D9; */
    /* rgb(224, 225, 221); */
+/* } */
+
+.gradient-bg{
+  /* background: linear-gradient(135deg, #577590 0%, #F3CA40 20%, #F2A541 40%, #F08A4B 60%, #D78A76 80%, #F3CA40 90%); */
+  background: linear-gradient(90deg, #E0EFDA 0%, #EFC7E5 10%, #EEB1D5 40%, #E18AD4 50%, #D782BA 60%, #EEB1D5 90%, #EFC7E5 100%);
+  /* background: linear-gradient(45deg, #EFC7E5 0%, #EEB1D5 40%, #E18AD4 50%, #D782BA 60%, #EEB1D5 70%, #EFC7E5 100%); */
+}
+
+.no-bg{
+  background-color: transparent;
+  border: none;
+  text-align: center;
 }
 
 body {
   border-style: solid;
-  font-family: 'Cambria', 'Gill Sans', 'Gill Sans MT', 'Cambria', 'Trebuchet MS', sans-serif;
+  font-family:  'Gill Sans', 'Gill Sans MT', 'Cambria', 'Trebuchet MS', sans-serif;
   /* background-color: linear-gradient(45deg, #DCE0D9 0%, #808F85 35%, #595959 100%); */
 }
 
@@ -92,7 +104,8 @@ li.list-group-item {
 
 #card-item{
   color: white;
-  background-color: #6B0F1A;
+  background-color: transparent;
+  font-size: small;
 }
 
 h2{
@@ -150,6 +163,8 @@ summary {
   position: relative;
   width: 99%;
   padding-left: 0.35cm;
+  padding-right: 1rem;
+  vertical-align: top;
 }
 summary::marker {
   content: none;
