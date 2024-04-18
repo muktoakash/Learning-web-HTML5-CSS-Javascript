@@ -109,9 +109,10 @@ li.list-group-item {
 }
 
 #card-item{
-  color: white;
+  /* color: white; */
+  color: #31081f;
   background-color: transparent;
-  font-size: small;
+  font-size: medium;
 }
 
 h2{
