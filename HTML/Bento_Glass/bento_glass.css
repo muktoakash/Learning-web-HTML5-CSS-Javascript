@@ -19,7 +19,7 @@ h1{
 }
 
 .container{
-    background-color: white;
+    /* background-color: white; */
     width: 1200px;
     height: 800px;
     border-radius: 1em;
@@ -27,24 +27,29 @@ h1{
     /* margin: 2em; */
     display: flex;
     flex-direction: row;
+    gap: 1em;
 }
 .col{
     border: 2px solid red;
     border-radius: 1em;
     display: flex;
     flex: auto;
+    gap: 1em;
 }
 
 #outer-1{
+    border: none;
     flex:2;
     display: flex;
     flex-direction: column;
 }
 #outer-2{
+    border: none;
     flex: 1;
     flex-direction: column;
 }
 #outer-3{
+    border: none;
     flex: 1;
     flex-direction: column;
 }
@@ -55,12 +60,15 @@ h1{
     display: flex;
     flex: auto;
     flex-direction: row;
+    gap: 1em;
 }
 
 #inner-11{
+    border: none;
     flex-direction: row;
 }
 #inner-12{
+    border: none;
     flex-direction: column;
 }
 
