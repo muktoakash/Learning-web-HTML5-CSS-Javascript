@@ -24,11 +24,12 @@ h1{
     height: 800px;
     border-radius: 1em;
     padding: 2em;
-    /* margin: 2em; */
+    margin: 2em;
     display: flex;
     flex-direction: row;
     gap: 1em;
 }
+
 .col{
     border: 2px solid #ffffff10;
     background: rgba(255, 255, 255, 0.15);
@@ -97,4 +98,39 @@ footer{
 }
 a{
     color: white;
+}
+
+@media(max-width: 1024px){
+    .container{
+        max-width: 1000px;
+        max-height: 1000px;
+        flex-direction: column;
+    }
+    #outer-1{
+        flex-direction: row;
+    }
+    #outer-2{
+        flex-direction: row;
+    }
+    #outer-3{
+        flex-direction: row;
+    }
+    #inner-11{
+        flex: 2;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 650px){
+    .container{
+        max-width: 500px;
+        max-height: 550px;
+        gap: 0.5em;
+    }
+    .row {
+        gap: 0.5em;
+    }
+    .col {
+        gap: 0.5em;
+    }
 }
