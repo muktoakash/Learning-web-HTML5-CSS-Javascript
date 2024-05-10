@@ -30,7 +30,7 @@ h1{
     gap: 1em;
 }
 .col{
-    border: 2px solid red;
+    border: 2px solid #ffffff10;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 1em;
     display: flex;
@@ -59,7 +59,7 @@ h1{
 }
 
 .row{
-    border: 2px solid red;
+    border: 2px solid #ffffff10;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 1em;
     display: flex;
