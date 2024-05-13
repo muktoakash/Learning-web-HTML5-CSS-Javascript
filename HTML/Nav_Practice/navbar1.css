@@ -1,0 +1,13 @@
+*{
+    background-color: blueviolet;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.logo{
+    width: 10em;
+}
