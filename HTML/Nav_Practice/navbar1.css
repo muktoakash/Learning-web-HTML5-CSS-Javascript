@@ -1,13 +1,32 @@
-*{
+body{
     background-color: blueviolet;
     box-sizing: border-box;
     font-size: 16px;
+    font-weight: 500;;
 }
 
 .navbar{
     display: flex;
+    width: auto;
 }
 
 .logo{
     width: 10em;
+    flex: 2;
+}
+
+.navlist{
+    display: inline;
+    flex: 3;
+    list-style: none;
+}
+
+.navitem{
+    display: inline;
+}
+
+.navbutton a{
+    flex: 1;
+    height: 24px;
+    background-color: gray;
 }
