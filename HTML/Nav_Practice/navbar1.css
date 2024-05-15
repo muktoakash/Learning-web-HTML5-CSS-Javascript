@@ -1,5 +1,6 @@
 body{
     background-color: blueviolet;
+    background-image: url('./assets/background.jpg');
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 500;;
