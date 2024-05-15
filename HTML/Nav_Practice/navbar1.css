@@ -1,3 +1,7 @@
+*{
+    color: white;
+}
+
 body{
     background-color: blueviolet;
     background-image: url('./assets/background.jpg');
@@ -14,6 +18,7 @@ body{
 .logo{
     width: 10em;
     flex: 2;
+    background-color: azure;
 }
 
 .navlist{
@@ -28,6 +33,15 @@ body{
 
 .navbutton a{
     flex: 1;
-    height: 24px;
-    background-color: gray;
+    height: 20px;
+    background-color: azure;
+    margin: 0;
+    padding: 0;
+}
+
+#navbtnlink{
+    margin: 0;
+    padding: 0;
+    background-color: brown;
+    height: 20px;
 }
