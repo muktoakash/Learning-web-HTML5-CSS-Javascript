@@ -15,10 +15,10 @@ li, a, button {
 }
 
 header{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     padding: 30px 10%;
     background-color: #4b79a6d5;
 }
@@ -31,10 +31,12 @@ body{
     font-weight: 500;; */
 }
 
-/* .navbar{
+.navbar{
     display: flex;
     width: auto;
-} */
+    justify-content: space-between;
+    align-items: center;
+}
 
 .logo{
     width: 10em;
@@ -42,7 +44,7 @@ body{
     position: relative;
     /* height: 2em; */
     /* move the image down by 10px */
-    top: 10px;
+    /* top: 10px; */
     /* border: 1px solid black; */
     /* padding-top: 0.5em; */
     /* flex: 2; */
@@ -83,9 +85,9 @@ button:hover{
     background-color: #2980b9;
 }
 
-#navbtnlink{
+/* #navbtnlink{
     margin: 0;
     padding: 0;
     background-color: brown;
     height: 20px;
-}
+} */
