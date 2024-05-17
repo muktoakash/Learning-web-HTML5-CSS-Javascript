@@ -1,7 +1,24 @@
 *{
     color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+li, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    /* background-color: #2c3e50; */
+}
 body{
     background-color: blueviolet;
     background-image: url('./assets/background.jpg');
@@ -19,6 +36,7 @@ body{
     width: 10em;
     flex: 2;
     background-color: azure;
+    cursor: pointer;
 }
 
 .navlist{
@@ -28,17 +46,27 @@ body{
 }
 
 .navitem{
-    display: inline;
+    display: inline-block;
+    padding: 0 20px;
 }
 
-.navbutton a{
-    flex: 1;
-    height: 20px;
-    background-color: azure;
-    margin: 0;
-    padding: 0;
+.navlist li a{
+    transition: all 0.3s ease 0s;
 }
 
+.navlist li a:hover{
+    color: #3498db;
+}
+
+button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
 #navbtnlink{
     margin: 0;
     padding: 0;
