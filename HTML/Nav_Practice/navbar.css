@@ -23,7 +23,7 @@ body{
 .navbar{
     display: flex;
     width: auto;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -31,6 +31,7 @@ body{
     width: 10em;
     position: relative;
     cursor: pointer;
+    margin-right: auto;
 }
 
 .navlist{
@@ -59,6 +60,7 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    margin-left: 20px;
 }
 
 button:hover{
