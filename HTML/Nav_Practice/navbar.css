@@ -23,7 +23,7 @@ body{
 .navbar{
     display: flex;
     width: auto;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -31,11 +31,14 @@ body{
     width: 10em;
     position: relative;
     cursor: pointer;
+    margin-left: auto;
+    order: 3;
 }
 
 .navlist{
     display: inline;
     list-style: none;
+    order: 1;
 }
 
 .navitem{
@@ -51,6 +54,9 @@ body{
     color: #3498db;
 }
 
+.cta{
+    order: 2;
+}
 button{
     background-color: #3498db;
     color: white;
@@ -59,6 +65,7 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    margin-left: 20px;
 }
 
 button:hover{
