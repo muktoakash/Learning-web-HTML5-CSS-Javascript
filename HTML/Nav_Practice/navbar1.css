@@ -10,38 +10,49 @@ li, a, button {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+    /* margin-bottom: 2em; */
+    /* padding-bottom: 2em; */
 }
 
 header{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    /* background-color: #2c3e50; */
+    background-color: #4b79a6d5;
 }
 body{
-    background-color: blueviolet;
+    /* width: 100%; */
+    /* background-color: blueviolet; */
     background-image: url('./assets/background.jpg');
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     font-size: 16px;
-    font-weight: 500;;
+    font-weight: 500;; */
 }
 
-.navbar{
+/* .navbar{
     display: flex;
     width: auto;
-}
+} */
 
 .logo{
     width: 10em;
-    flex: 2;
-    background-color: azure;
+    /* object-position: bottom; */
+    position: relative;
+    /* height: 2em; */
+    /* move the image down by 10px */
+    top: 10px;
+    /* border: 1px solid black; */
+    /* padding-top: 0.5em; */
+    /* flex: 2; */
+    /* background-color: #3498db; */
     cursor: pointer;
 }
 
 .navlist{
     display: inline;
-    flex: 3;
+    /* flex: 3; */
     list-style: none;
 }
 
@@ -63,10 +74,15 @@ button{
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-
+    transition: all 0.3s ease 0s;
 }
+
+button:hover{
+    background-color: #2980b9;
+}
+
 #navbtnlink{
     margin: 0;
     padding: 0;
