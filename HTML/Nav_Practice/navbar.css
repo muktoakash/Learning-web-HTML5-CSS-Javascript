@@ -14,7 +14,7 @@ li, a, button {
 
 header{
     padding: 30px 10%;
-    background-color: #4b79a6d5;
+    /* background-color: #4b79a6d5; */
 }
 body{
     background-image: url('./assets/background.jpg');
@@ -27,12 +27,24 @@ body{
     align-items: center;
 }
 
-.logo{
-    width: 10em;
+.logo_wrap{
+    width: 12em;
+    height: 6em;
     position: relative;
     cursor: pointer;
     margin-left: auto;
     order: 3;
+    background-color: azure;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100%;
+    /* border: 1px solid white; */
+    border-radius: 50%;
 }
 
 .navlist{
