@@ -24,7 +24,7 @@ body{
     display: flex;
     width: auto;
     justify-content: flex-end;
-    align-items: center;
+    align-items: top;
 }
 
 .logo_wrap{
