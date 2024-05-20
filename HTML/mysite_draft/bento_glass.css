@@ -21,7 +21,8 @@ h1{
 
 .bentoContainer{
     /* background-color: white; */
-    width: 1200px;
+    /* width: 1200px; */
+    width: 90%;
     height: 800px;
     border-radius: 1em;
     padding: 2em;
