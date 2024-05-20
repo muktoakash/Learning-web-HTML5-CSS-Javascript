@@ -74,9 +74,10 @@ body{
     color: #3498db;
 }
 
-.cta{
+/* .cta{
     order: 2;
-}
+} */
+
 .navbutton{
     background: none;
     /* background-color: #3498db; */
