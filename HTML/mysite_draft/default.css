@@ -17,7 +17,8 @@ header{
     /* background-color: #4b79a6d5; */
 }
 body{
-    background-image: url('./assets/background.jpg');
+    background: url(./assets/background.jpg) center;
+    background-size: cover;
 }
 
 .navbar{
@@ -92,4 +93,39 @@ body{
 
 .navbutton:hover{
     background-color: #2980b9;
+}
+
+@media(max-width: 1024px){
+    header{
+        padding: 30px 5%;
+    }
+    .navbutton{
+        display: block;
+    }
+    .navbutton:hover{
+        background-color: #2980b9;
+    }
+
+    .logo_wrap{
+        width: 8em;
+        height: 4em;
+    }
+}
+
+@media(max-width: 650px){
+    .navlist{
+        display: block;
+    }
+    .navlist li{
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .navlist li a{
+        font-size: 20px;
+    }
+    .logo_wrap{
+        width: 6em;
+        height: 3em;
+    }
 }
