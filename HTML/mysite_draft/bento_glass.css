@@ -3,10 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    justify-content: center;
+}
+
+.glass-text{
     color: azure;
     font-weight: 900;
     font-size: larger;
     text-align: center;
+    justify-content: center;
+    align-content: center;
 }
 /* 
 body{
@@ -44,6 +50,8 @@ h1{
     display: flex;
     flex: auto;
     gap: 1em;
+    text-align: center;
+    justify-content: center;
 }
 
 .row{
@@ -55,6 +63,8 @@ h1{
     flex: auto;
     flex-direction: row;
     gap: 1em;
+    text-align: center;
+    justify-content: center;
 }
 
 #outer-1{
