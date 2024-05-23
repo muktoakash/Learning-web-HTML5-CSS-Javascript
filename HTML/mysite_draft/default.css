@@ -95,6 +95,10 @@ body{
     background-color: #2980b9;
 }
 
+footer{
+    text-align: end;
+}
+
 @media(max-width: 1024px){
     header{
         padding: 30px 5%;
