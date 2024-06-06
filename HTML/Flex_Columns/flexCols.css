@@ -1,0 +1,8 @@
+#all{
+    border: 1px black solid;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+}
