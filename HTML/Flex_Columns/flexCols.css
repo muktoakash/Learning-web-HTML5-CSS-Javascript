@@ -67,6 +67,8 @@ menu a:hover {
 .content {
     border: 1px black solid;
     position: relative;
+    top: 10%;
+    left: 20%;
     width: 78%;
     height: 90%;
     padding-left: 1%;
