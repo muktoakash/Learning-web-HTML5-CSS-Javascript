@@ -1,3 +1,11 @@
+body{
+    background-color: #fff9bf;
+}
+
+h1{
+    text-align: center;
+}
+
 #all{
     border: 1px black solid;
     position: absolute;
@@ -32,14 +40,40 @@
     padding-right: 1%;
     overflow: auto;
 }
-#content {
+
+#menu li {
+    list-style-type: none;
+    margin-left: -2em;
+    text-align: center;
+}
+
+#menu a {
+    display: block;
+    border: 2px gray outset;
+    text-decoration: none;
+    color: black;
+}
+
+menu a:hover {
+    color: white;
+    background-color: black;
+    border: 2px gray inset;
+}
+
+#menu h2 {
+    text-align: center;
+}
+
+.content {
     border: 1px black solid;
-    position: absolute;
-    left: 20%;
-    top: 10%;
+    position: relative;
     width: 78%;
     height: 90%;
     padding-left: 1%;
     padding-right: 1%;
     overflow: auto;
+}
+
+.content h2 {
+    border-top: 3px black double;
 }
