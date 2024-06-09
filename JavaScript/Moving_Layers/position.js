@@ -8,3 +8,15 @@ function pos(dx, dy) {
     obj.style.top = y + "px";
     obj.style.left = x + "px";
 }
+
+function hideSquare() {
+    if (!document.getElementById) return;
+    obj = document.getElementById("square");
+    obj.style.display = "none";
+}
+
+function showSquare() {
+    if (!document.getElementById) return;
+    obj = document.getElementById("square");
+    obj.style.display = "block";
+}
