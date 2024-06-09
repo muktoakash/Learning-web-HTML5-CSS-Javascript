@@ -7,7 +7,7 @@ h1{
 }
 
 #all{
-    border: 1px black solid;
+    /* border: 1px black solid; */
     position: absolute;
     left: 5%;
     top: 5%;
@@ -30,7 +30,7 @@ h1{
 }
 
 #menu {
-    border: 1px green solid;
+    /* border: 1px green solid; */
     position: absolute;
     left: 0%;
     top: 10%;
@@ -65,7 +65,7 @@ menu a:hover {
 }
 
 .content {
-    border: 1px black solid;
+    /* border: 1px black solid; */
     position: relative;
     top: 10%;
     left: 20%;
