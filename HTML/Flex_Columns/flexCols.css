@@ -31,9 +31,9 @@ h1{
 
 #menu {
     /* border: 1px green solid; */
-    position: absolute;
-    left: 0%;
-    top: 10%;
+    position: fixed;
+    left: 3%;
+    top: 15%;
     width: 18%;
     height: 90%;
     padding-left: 1%;
