@@ -32,3 +32,8 @@ var Jimbo = new Card("Jimbo Jones",
     "233 Walnut Circle, Anotherville ST 88999",
     "555-555-1344"
 );
+
+// Now print them
+Sue.printCard();
+Fred.printCard();
+Jimbo.printCard();
