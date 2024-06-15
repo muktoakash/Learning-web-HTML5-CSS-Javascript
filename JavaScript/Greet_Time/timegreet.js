@@ -16,3 +16,15 @@ document.write("</h2>");
 document.write("<p>");
 
 // change the greetings
+if (hourOfDay < 10) {
+    document.write("Good Morning.");
+} else if ((hourOfDay >= 14) && (hourOfDay <= 17)) {
+    document.write("Good Afternoon.");
+} else if (hourOfDay >= 17) {
+    document.write("Good Evening.");
+} else {
+    document.write("Good day.");
+}
+
+// close the paragraph
+document.write("<p");
