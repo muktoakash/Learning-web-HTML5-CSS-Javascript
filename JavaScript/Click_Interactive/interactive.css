@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img {
+    margin-right: 12px;
+    margin-bottom: 6px;
+    border: 1px solid #000;
+}
+
+.mainimg {
+    float: left;
+    max-width: 35%;
+    height: auto;
+}
+
+#eHide, #pHide, #elevation, #photos {
+    display: none;
+}
+
+#eShow, #pShow {
+    display: block;
+}
+
+#photos {
+    clear: both;
+}
+
+#photos img {
+    max-width: 20%;
+    height: auto;
+    clear: left;
+}
+
+.fakelink {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    color: #E03A3E;
+}
+
+section {
+    margin-bottom: 6px;
+}
