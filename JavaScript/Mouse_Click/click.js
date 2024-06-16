@@ -1,4 +1,4 @@
-function mousestatus(e) {
+function mouseStatus(e) {
     if (!e) e = window.event;
 
     btn = e.button;
@@ -20,3 +20,10 @@ function mousestatus(e) {
     document.getElementById('testarea').innerHTML += message;
     e.preventDefault();
 }
+
+obj = document.getElementById('testlink');
+
+obj.addEventListener("click", mouseStatus);
+obj.addEventListener("mousedown", mouseStatus);
+obj.addEventListener("mouseup", mouseStatus);
+obj.addEventListener("dblclick", mouseStatus);
