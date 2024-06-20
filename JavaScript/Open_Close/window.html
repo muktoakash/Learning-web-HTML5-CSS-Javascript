@@ -12,6 +12,24 @@
     </p>
     <button type="button" id="openNew">Open New Window</button>
     <button type="button" id="closeNew">Close New Window</button>
+
+    <h1>Moving and Resizing Windows</h1>
+
+    <form name="changeForm">
+        <p>
+            <strong>Resize to</strong><br>
+            <input type="text" size="5" name="w"> pixels wide and
+            <input type="text" size="5" name="w"> pixels high
+        </p>
+
+        <p><strong>-- AND/OR --</strong></p>
+        <p>
+            <strong>Move to:</strong>
+            X-position: <input type="text" size="5" name="x">
+            Y-position: <input type="text" size="5" name="y">
+        </p>
+        <p><input type="button" value="Change Window" id="doIt"></p>
+    </form>
 </body>
 
 <script src="./window.js"></script>
