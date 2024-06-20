@@ -1,10 +1,10 @@
-document.getElementById("openNew").addEventListener("click", function ({
-    newWin = window.open("", "NewWin", "toolbar=no, status=no, width=200, height=100");
-}));
+document.getElementById("openNew").addEventListener("click", function (){
+    newWin = window.open("", "NewWin", "toolbar=no,status=no,width=200, height=100");
+});
 
-document.getElementById("closeNew").addEventListener("click", function ({
+document.getElementById("closeNew").addEventListener("click", function (){
     newWin.close();
-}));
+});
 
 function doIt() {
     if ((document.changeForm.w.value) &&
@@ -22,7 +22,7 @@ function doIt() {
 }
 
 window.addEventListener("load", function () {
-    newWin = this.window.open('', "NewWin", 'width=200,height=100');
-})
+    newWin = window.open('', "NewWin", 'width=200,height=100');
+});
 
 document.getElementById("doIt").addEventListener("click", doIt);
