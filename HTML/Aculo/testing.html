@@ -15,6 +15,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
 </head>
 <body>
+    <h1>Testing script.aculo.us Effects</h1>
+    <button onclick="new Effect.Fade($('testarea'))">Fade Out</button>
+    <button onclick="new Effect.Appear($('testarea'))">Fade In</button>
+    <button onclick="new Effect.SlideUp($('testarea'))">Slide Up</button>
+    <button onclick="new Effect.SlideDown($('testarea'))">Slide Down</button>
+    <button onclick="new Effect.Highlight($('testarea'))">Highlight</button>
+    <button onclick="new Effect.Shake($('testarea'))">Shake</button>
 
+    <hr>
+    <h2>Testing Effects</h2>
+    <p id="testarea">
+        This section of the document is within a &lt;p&gt; element with the <strong>id</strong> value of <strong>testarea</strong>. The event handlers on the buttons above send this object to the <a href="http://script.aculo.us/">script.aculo.us</a> library to perform effects. Click to buttons to see the effects in action.
+    </p>
 </body>
 </html>
