@@ -43,3 +43,6 @@ function Toggle(e) {
 
     img.src = file;
 }
+
+// replace the second checkbox with a graphic
+graphicBox("check2");
