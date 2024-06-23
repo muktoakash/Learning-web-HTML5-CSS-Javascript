@@ -10,46 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guest Book</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        fieldset {
-            width: 75%;
-            border: 2px solid #9435d4;
-        }
-
-        legend {
-            font-weight: bold;
-            font-size: 125%;
-        }
-
-        label.question {
-            width: 225px;
-            float: left;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        span.question {
-            font-weight: bold;
-        }
-
-        input,
-        textarea,
-        select,
-        button {
-            border: 1px solid #000;
-            padding: 3px;
-        }
-
-        #buttons {
-            margin-top: 12px;
-        }
-
-        #errors {
-            color: red;
-            font-weight: bold;
-            font-size: larger;
-        }
-    </style>
+    <link rel="stylesheet" href="./guest_book_form.css">
 </head>
 
 <body>
@@ -156,7 +117,7 @@
         <div id="buttons">
             <input type="submit" value="Click Here to Submit"> or
             <input type="reset" value="Erase and Start Over"> or
-            <button type="button" id="standardValues">Fill in Standard Values</button> 
+            <button type="button" id="standardValues">Fill in Standard Values</button>
         </div>
     </form>
     <datalist id="listOfBadChoices">

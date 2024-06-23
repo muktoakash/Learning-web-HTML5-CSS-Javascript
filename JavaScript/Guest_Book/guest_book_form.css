@@ -1,0 +1,38 @@
+fieldset {
+            width: 75%;
+            border: 2px solid #9435d4;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 125%;
+        }
+
+        label.question {
+            width: 225px;
+            float: left;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        span.question {
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            border: 1px solid #000;
+            padding: 3px;
+        }
+
+        #buttons {
+            margin-top: 12px;
+        }
+
+        #errors {
+            color: red;
+            font-weight: bold;
+            font-size: larger;
+        }
