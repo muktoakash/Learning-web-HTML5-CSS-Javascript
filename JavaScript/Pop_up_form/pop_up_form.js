@@ -12,3 +12,5 @@ function display() {
     message += "</ul>";
     dispWin.document.write(message);
 }
+
+document.getElementById("display").addEventListener("click", display);
