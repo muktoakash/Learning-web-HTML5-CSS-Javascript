@@ -27,6 +27,7 @@ This is my first git repository. I am using this to store my learnings about
 - [x] CSS -> Styling elements by tags, classes, and ids. Using flex-grid and position properties to style a page.
 - [x] CSS -> Transitions and animations of elements. Responsive web design.
 - [x] JS -> DOM and referring to elements by ID. Dynamically changing innerHTML of an element.
+- [x] JS -> Dynamic interaction with users through prompts, buttons, and mouse or keyboard events.
 - [x] JS -> async/await functional programming, unobstructive JavaScript with addEventListener
 - [x] BootStrap -> Use the framework to create responsive pages quickly.
 - [x] Creating frontend of forms that combine HTML, CSS and JavaScript for functionality and appearance.  
@@ -41,4 +42,7 @@ This is my first git repository. I am using this to store my learnings about
 - A newspapers style [three-column](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Resume) layout.
 ### Combining JavaScript with HTML and CSS
 - Display [Browser Information](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/JavaScript/Browser_Info) on client side
-- 
+- Get the clients [geolocation](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/JavaScript/GeoLocation) using googlemaps or leaflet API and clients location data.
+- [Guestbook form](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/JavaScript/Guest_Book) with many different types of form elements
+
+And many, many more instructive projects for beginners and intermediate frontend web-developers.
