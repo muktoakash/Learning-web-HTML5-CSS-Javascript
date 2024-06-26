@@ -27,13 +27,18 @@ This is my first git repository. I am using this to store my learnings about
 - [x] CSS -> Styling elements by tags, classes, and ids. Using flex-grid and position properties to style a page.
 - [x] CSS -> Transitions and animations of elements. Responsive web design.
 - [x] JS -> DOM and referring to elements by ID. Dynamically changing innerHTML of an element.
-- [x] JS -> async/await functional programming
+- [x] JS -> async/await functional programming, unobstructive JavaScript with addEventListener
 - [x] BootStrap -> Use the framework to create responsive pages quickly.
 - [x] Creating frontend of forms that combine HTML, CSS and JavaScript for functionality and appearance.  
 - [x] Designing functional, fast, attractive and effective webpages.
 
 ## Notable projects in this repo:
+### Using HTML and CSS only
 - [Bento Glass](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Bento_Glass): A bento glass-styled grid that can by used in future pages.
 - [Bouncy Ball](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Bouncy_Ball): Animation of a ball bouncing left-to-right and back, made using CSS.
 - A nice, clean [webpage](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Bootstrap_Example) template designed using bootstrap.
+- My [resume](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Resume) built in HTML and designed using CSS.
+- A newspapers style [three-column](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Resume) layout.
+### Combining JavaScript with HTML and CSS
+- Display [Browser Information](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/JavaScript/Browser_Info) on client side
 - 
