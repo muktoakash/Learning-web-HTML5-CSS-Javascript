@@ -11,12 +11,12 @@ This is my first git repository. I am using this to store my learnings about
    - [x] buy a domain name: muktoakash.ca
    - [x] host the website: using hostinger
 2. Learn how to properly build websites
-  - [ ] create a template that I can use in the future
+  - [x] create a template that I can use in the future (bento box template, but also planning on using bootstrap)
   - [ ] try to incorporate other things such as Python3, etc. Update: currently planning on using django.
 
 ## Learning Resources:
 1. https://www.udemy.com/course/the-web-developer-bootcamp
-2. Sams Teach Yourself HTML, CSS, and JavaScript All in One, Third Edition
+2. (Completed) Sams Teach Yourself HTML, CSS, and JavaScript All in One, Third Edition
    by Julie C. Meloni, Jennifer Kyrnin
 ---
 
