@@ -11,7 +11,7 @@ This is my first git repository. I am using this to store my learnings about
    - [x] buy a domain name: muktoakash.ca
    - [x] host the website: using hostinger
 2. Learn how to properly build websites
-  - [x] create a template that I can use in the future (bento box template, but also planning on using bootstrap)
+  - [x] create a template that I can use in the future (bento box template, but also using bootstrap)
   - [ ] try to incorporate other things such as Python3, etc. Update: currently planning on using django.
 
 ## Learning Resources:
@@ -29,4 +29,11 @@ This is my first git repository. I am using this to store my learnings about
 - [x] JS -> DOM and referring to elements by ID. Dynamically changing innerHTML of an element.
 - [x] JS -> async/await functional programming
 - [x] BootStrap -> Use the framework to create responsive pages quickly.
+- [x] Creating frontend of forms that combine HTML, CSS and JavaScript for functionality and appearance.  
 - [x] Designing functional, fast, attractive and effective webpages.
+
+## Notable projects in this repo:
+- [Bento Glass](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Bento_Glass): A bento glass-styled grid that can by used in future pages.
+- [Bouncy Ball](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Bouncy_Ball): Animation of a ball bouncing left-to-right and back, made using CSS.
+- A nice, clean [webpage](https://github.com/muktoakash/Learning-web-HTML5-CSS-Javascript/tree/master/HTML/Bootstrap_Example) template designed using bootstrap.
+- 
