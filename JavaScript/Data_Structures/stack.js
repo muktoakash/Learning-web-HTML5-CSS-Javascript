@@ -20,7 +20,7 @@ class Stack {
         return item;
     }
 
-    length() {
+    height() {
         return this.size;
     }
 
