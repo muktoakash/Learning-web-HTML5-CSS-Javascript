@@ -9,20 +9,36 @@
     <h1>Tesing Stack Implementation</h1>
 
     <b id="Create">Stack Creation:</b>
-    <button type="button" id="Create">Initialize Empty Stack</button>
+    <button type="button" id="create">Initialize Empty Stack</button>
 
-    Use the form below to push, pop, peek, and find the height of the stack.
+    <p id="introForm"> Use the form below to push, pop, peek, and find the height of the stack. </p>
 
     <form action="" id="manipulate">
-        <!-- Get current length -->
-
+        <!-- Get current height -->
+        <p>
+            <label for="height">Current Stack Height</label>
+            <input type="text" id="height" name="currHeight">
+        </p>
         <!-- Push Elements -->
-
+         <p>
+            <label for="push">Item to push</label>
+            <input type="text" id="push" name="pushItem" required>
+        </p>
         <!-- Peek at the top -->
-
+         <p>
+            <label for="peek">Peek at the top item</label>
+            <input type="text" id="top" name="peekTop" required>
+        </p>
         <!-- Pop an element -->
-
+         <p>
+            <label for="pop">Pop the most recent item</label>
+            <input type="text" id="pop" name="popItem" required>
+        </p>
         <!-- Peek at the entire Stack -->
+         <p>
+            <label for="allStack">Visualize the entire Stack</label>
+            <input type="text" id="allStack" name="stack" required>
+        </p>
     </form>
 
 </body>
