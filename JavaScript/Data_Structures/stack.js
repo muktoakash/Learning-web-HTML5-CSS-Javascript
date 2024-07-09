@@ -1,7 +1,7 @@
 class Stack {
     constructor() {
-        let this.size = 0;
-        let this.storage = {};
+        this.size = 0;
+        this.storage = {};
     }
 
     push(value) {
