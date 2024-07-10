@@ -27,4 +27,10 @@ class Stack {
     peek(value = this.size) {
         return this.storage[value - 1];
     }
+
+    destroy() {
+        this.size = 0;
+        delete this.storage;
+        this.storage = {};
+    }
 }
