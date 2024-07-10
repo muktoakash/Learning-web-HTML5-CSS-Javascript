@@ -30,6 +30,7 @@ class Stack {
 
     destroy() {
         this.size = 0;
+        delete this.storage;
         this.storage = {};
     }
 }

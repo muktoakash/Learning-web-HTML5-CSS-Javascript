@@ -53,8 +53,7 @@ function destruction(){
     document.getElementById("allStackButton").disabled = true;
 
     // Reset the form;
-    // document.getElementById("manipulateStack").reset();
-    // document.getElementById("createStack").addEventListener("click", creation)
+    document.getElementById("manipulateStack").reset();
 }
 
 // Dynamically display the form with the current state of the stack
