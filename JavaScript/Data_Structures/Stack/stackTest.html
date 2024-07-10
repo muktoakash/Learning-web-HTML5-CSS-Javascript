@@ -1,3 +1,6 @@
+<!-- stackTest.html -->
+ <!-- Dynamically creates and manipulates a stack to test the Stack class functionality. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +25,7 @@
         <!-- Push EleStackments : Button-->
          <p id="pPushStack">
             <label for="pushStack">Item to push</label>
-            <input type="text" id="pushStack" placeholder="Item" name="pushStackItem">
+            <input type="text" id="pushStack" placeholder="Uninitialized Stack" placeholder="Item" name="pushStackItem">
             <button type="button" id="pushStackButton">Push!</button>
         </p>
         <!-- Peek at Stackthe top : Automatic-->
@@ -33,7 +36,7 @@
         <!-- Pop an Stackelement : Button-->
          <p id="pPopStack">
             <label for="popStack">Pop the most recent Stack item</label>
-            <input type="text" id="popStack" placeholder="Item" name="popStackItem">
+            <input type="text" id="popStack" placeholder="Uninitialized Stack" placeholder="Item" name="popStackItem">
             <button type="button" id="popStackButton">Pop!</button>
         </p>
         <!-- PeekStack at the entire Stack : Button-->
@@ -42,6 +45,7 @@
         </p>
     </form>
 
-    <script src="./stackTest.js"></script>
+     <script type="module" src="./stackTest.js"></script>
+     <!-- <script src="stackTest.js"></script> -->
 </body>
 </html>

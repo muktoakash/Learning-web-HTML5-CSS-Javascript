@@ -1,4 +1,4 @@
-class Stack {
+export class Stack {
     constructor() {
         this.size = 0;
         this.storage = {};
