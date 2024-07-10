@@ -54,10 +54,28 @@ function destruction(){
 
     // Reset the form;
     document.getElementById("manipulateStack").reset();
+    clearStack();
+}
+
+// Push an item to the Stack when button is clicked
+document.getElementById("pushStackButton").addEventListener("click", pushItem);
+
+function pushItem() {
+    var item = document.getElementById("pushStack").value;
+    newStack.push(item);
+    displayForm();
+}
+
+// Pop an item from the Stack when button is clicked
+document.getElementById("popStackButton").addEventListener("click", popItem);
+
+function popItem() {
+    const item = newStack.pop();
+    displayForm(item);
 }
 
 // Dynamically display the form with the current state of the stack
-const displayForm = () => {
+const displayForm = (popped=null) => {
     var height = newStack.height();
     if (height === 0) {
         document.getElementById("heightStack").value = height;
@@ -66,7 +84,35 @@ const displayForm = () => {
     } else {
         document.getElementById("heightStack").value = height;
         document.getElementById("top").value = newStack.peek();
-        document.getElementById("popStack").value = "Pop Item from Stack";
+        if (popped !== null) {
+            document.getElementById("popStack").value = popped;
+        } else {
+            document.getElementById("popStack").value = "";
+            document.getElementById("popStack").placeholder = "Pop Item from Stack";
+        }
     }
-    document.getElementById("pushStack").defaultValue = "Push Item to Stack";
+    document.getElementById("pushStack").value = "";
+    document.getElementById("pushStack").placeholder = "Push Item to Stack";
+}
+
+// Display all items in the Stack when button is clicked
+document.getElementById("allStackButton").addEventListener("click", displayAll);
+
+function displayAll() {
+    var allItems = "";
+    for (var i = 1; i < newStack.height(); i++) {
+        allItems += newStack.peek(i) + " -> ";
+    }
+    allItems += newStack.peek(i);
+
+    document.getElementById("pStackVisualOutput").textContent = allItems;
+    document.getElementById("clearStackButton").disabled = false;
+}
+
+// Clear the visualization when button is clicked   
+document.getElementById("clearStackButton").addEventListener("click", clearStack);
+
+function clearStack() {
+    document.getElementById("pStackVisualOutput").textContent = "";
+    document.getElementById("clearStackButton").disabled = true;
 }
