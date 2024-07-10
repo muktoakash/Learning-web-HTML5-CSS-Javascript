@@ -1,4 +1,4 @@
-export class Stack {
+class Stack {
     constructor() {
         this.size = 0;
         this.storage = {};
@@ -26,5 +26,10 @@ export class Stack {
 
     peek(value = this.size) {
         return this.storage[value - 1];
+    }
+
+    destroy() {
+        this.size = 0;
+        this.storage = {};
     }
 }

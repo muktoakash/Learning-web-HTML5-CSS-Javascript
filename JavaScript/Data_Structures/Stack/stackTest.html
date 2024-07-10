@@ -13,6 +13,7 @@
 
     <b id="bCreateStack">Stack Creation:</b>
     <button type="button" id="createStack">Initialize Empty Stack</button>
+    <button type="button" id="destroyStack" disabled="true">Destroy Current Stack</button>
 
     <p id="pIntroFormStack"> Use the form below to push, pop, peek, and find the height of the stack. </p>
 
@@ -26,7 +27,7 @@
          <p id="pPushStack">
             <label for="pushStack">Item to push</label>
             <input type="text" id="pushStack" placeholder="Uninitialized Stack" placeholder="Item" name="pushStackItem">
-            <button type="button" id="pushStackButton">Push!</button>
+            <button type="button" id="pushStackButton" disabled="true">Push!</button>
         </p>
         <!-- Peek at Stackthe top : Automatic-->
          <p id="pPeekStack">
@@ -37,15 +38,16 @@
          <p id="pPopStack">
             <label for="popStack">Pop the most recent Stack item</label>
             <input type="text" id="popStack" placeholder="Uninitialized Stack" placeholder="Item" name="popStackItem">
-            <button type="button" id="popStackButton">Pop!</button>
+            <button type="button" id="popStackButton" disabled="true">Pop!</button>
         </p>
         <!-- PeekStack at the entire Stack : Button-->
          <p id="pStackVisual">
-            <button type="button" id="allStack">Visualize the Entire Stack</button>
+            <button type="button" id="allStackButton" disabled="true">Visualize the Entire Stack</button>
         </p>
     </form>
 
-     <script type="module" src="./stackTest.js"></script>
-     <!-- <script src="stackTest.js"></script> -->
+     <!-- <script type="module" src="./stackTest.js"></script> -->
+      <script src="./stack.js"></script>
+     <script src="./stackTest.js"></script>
 </body>
 </html>
