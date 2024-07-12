@@ -2,7 +2,7 @@ class SetObject{ // Named to avoid conflict with ES6 Set
     constructor() {
         // Use an array to hold the elements (not efficient for lookup)
         // May be modify later with a hashtable
-        this.collection = [];
+        this.collection = {};
         this.size = 0;
     }
 
