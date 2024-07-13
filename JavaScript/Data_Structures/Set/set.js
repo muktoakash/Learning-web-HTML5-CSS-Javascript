@@ -7,7 +7,9 @@ class SetObject{ // Named to avoid conflict with ES6 Set
     }
 
     hasElement(element) {
-        return (this.collection.indexOf(element) !== -1);
+       // return (this.collection.indexOf(element) !== -1);
+if (this.collection[element]) return true;
+return false;
     }
 
     getAll() {
