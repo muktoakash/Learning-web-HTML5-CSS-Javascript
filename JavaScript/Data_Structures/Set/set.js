@@ -15,6 +15,28 @@ class SetofStrings{ // Named to avoid conflict with ES6 Set
         return Object.keys(this.collection);
     }
 
+    setAsText() {
+        if (this.isEmpty()) {
+            retText = "{ }";
+        }
+        else {
+            elements = this.getAll();
+            retText = "{";
+            counter = 0;
+            for (const item of elements) {
+                retText += item;
+                counter++;
+                if (counter < this.size) {
+                    retText += ", "
+                }
+                else {
+                    retText += "}"
+                }
+            }
+        }
+        return retText;
+    }
+
 
     add(item) {
         if (!this.hasElement(item)) {
