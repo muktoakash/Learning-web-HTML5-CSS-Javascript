@@ -5,7 +5,7 @@ class SetofStrings{ // Named to avoid conflict with ES6 Set
     }
 
     hasElement(element) {
-        if (this.collection[String(element)]) {
+        if (this.collection[String(element)] !== undefined) {
             return true;
         }
         return false;
@@ -27,10 +27,10 @@ class SetofStrings{ // Named to avoid conflict with ES6 Set
                 retText += item;
                 counter++;
                 if (counter < this.size) {
-                    retText += ", "
+                    retText += ", ";
                 }
                 else {
-                    retText += "}"
+                    retText += "}";
                 }
             }
         }
@@ -60,7 +60,21 @@ class SetofStrings{ // Named to avoid conflict with ES6 Set
 
     isEmpty() { return this.size === 0; }
 
-    // Implement set union, intersection, difference, Cartesian Project, Power Set, isSubset
+    // Implement set union, intersection, difference, Cartesian Project, Power Set, isSubset, isSuperset
+
+    static union(setA, setB) {
+        var unionSet = new SetofStrings;
+        for (item of setA.getAll()) {
+            unionSet.add(item);
+        }
+        for (item of setB.getAll()) {
+            unionSet.add(item);
+        }
+
+        return unionSet;
+    }
+
+    // helper functions
 
 
 }
