@@ -63,7 +63,7 @@ class SetofStrings{ // Named to avoid conflict with ES6 Set
     // Implement set union, intersection, difference, Cartesian Project, Power Set, isSubset, isSuperset
 
     static union(setA, setB) {
-        var unionSet = new SetofStrings;
+        var unionSet = new SetofStrings();
         for (item of setA.getAll()) {
             unionSet.add(item);
         }
@@ -73,6 +73,19 @@ class SetofStrings{ // Named to avoid conflict with ES6 Set
 
         return unionSet;
     }
+
+    static intersection(setA, setB) {
+        var intersectionSet = new SetofStrings();
+        for (item of setA.getAll()) {
+            if (setB.hasElement(item)) {
+                intersectionSet.add(item);
+            }
+        }
+
+        return intersectionSet;
+    }
+
+    
 
     // helper functions
 
