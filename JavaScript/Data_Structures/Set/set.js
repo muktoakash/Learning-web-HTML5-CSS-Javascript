@@ -62,7 +62,7 @@ class SetofStrings {
     return this.size === 0;
   }
 
-  // Implement set union, intersection, difference, Cartesian Project, Power Set, isSubset, isSuperset
+  // Implement set union, intersection, difference, Cartesian Product, Power Set, isSubset, isSuperset
 
   static union(setA, setB) {
     var unionSet = new SetofStrings();
@@ -95,6 +95,18 @@ class SetofStrings {
     }
 
     return diffSet;
+  }
+
+  static cartesianProduct(setA, setB) {
+    var newItem;
+    var newSet;
+    for (itemA of setA.getAll()){
+      for (itemB of setB.getAll()){
+        newItem = `(${itemA}, ${itemB})`;
+        newSet.add(newItem);
+      }
+    }
+    return newSet;
   }
 
   // helper functions
