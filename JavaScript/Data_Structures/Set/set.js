@@ -98,8 +98,8 @@ class SetofStrings {
   }
 
   static cartesianProduct(setA, setB) {
-    var newItem;
-    var newSet;
+    var newItem ;
+    var newSet = new SetofStrings();
     for (itemA of setA.getAll()){
       for (itemB of setB.getAll()){
         newItem = `(${itemA}, ${itemB})`;
@@ -110,4 +110,22 @@ class SetofStrings {
   }
 
   // helper functions
+  isSubset(that){
+    if (this.getSize() > that.getSize()){
+      return false;
+    }
+
+    for (itemA of this.getAll()) {
+      if (! that.hasElement(itemA) ) { return false; }
+    }
+    return true;
+  }
+
+  isSuperSet(that) {
+    return that,this.isSubset(this);
+  }
+
+  static setEqual(setA, setB) {
+    return (setA.isSubset(setB) && setB.isSubset(setA));
+  }
 }
