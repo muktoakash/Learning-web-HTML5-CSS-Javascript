@@ -64,6 +64,30 @@ class SetofStrings {
 
   // Implement set union, intersection, difference, Cartesian Product, Power Set, isSubset, isSuperset
 
+  powerSet() {
+    // Return must be a set
+    // Must contain empty set and this
+    // Must contain every subset of this
+    // All contents are string representations of sets
+
+    powSet = new SetofStrings(); // Set to return
+
+    empSet = new SetofStrings(); // empty set
+
+    powSet.add(empSet.setAsText());
+
+    // Create all possible subsets using helper function
+    const n = this.getSize();
+    for (var i = 1; i < n; i++) {
+      nItemSet = nGenSet(i);
+      powSet.add(nItemSet);
+    }
+
+    powSet.add(this.setAsText());
+
+    return powSet
+  }
+
   static union(setA, setB) {
     var unionSet = new SetofStrings();
     for (item of setA.getAll()) {
