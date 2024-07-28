@@ -76,11 +76,16 @@ class SetofStrings {
 
     powSet.add(empSet.setAsText());
 
+    const listElements = this.getAll() // list of elements
+
     // Create all possible subsets using helper function
     const n = this.getSize();
-    for (var i = 1; i < n; i++) {
-      nItemSet = nGenSet(i);
-      powSet.add(nItemSet);
+    for (element of listElements){
+
+        for(var i = 1; i<n; i++) {
+          nItemSet = nGenSet(i, element);
+          powSet.add(nItemSet);
+        }
     }
 
     powSet.add(this.setAsText());
@@ -110,6 +115,7 @@ class SetofStrings {
 
     return intersectionSet;
   }
+
   static AdiffB(setA, setB) {
     var diffSet = new SetofStrings();
     for (item of setA.getAll()) {
@@ -146,10 +152,53 @@ class SetofStrings {
   }
 
   isSuperSet(that) {
-    return that,this.isSubset(this);
+    return (that.isSubset(this));
   }
 
   static setEqual(setA, setB) {
     return (setA.isSubset(setB) && setB.isSubset(setA));
+  }
+
+  nGenSet(size, item) {
+    // Generate all size-subsets of this that contains
+    // given element
+
+    const n = this.getSize();
+
+    // Input validation
+    if (size >= n) {
+      alert("size out of bounds;")
+        return "none";
+    }
+
+
+    var retSet = new Set();
+
+    listElements = this.getAll();
+
+    for (var j = 0; j < )
+    for (element of listElements) {
+      if (element == item) {
+        continue;
+      }
+
+    }
+  }
+
+  setAll(listElements) {
+    // must start with an empty set
+    // mutates this
+
+    if (!this.isEmpty()) {
+      alert("Set not empty, must use empty set");
+    }
+
+    this.enterList(listElements);
+  }
+
+  enterList(listElements) {
+    for (element of listElements) {
+      this.add(element);
+    }
   }
 }
