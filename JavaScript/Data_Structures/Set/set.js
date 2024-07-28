@@ -17,16 +17,17 @@ class SetofStrings {
   }
 
   setAsText() {
+    var retText;
     if (this.isEmpty()) {
       retText = "{ }";
     } else {
       elements = this.getAll();
       retText = "{";
-      counter = 0;
+      var counter = 0;
       for (const item of elements) {
         retText += item;
         counter++;
-        if (counter < this.size) {
+        if (counter < this.getSize()) {
           retText += ", ";
         } else {
           retText += "}";
@@ -80,12 +81,12 @@ class SetofStrings {
 
     // Create all possible subsets using helper function
     const n = this.getSize();
-    for (element of listElements){
+    for (const element of listElements){
 
-        for(var i = 1; i<n; i++) {
-          nItemSet = nGenSet(i, element);
-          powSet.add(nItemSet);
-        }
+        for(var i = 0; i< n-1; i++) {
+          currentItemSet = nGenSet(i, element); //subsets of size i with element
+          powSet.enterList(currentItemSet.getAll()); // Add all these subsets
+      }
     }
 
     powSet.add(this.setAsText());
@@ -118,8 +119,8 @@ class SetofStrings {
 
   static AdiffB(setA, setB) {
     var diffSet = new SetofStrings();
-    for (item of setA.getAll()) {
-      if (!setB.hasElement(item)) {
+    for (const item of setA.getAll()) {
+      if (! setB.hasElement(item)) {
         diffSet.add(item);
       }
     }
@@ -130,8 +131,8 @@ class SetofStrings {
   static cartesianProduct(setA, setB) {
     var newItem ;
     var newSet = new SetofStrings();
-    for (itemA of setA.getAll()){
-      for (itemB of setB.getAll()){
+    for (const itemA of setA.getAll()){
+      for (const itemB of setB.getAll()){
         newItem = `(${itemA}, ${itemB})`;
         newSet.add(newItem);
       }
@@ -145,7 +146,7 @@ class SetofStrings {
       return false;
     }
 
-    for (itemA of this.getAll()) {
+    for (const itemA of this.getAll()) {
       if (! that.hasElement(itemA) ) { return false; }
     }
     return true;
