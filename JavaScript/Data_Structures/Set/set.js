@@ -160,8 +160,12 @@ class SetofStrings {
   }
 
   nGenSet(size, item) {
-    // Generate all size-subsets of this that contains
-    // given element
+    // Generate all size-subsets of this
+    // containing given element
+    // Sometimes the return would be size-1 subset,
+    // which ruins a small amount of efficiency,
+    // but something that will be ignored at this point.
+    //  May be fixed on a later date
 
     const n = this.getSize();
 
@@ -172,17 +176,22 @@ class SetofStrings {
     }
 
 
-    var retSet = new Set();
+    var retSet = new SetofStrings();
 
     listElements = this.getAll();
 
-    for (var j = 0; j < )
-    for (element of listElements) {
-      if (element == item) {
-        continue;
-      }
+    for (var j = 0; j < n - size; j++) {
+      var setToAdd = new SetofStrings();
+      setToAdd.add(item); // Put current item in
 
+      elemsToAdd = listElements.slice(j, j + size);
+
+      setToAdd.enterList(elemsToAdd);
+
+      retSet.add(setToAdd.setAsText);
     }
+
+    return retSet;
   }
 
   setAll(listElements) {
