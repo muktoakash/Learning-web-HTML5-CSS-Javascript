@@ -3,3 +3,6 @@
 
 // Stack:
 export { Stack } from "./Stack/stack.js"
+
+// Set
+export { SetofStrings } from "./Set/set.js"

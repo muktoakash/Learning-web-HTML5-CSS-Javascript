@@ -63,7 +63,6 @@ class SetofStrings {
     return this.size === 0;
   }
 
-  // Implement set union, intersection, difference, Cartesian Product, Power Set, isSubset, isSuperset
 
   powerSet() {
     // Return must be a set
