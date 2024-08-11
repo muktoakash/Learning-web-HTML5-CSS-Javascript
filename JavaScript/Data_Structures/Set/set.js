@@ -5,6 +5,12 @@ class SetofStrings {
     this.size = 0;
   }
 
+  destroy() {
+    delete this.collection;
+    this.collection = {};
+    this.size = 0;
+  }
+
   hasElement(element) {
     if (this.collection[String(element)] !== undefined) {
       return true;
