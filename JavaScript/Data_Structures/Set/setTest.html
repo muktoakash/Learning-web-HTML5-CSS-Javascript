@@ -6,45 +6,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesing Stack</title>
+    <title>Tesing Set</title>
 </head>
 <body>
-    <h1 id="hTestStack">Tesing Set Implementation</h1>
+    <h1 id="hTestSet">Tesing Set Implementation</h1>
 
-    <b id="bCreateStack">Set Creation:</b>
+    <b id="bCreateSet">Set Creation:</b>
     <button type="button" id="createSet">Initialize Empty Set</button>
     <button type="button" id="destroySet" disabled="true">Delete Current Set</button>
 
     <p id="pIntroFormSet"> <span id="remove">Set needs to be initialized. Then</span> <span id="introFormSet">use the form below to insert, remove, visualize, and find the cardinality of the set.</span> </p>
 
-    <form action="" id="manipulateStack">
-        <!-- Get curreStacknt height : Automatic-->
-        <p id="pHeightStack">
-            <label for="heightStack">Current Stack Height<Stack/label>
-            <input type="text" id="heightStack" placeholder="Uninitialized Stack" name="currStackHeight">
+    <form action="" id="manipulateSet">
+        <!-- Get current Set size : Automatic-->
+        <p id="pHeightSet">
+            <label for="heightSet">Current Set Size<Set/label>
+            <input type="text" id="heightSet" placeholder="Uninitialized Set" name="currSetHeight">
         </p>
-        <!-- Push EleStackments : Button-->
-         <p id="pPushStack">
-            <label for="pushStack">Item to push</label>
-            <input type="text" id="pushStack" placeholder="Uninitialized Stack" placeholder="Item" name="pushStackItem">
-            <button type="button" id="pushStackButton" disabled="true">Push!</button>
+        <!-- Insert Elements : Button-->
+         <p id="pPushSet">
+            <label for="pushSet">Item to insert</label>
+            <input type="text" id="pushSet" placeholder="Uninitialized Set" placeholder="Item" name="pushSetItem">
+            <button type="button" id="pushSetButton" disabled="true">Insert!</button>
         </p>
-        <!-- Peek at Stackthe top : Automatic-->
-         <p id="pPeekStack">
-            <label for="peekStack">Peek at the top item</label>
-            <input type="text" id="top" name="peekStackTop" placeholder="Uninitialized Stack">
+        <!-- Peek at Setthe top : Automatic-->
+         <p id="pPeekSet">
+            <label for="peekSet">Check if item in Set</label>
+            <input type="text" id="top" name="peekSetTop" placeholder="Uninitialized Set">
         </p>
-        <!-- Pop an Stackelement : Button-->
-         <p id="pPopStack">
-            <label for="popStack">Pop the most recent Stack item</label>
-            <input type="text" id="popStack" placeholder="Uninitialized Stack" placeholder="Item" name="popStackItem">
-            <button type="button" id="popStackButton" disabled="true">Pop!</button>
+        <!-- Remove an element : Button-->
+         <p id="pPopSet">
+            <label for="popSet">Remove Set Item</label>
+            <input type="text" id="popSet" placeholder="Uninitialized Set" placeholder="Item" name="popSetItem">
+            <button type="button" id="popSetButton" disabled="true">Remove!</button>
         </p>
-        <!-- PeekStack at the entire Stack : Button-->
-         <p id="pStackVisual">
-            <button type="button" id="allStackButton" disabled="true">Visualize the Entire Stack</button>
-            <button type="button" id="clearStackButton" disabled="true">Clear the Visualization</button>
-            <p id="pStackVisualOutput"></p>
+        <!-- Peek at the entire Set : Button-->
+         <p id="pSetVisual">
+            <button type="button" id="allSetButton" disabled="true">Visualize the Entire Set</button>
+            <button type="button" id="clearSetButton" disabled="true">Clear the Visualization</button>
+            <p id="pSetVisualOutput"></p>
         </p>
     </form>
 
