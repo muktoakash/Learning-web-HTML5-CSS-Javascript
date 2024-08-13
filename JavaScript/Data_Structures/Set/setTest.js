@@ -1,18 +1,18 @@
 // stackTest.js
-// Does unit test on the Stack data structure in stack.js
+// Does unit test on the Set data structure in stack.js
 // with the help of stackTest.html for visualization
 
 // Import
-// import { Stack } from "./stack.js";
+// import { Set } from "./stack.js";
 
 // Global Variables
-let newStack = new Stack();
-const txt = document.getElementById("introFormStack").textContent;
+let newSet = new SetofStrings();
+const txt = document.getElementById("introFormSet").textContent;
 
 // window.onload = creation();
 
-// Create a new Stack when button is pushed
-let createButton = document.getElementById("createStack");
+// Create a new Set when button is pushed
+let createButton = document.getElementById("createSet");
 createButton.addEventListener("click", () => {
     creation();
 });
@@ -20,99 +20,95 @@ createButton.addEventListener("click", () => {
 var count = 0;
 
 function creation() {
-    
 
-    if (count == 0) {
+
+    if (count === 0) {
         document.getElementById("remove").style.display = "none";
     }
     count++;
-    
-    
-    newTxt = "An empty Stack has been initialized. Now " + txt;
-    document.getElementById("pIntroFormStack").innerText = newTxt;
-    document.getElementById("destroyStack").disabled = false;
-    document.getElementById("pushStackButton").disabled = false;
-    document.getElementById("popStackButton").disabled = false;
-    document.getElementById("allStackButton").disabled = false;
-    document.getElementById("createStack").disabled = true;
+
+
+    newTxt = "An empty Set has been initialized. Now " + txt;
+    document.getElementById("pIntroFormSet").innerText = newTxt;
+    document.getElementById("destroySet").disabled = false;
+    document.getElementById("pushSetButton").disabled = false;
+    document.getElementById("popSetButton").disabled = false;
+    document.getElementById("allSetButton").disabled = false;
+    document.getElementById("createSet").disabled = true;
 
     displayForm();
 }
 
-// Destroy the Stack when button is clicked
-document.getElementById("destroyStack").addEventListener("click", destruction)
+// Destroy the Set when button is clicked
+document.getElementById("destroySet").addEventListener("click", destruction)
 
 function destruction(){
-    newStack.destroy();
-    newTxt = "Stack has been destroyed. Create a new Stack. Then " + txt;
-    document.getElementById("pIntroFormStack").innerText = newTxt;
-    document.getElementById("createStack").disabled = false;
-    document.getElementById("destroyStack").disabled = true;
-    document.getElementById("pushStackButton").disabled = true;
-    document.getElementById("popStackButton").disabled = true;
-    document.getElementById("allStackButton").disabled = true;
+    newSet.destroy();
+    newTxt = "Set has been destroyed. Create a new Set. Then " + txt;
+    document.getElementById("pIntroFormSet").innerText = newTxt;
+    document.getElementById("createSet").disabled = false;
+    document.getElementById("destroySet").disabled = true;
+    document.getElementById("pushSetButton").disabled = true;
+    document.getElementById("popSetButton").disabled = true;
+    document.getElementById("allSetButton").disabled = true;
 
     // Reset the form;
-    document.getElementById("manipulateStack").reset();
-    clearStack();
+    document.getElementById("manipulateSet").reset();
+    clearSet();
 }
 
-// Push an item to the Stack when button is clicked
-document.getElementById("pushStackButton").addEventListener("click", pushItem);
+// Push an item to the Set when button is clicked
+document.getElementById("pushSetButton").addEventListener("click", pushItem);
 
 function pushItem() {
-    var item = document.getElementById("pushStack").value;
-    newStack.push(item);
-    displayForm();
+    var item = document.getElementById("pushSet").value;
+    const success = newSet.add(item);
+    displayForm(null, success);
 }
 
-// Pop an item from the Stack when button is clicked
-document.getElementById("popStackButton").addEventListener("click", popItem);
+// Pop an item from the Set when button is clicked
+document.getElementById("popSetButton").addEventListener("click", popItem);
 
-function popItem() {
-    const item = newStack.pop();
-    displayForm(item);
+function popItem(item) {
+    const success = newSet.remove(item);
+    displayForm(item, success);
 }
 
 // Dynamically display the form with the current state of the stack
-const displayForm = (popped=null) => {
-    var height = newStack.height();
+const displayForm = (popped=null, success=false) => {
+    var height = newSet.getSize();
     if (height === 0) {
-        document.getElementById("heightStack").value = height;
-        document.getElementById("top").value = "Empty Stack";
-        document.getElementById("popStack").value = "Empty Stack";
+        document.getElementById("heightSet").value = height;
+        document.getElementById("top").value = "Empty Set";
+        document.getElementById("popSet").value = "Empty Set";
     } else {
-        document.getElementById("heightStack").value = height;
-        document.getElementById("top").value = newStack.peek();
+        document.getElementById("heightSet").value = height;
+        document.getElementById("top").value = newSet.peek();
         if (popped !== null) {
-            document.getElementById("popStack").value = popped;
+            document.getElementById("popSet").value = popped;
         } else {
-            document.getElementById("popStack").value = "";
-            document.getElementById("popStack").placeholder = "Pop Item from Stack";
+            document.getElementById("popSet").value = "";
+            document.getElementById("popSet").placeholder = "Pop Item from Set";
         }
     }
-    document.getElementById("pushStack").value = "";
-    document.getElementById("pushStack").placeholder = "Push Item to Stack";
+    document.getElementById("pushSet").value = "";
+    document.getElementById("pushSet").placeholder = "Push Item to Set";
 }
 
-// Display all items in the Stack when button is clicked
-document.getElementById("allStackButton").addEventListener("click", displayAll);
+// Display all items in the Set when button is clicked
+document.getElementById("allSetButton").addEventListener("click", displayAll);
 
 function displayAll() {
-    var allItems = "";
-    for (var i = 1; i < newStack.height(); i++) {
-        allItems += newStack.peek(i) + " -> ";
-    }
-    allItems += newStack.peek(i);
+    var allItems = newSet.setAsTest();
 
-    document.getElementById("pStackVisualOutput").textContent = allItems;
-    document.getElementById("clearStackButton").disabled = false;
+    document.getElementById("pSetVisualOutput").textContent = allItems;
+    document.getElementById("clearSetButton").disabled = false;
 }
 
-// Clear the visualization when button is clicked   
-document.getElementById("clearStackButton").addEventListener("click", clearStack);
+// Clear the visualization when button is clicked
+document.getElementById("clearSetButton").addEventListener("click", clearSet);
 
-function clearStack() {
-    document.getElementById("pStackVisualOutput").textContent = "";
-    document.getElementById("clearStackButton").disabled = true;
+function clearSet() {
+    document.getElementById("pSetVisualOutput").textContent = "";
+    document.getElementById("clearSetButton").disabled = true;
 }
