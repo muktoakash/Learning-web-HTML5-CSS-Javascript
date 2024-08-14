@@ -69,7 +69,8 @@ function pushItem() {
 // Pop an item from the Set when button is clicked
 document.getElementById("popSetButton").addEventListener("click", popItem);
 
-function popItem(item) {
+function popItem() {
+    const item = document.getElementById("popSet").value;
     const success = newSet.remove(item);
     displayForm(item, success);
 }
@@ -83,9 +84,18 @@ const displayForm = (popped=null, success=false) => {
         document.getElementById("popSet").value = "Empty Set";
     } else {
         document.getElementById("heightSet").value = height;
-        document.getElementById("top").value = newSet.peek();
+        // document.getElementById("top").value = newSet.peek();
         if (popped !== null) {
-            document.getElementById("popSet").value = popped;
+            if (success === true) {
+                document.getElementById(
+                  "popSet"
+                ).value = `${popped} was removed`;
+            } else {
+                document.getElementById(
+                  "popSet"
+                ).value = `${popped} was not in Set.`;
+            }
+
         } else {
             document.getElementById("popSet").value = "";
             document.getElementById("popSet").placeholder = "Pop Item from Set";
