@@ -1,4 +1,4 @@
-class SetofStrings {
+class SetOfStrings {
   // Named to avoid conflict with ES6 Set
   constructor() {
     this.collection = {};

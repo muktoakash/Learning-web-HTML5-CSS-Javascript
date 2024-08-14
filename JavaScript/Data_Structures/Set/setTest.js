@@ -6,7 +6,7 @@
 // import { Set } from "./stack.js";
 
 // Global Variables
-let newSet = new SetofStrings();
+let newSet = new SetOfStrings();
 const txt = document.getElementById("introFormSet").textContent;
 
 // window.onload = creation();
