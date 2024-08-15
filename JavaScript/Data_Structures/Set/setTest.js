@@ -80,7 +80,6 @@ const displayForm = (popped=null, success=false) => {
     var height = newSet.getSize();
     if (height === 0) {
         document.getElementById("heightSet").value = height;
-        document.getElementById("top").value = "Empty Set";
         document.getElementById("popSet").value = "Empty Set";
     } else {
         document.getElementById("heightSet").value = height;
@@ -109,7 +108,8 @@ const displayForm = (popped=null, success=false) => {
 document.getElementById("allSetButton").addEventListener("click", displayAll);
 
 function displayAll() {
-    var allItems = newSet.setAsTest();
+    var allItems = newSet.setAsText();
+    alert(`${allItems}`);
 
     document.getElementById("pSetVisualOutput").textContent = allItems;
     document.getElementById("clearSetButton").disabled = false;

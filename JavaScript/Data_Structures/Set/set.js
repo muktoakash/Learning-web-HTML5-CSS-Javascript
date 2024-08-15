@@ -27,7 +27,8 @@ class SetOfStrings {
     if (this.isEmpty()) {
       retText = "{ }";
     } else {
-      elements = this.getAll();
+      const elements = this.getAll();
+      console.log(elements);
       retText = "{";
       var counter = 0;
       for (const item of elements) {
