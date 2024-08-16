@@ -28,10 +28,12 @@ class SetOfStrings {
       retText = "{ }";
     } else {
       const elements = this.getAll();
-      console.log(elements);
       retText = "{";
       var counter = 0;
       for (const item of elements) {
+        if (this.hasElement(item) == false) {
+          continue;
+        }
         retText += item;
         counter++;
         if (counter < this.getSize()) {
@@ -55,7 +57,7 @@ class SetOfStrings {
 
   remove(item) {
     if (this.hasElement(item)) {
-      this.collection[String(item)] = false;
+      this.collection[String(item)] = undefined;
       this.size--;
       return true;
     }

@@ -64,6 +64,12 @@ function pushItem() {
     var item = document.getElementById("pushSet").value;
     const success = newSet.add(item);
     displayForm(null, success);
+    if (success === true) {
+        document.getElementById("pSetInsert").innerText = `${item} was inserted.`;
+    } else {
+        document.getElementById("pSetInsert").innerText = `${item} was already in Set.`;
+    }
+
 }
 
 // Pop an item from the Set when button is clicked
@@ -102,6 +108,7 @@ const displayForm = (popped=null, success=false) => {
     }
     document.getElementById("pushSet").value = "";
     document.getElementById("pushSet").placeholder = "Push Item to Set";
+     document.getElementById("pSetInsert").innerText= "";
 }
 
 // Display all items in the Set when button is clicked
@@ -109,7 +116,7 @@ document.getElementById("allSetButton").addEventListener("click", displayAll);
 
 function displayAll() {
     var allItems = newSet.setAsText();
-    alert(`${allItems}`);
+    // alert(`${allItems}`);
 
     document.getElementById("pSetVisualOutput").textContent = allItems;
     document.getElementById("clearSetButton").disabled = false;
