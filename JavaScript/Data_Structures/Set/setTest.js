@@ -79,6 +79,13 @@ function popItem() {
     const item = document.getElementById("popSet").value;
     const success = newSet.remove(item);
     displayForm(item, success);
+    if (success === true) {
+      document.getElementById("pSetRemove").innerText = `${item} was Removed.`;
+    } else {
+      document.getElementById(
+        "pSetRemove"
+      ).innerText = `${item} was not in Set.`;
+    }
 }
 
 // Dynamically display the form with the current state of the stack
@@ -90,24 +97,12 @@ const displayForm = (popped=null, success=false) => {
     } else {
         document.getElementById("heightSet").value = height;
         // document.getElementById("top").value = newSet.peek();
-        if (popped !== null) {
-            if (success === true) {
-                document.getElementById(
-                  "popSet"
-                ).value = `${popped} was removed`;
-            } else {
-                document.getElementById(
-                  "popSet"
-                ).value = `${popped} was not in Set.`;
-            }
+        document.getElementById("popSet").value = "";
+        document.getElementById("popSet").placeholder = "Remove Item from Set";
 
-        } else {
-            document.getElementById("popSet").value = "";
-            document.getElementById("popSet").placeholder = "Pop Item from Set";
-        }
     }
     document.getElementById("pushSet").value = "";
-    document.getElementById("pushSet").placeholder = "Push Item to Set";
+    document.getElementById("pushSet").placeholder = "Insert Item to Set";
      document.getElementById("pSetInsert").innerText= "";
 }
 
