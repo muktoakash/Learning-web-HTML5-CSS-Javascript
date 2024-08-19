@@ -7,6 +7,7 @@
 
 // Global Variables
 let newSet = new SetOfStrings();
+let powSet = new SetOfStrings();
 const txt = document.getElementById("introFormSet").textContent;
 
 // window.onload = creation();
@@ -35,6 +36,7 @@ function creation() {
     document.getElementById("popSetButton").disabled = false;
     document.getElementById("allSetButton").disabled = false;
     document.getElementById("createSet").disabled = true;
+    document.getElementById("createPowSet").disabled = false;
 
     displayForm();
 }
@@ -51,6 +53,7 @@ function destruction(){
     document.getElementById("pushSetButton").disabled = true;
     document.getElementById("popSetButton").disabled = true;
     document.getElementById("allSetButton").disabled = true;
+    document.getElementById("createPowSet").disabled = true;
 
     // Reset the form;
     document.getElementById("manipulateSet").reset();
@@ -66,6 +69,7 @@ function pushItem() {
     displayForm(null, success);
     if (success === true) {
         document.getElementById("pSetInsert").innerText = `${item} was inserted.`;
+        document.getElementById("visualPowSet").disabled = true;
     } else {
         document.getElementById("pSetInsert").innerText = `${item} was already in Set.`;
     }
@@ -80,7 +84,8 @@ function popItem() {
     const success = newSet.remove(item);
     displayForm(item, success);
     if (success === true) {
-      document.getElementById("pSetRemove").innerText = `${item} was Removed.`;
+        document.getElementById("pSetRemove").innerText = `${item} was Removed.`;
+        document.getElementById("visualPowSet").disabled = true;
     } else {
       document.getElementById(
         "pSetRemove"
@@ -103,7 +108,7 @@ const displayForm = (popped=null, success=false) => {
     }
     document.getElementById("pushSet").value = "";
     document.getElementById("pushSet").placeholder = "Insert Item to Set";
-     document.getElementById("pSetInsert").innerText= "";
+    document.getElementById("pSetInsert").innerText= "";
 }
 
 // Display all items in the Set when button is clicked
