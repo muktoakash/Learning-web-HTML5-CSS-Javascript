@@ -105,8 +105,9 @@ const displayForm = (popped=null, success=false) => {
 
     }
     if (success === true) {
-            document.getElementById("visualPowSet").disabled = true;
-            powSet.destroy();
+        document.getElementById("visualPowSet").disabled = true;
+        powSet.destroy();
+        document.getElementById("pBisPowSet").innerText = "";
     }
     document.getElementById("pushSet").value = "";
     document.getElementById("pushSet").placeholder = "Insert Item to Set";
@@ -116,23 +117,26 @@ const displayForm = (popped=null, success=false) => {
 // Display all items in the Set when button is clicked
 document.getElementById("allSetButton").addEventListener("click", displayAll);
 
-function displayAll(set = newSet) {
-    var allItems = set.setAsText();
+function displayAll() {
+    var allItems = newSet.setAsText();
     // alert(`${allItems}`);
 
     document.getElementById("pSetVisualOutput").textContent = allItems;
     document.getElementById("clearSetButton").disabled = false;
 }
 
+function clearSet() {
+  document.getElementById("pSetVisualOutput").textContent = "";
+  document.getElementById("clearSetButton").disabled = true;
+}
+
+// Clear the visualization when button is clicked
+document.getElementById("clearSetButton").addEventListener("click", clearSet);
+
+// Power Set Functionality
 document.getElementById('createPowSet').addEventListener("click", () => {
     document.getElementById('visualPowSet').disabled = false;
     }
 )
 
-// Clear the visualization when button is clicked
-document.getElementById("clearSetButton").addEventListener("click", clearSet);
-
-function clearSet() {
-    document.getElementById("pSetVisualOutput").textContent = "";
-    document.getElementById("clearSetButton").disabled = true;
-}
+// document.getElementById("visualPowSet").addEventListener("click", displayAll(powSet));
