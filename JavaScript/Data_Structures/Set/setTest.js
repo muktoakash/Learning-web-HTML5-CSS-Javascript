@@ -69,7 +69,6 @@ function pushItem() {
     displayForm(null, success);
     if (success === true) {
         document.getElementById("pSetInsert").innerText = `${item} was inserted.`;
-        document.getElementById("visualPowSet").disabled = true;
     } else {
         document.getElementById("pSetInsert").innerText = `${item} was already in Set.`;
     }
@@ -85,7 +84,6 @@ function popItem() {
     displayForm(item, success);
     if (success === true) {
         document.getElementById("pSetRemove").innerText = `${item} was Removed.`;
-        document.getElementById("visualPowSet").disabled = true;
     } else {
       document.getElementById(
         "pSetRemove"
@@ -106,6 +104,10 @@ const displayForm = (popped=null, success=false) => {
         document.getElementById("popSet").placeholder = "Remove Item from Set";
 
     }
+    if (success === true) {
+            document.getElementById("visualPowSet").disabled = true;
+            powSet.destroy();
+    }
     document.getElementById("pushSet").value = "";
     document.getElementById("pushSet").placeholder = "Insert Item to Set";
     document.getElementById("pSetInsert").innerText= "";
@@ -114,13 +116,18 @@ const displayForm = (popped=null, success=false) => {
 // Display all items in the Set when button is clicked
 document.getElementById("allSetButton").addEventListener("click", displayAll);
 
-function displayAll() {
-    var allItems = newSet.setAsText();
+function displayAll(set = newSet) {
+    var allItems = set.setAsText();
     // alert(`${allItems}`);
 
     document.getElementById("pSetVisualOutput").textContent = allItems;
     document.getElementById("clearSetButton").disabled = false;
 }
+
+document.getElementById('createPowSet').addEventListener("click", () => {
+    document.getElementById('visualPowSet').disabled = false;
+    }
+)
 
 // Clear the visualization when button is clicked
 document.getElementById("clearSetButton").addEventListener("click", clearSet);
