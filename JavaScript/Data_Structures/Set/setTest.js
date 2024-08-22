@@ -137,9 +137,10 @@ document.getElementById('createPowSet').addEventListener("click", () => {
     }
 )
 
-document.getElementById("visualPowSet").addEventListener("click", () =>
+document.getElementById("visualPowSet").addEventListener("click", () => {
     document.getElementById("clearVisPowSet").disabled = false;
     displayPowSet();
+}
 );
 
 function displayPowSet() {
