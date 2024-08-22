@@ -105,9 +105,7 @@ const displayForm = (popped=null, success=false) => {
 
     }
     if (success === true) {
-        document.getElementById("visualPowSet").disabled = true;
-        powSet.destroy();
-        document.getElementById("pBisPowSet").innerText = "";
+        resetPowSet();
     }
     document.getElementById("pushSet").value = "";
     document.getElementById("pushSet").placeholder = "Insert Item to Set";
@@ -139,4 +137,21 @@ document.getElementById('createPowSet').addEventListener("click", () => {
     }
 )
 
-// document.getElementById("visualPowSet").addEventListener("click", displayAll(powSet));
+document.getElementById("visualPowSet").addEventListener("click", () =>
+    document.getElementById("clearVisPowSet").disabled = false;
+    displayPowSet();
+);
+
+function displayPowSet() {
+    var allItems = powSet.setAsText();
+    // alert(`${allItems}`);
+
+    document.getElementById("pVisPowSet").textContent = allItems;
+}
+
+function resetPowSet() {
+    document.getElementById("visualPowSet").disabled = true;
+    powSet.destroy();
+    document.getElementById("pBisPowSet").innerText = "";
+    document.getElementById("clearVisPowSet").disabled = true;
+}
