@@ -106,6 +106,7 @@ const displayForm = (popped=null, success=false) => {
     }
     if (success === true) {
         resetPowSet();
+        clearSet();
     }
     document.getElementById("pushSet").value = "";
     document.getElementById("pushSet").placeholder = "Insert Item to Set";
@@ -153,6 +154,6 @@ function displayPowSet() {
 function resetPowSet() {
     document.getElementById("visualPowSet").disabled = true;
     powSet.destroy();
-    document.getElementById("pBisPowSet").innerText = "";
+    document.getElementById("pVisPowSet").innerText = "";
     document.getElementById("clearVisPowSet").disabled = true;
 }
