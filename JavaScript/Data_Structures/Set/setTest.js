@@ -154,6 +154,12 @@ function displayPowSet() {
 function resetPowSet() {
     document.getElementById("visualPowSet").disabled = true;
     powSet.destroy();
-    document.getElementById("pVisPowSet").innerText = "";
-    document.getElementById("clearVisPowSet").disabled = true;
+    clearPowSet()
+}
+
+document.getElementById("clearVisPowSet").addEventListener("click", clearPowSet);
+
+function clearPowSet() {
+  document.getElementById("pVisPowSet").textContent = "";
+  document.getElementById("clearVisPowSet").disabled = true;
 }
