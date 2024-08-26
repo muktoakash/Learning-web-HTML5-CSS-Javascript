@@ -79,9 +79,9 @@ class SetOfStrings {
     // Must contain every subset of this
     // All contents are string representations of sets
 
-    powSet = new SetofStrings(); // Set to return
+    var powSet = new SetOfStrings(); // Set to return
 
-    empSet = new SetofStrings(); // empty set
+    var empSet = new SetOfStrings(); // empty set
 
     powSet.add(empSet.setAsText());
 
@@ -89,13 +89,14 @@ class SetOfStrings {
 
     // Create all possible subsets using helper function
     const n = this.getSize();
-    for (const element of listElements){
-
-        for(var i = 0; i< n-1; i++) {
-          currentItemSet = nGenSet(i, element); //subsets of size i with element
-          powSet.enterList(currentItemSet.getAll()); // Add all these subsets
+    if (n >= 1) {
+      for (const element of listElements) {
+        // for (var i = 0; i < n - 1; i++) {
+        //   currentItemSet = nGenSet(i, element); //subsets of size i with element
+        //   powSet.enterList(currentItemSet.getAll()); // Add all these subsets
+        }
       }
-    }
+
 
     powSet.add(this.setAsText());
 

@@ -145,6 +145,7 @@ document.getElementById("visualPowSet").addEventListener("click", () => {
 );
 
 function displayPowSet() {
+    powSet = newSet.powerSet();
     var allItems = powSet.setAsText();
     // alert(`${allItems}`);
 
