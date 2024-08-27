@@ -91,11 +91,12 @@ class SetOfStrings {
     const n = this.getSize();
     if (n >= 1) {
       for (const element of listElements) {
-        // for (var i = 0; i < n - 1; i++) {
-        //   currentItemSet = nGenSet(i, element); //subsets of size i with element
-        //   powSet.enterList(currentItemSet.getAll()); // Add all these subsets
+        for (var i = 0; i < n - 1; i++) {
+          var currentItemSet = this.nGenSet(i, element); //subsets of size i with element
+          powSet.enterList(currentItemSet.getAll()); // Add all these subsets
         }
       }
+    }
 
 
     powSet.add(this.setAsText());
@@ -186,19 +187,19 @@ class SetOfStrings {
     }
 
 
-    var retSet = new SetofStrings();
+    var retSet = new SetOfStrings();
 
-    listElements = this.getAll();
+    const listElements = this.getAll();
 
     for (var j = 0; j < n - size; j++) {
-      var setToAdd = new SetofStrings();
+      var setToAdd = new SetOfStrings();
       setToAdd.add(item); // Put current item in
 
-      elemsToAdd = listElements.slice(j, j + size);
+      var elemsToAdd = listElements.slice(j, j + size);
 
       setToAdd.enterList(elemsToAdd);
 
-      retSet.add(setToAdd.setAsText);
+      retSet.add(setToAdd.setAsText());
     }
 
     return retSet;
@@ -216,7 +217,7 @@ class SetOfStrings {
   }
 
   enterList(listElements) {
-    for (element of listElements) {
+    for (var element of listElements) {
       this.add(element);
     }
   }
