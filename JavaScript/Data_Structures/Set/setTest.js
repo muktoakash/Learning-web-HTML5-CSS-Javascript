@@ -155,7 +155,7 @@ function displayPowSet() {
 function resetPowSet() {
     document.getElementById("visualPowSet").disabled = true;
     powSet.destroy();
-    clearPowSet()
+    clearPowSet();
 }
 
 document.getElementById("clearVisPowSet").addEventListener("click", clearPowSet);

@@ -87,12 +87,15 @@ class SetOfStrings {
 
     const listElements = this.getAll() // list of elements
 
+    var listSet = new Array(); // list of all sets in the Power Set
+    listSet.push(empSet);
+
     // Create all possible subsets using helper function
     const n = this.getSize();
     if (n >= 1) {
       for (const element of listElements) {
         for (var i = 0; i < n - 1; i++) {
-          var currentItemSet = this.nGenSet(i, element); //subsets of size i with element
+          var currentItemSet = this.nGenSet(i, element, listSet); //subsets of size i with element
           powSet.enterList(currentItemSet.getAll()); // Add all these subsets
         }
       }
@@ -170,13 +173,15 @@ class SetOfStrings {
     return (setA.isSubset(setB) && setB.isSubset(setA));
   }
 
-  nGenSet(size, item) {
+  nGenSet(size, item, currList) {
     // Generate all size-subsets of this
     // containing given element
     // Sometimes the return would be size-1 subset,
     // which ruins a small amount of efficiency,
     // but something that will be ignored at this point.
     //  May be fixed on a later date
+
+    // side-effect: modifies currList
 
     const n = this.getSize();
 
@@ -199,9 +204,21 @@ class SetOfStrings {
 
       setToAdd.enterList(elemsToAdd);
 
-      retSet.add(setToAdd.setAsText());
-    }
+      var toAdd = true;
 
+      const k = setToAdd.getSize();
+
+      for (let currSet of currList) {
+        if (currSet.getSize() === k) {
+          toAdd = !SetOfStrings.setEqual(currSet, setToAdd);
+        }
+      }
+
+      if (toAdd) {
+        currList.push(setToAdd);
+        retSet.add(setToAdd.setAsText());
+      }
+    }
     return retSet;
   }
 
