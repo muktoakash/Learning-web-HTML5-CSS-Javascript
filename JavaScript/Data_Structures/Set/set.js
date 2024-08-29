@@ -173,7 +173,7 @@ class SetOfStrings {
     return (setA.isSubset(setB) && setB.isSubset(setA));
   }
 
-  nGenSet(size, item, currList) {
+  nGenSet(size, currList) {
     // Generate all size-subsets of this
     // containing given element
     // Sometimes the return would be size-1 subset,
@@ -184,6 +184,31 @@ class SetOfStrings {
     // side-effect: modifies currList
 
     const n = this.getSize();
+
+    const listElements = this.getAll();
+
+    let listSets = new Array();
+
+    // Rewrite: requires n >= 1
+    if (n === 1) {
+      for (let i = 0; i < n; i++) {
+        listSets[i] = new SetOfStrings();
+        listSets[i].add()
+      }
+    } else {
+      const num_sets_yet = listSets.length;
+      const newList = new Array();
+      newList = this.nGenSet(size - 1, currList);
+      const num_new_sets = newList.length;
+      for (let i = 0; i < num_sets_yet; i++){
+        for (let j = 0; j < num_new_sets; j++) {
+          listSets[i + j + num_sets_yet] = SetOfStrings.union(listSets[i], newList[j]);
+        }
+      }
+      return listSets;
+
+    }
+
 
     // Input validation
     if (size >= n) {
