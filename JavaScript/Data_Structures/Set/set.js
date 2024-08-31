@@ -80,29 +80,36 @@ class SetOfStrings {
     // All contents are string representations of sets
 
     var powSet = new SetOfStrings(); // Set to return
-
     var empSet = new SetOfStrings(); // empty set
-
-    powSet.add(empSet.setAsText());
-
-    const listElements = this.getAll() // list of elements
-
     var listSet = new Array(); // list of all sets in the Power Set
-    listSet.push(empSet);
 
     // Create all possible subsets using helper function
     const n = this.getSize();
     if (n >= 1) {
-      for (const element of listElements) {
-        for (var i = 0; i < n - 1; i++) {
-          var currentItemSet = this.nGenSet(i, element, listSet); //subsets of size i with element
-          powSet.enterList(currentItemSet.getAll()); // Add all these subsets
-        }
-      }
+      listSet = this.nGenSet(n);
     }
 
+    listSet.push(empSet);
+    listSet.push(this);
 
-    powSet.add(this.setAsText());
+    // Build the powerset
+    const k = listSet.length;
+    let toAdd = true;
+
+    for (let i = 0; i < k; i++) {
+      curr_size = listSet[i].getSize();
+      for (let j = 0; j < i; j++) {
+        toAdd = (toAdd) && !(listSet[j].getSize() === curr_size) && (!SetOfStrings.setEqual(listSet[j], listSet[i]));
+        if (toAdd === false) {
+          break;
+        }
+      }
+      if (toAdd === false) {
+        continue;
+      } else {
+        powSet.add(listSet[i].setAsText);
+      }
+    }
 
     return powSet
   }
@@ -173,7 +180,7 @@ class SetOfStrings {
     return (setA.isSubset(setB) && setB.isSubset(setA));
   }
 
-  nGenSet(size, currList) {
+  nGenSet(size) {
     // Generate all size-subsets of this
     // containing given element
     // Sometimes the return would be size-1 subset,
@@ -185,66 +192,37 @@ class SetOfStrings {
 
     const n = this.getSize();
 
+    // Input validation
+    if (size >= n) {
+      alert("size out of bounds;");
+      return "none";
+    }
+
     const listElements = this.getAll();
 
     let listSets = new Array();
 
     // Rewrite: requires n >= 1
-    if (n === 1) {
+    if (size === 1) {
       for (let i = 0; i < n; i++) {
         listSets[i] = new SetOfStrings();
-        listSets[i].add()
+        listSets[i].add(listElements[i]);
       }
     } else {
       const num_sets_yet = listSets.length;
       const newList = new Array();
-      newList = this.nGenSet(size - 1, currList);
+      newList = this.nGenSet(size - 1);
       const num_new_sets = newList.length;
-      for (let i = 0; i < num_sets_yet; i++){
+      for (let i = 0; i < num_sets_yet; i++) {
         for (let j = 0; j < num_new_sets; j++) {
-          listSets[i + j + num_sets_yet] = SetOfStrings.union(listSets[i], newList[j]);
+          listSets[i + j + num_sets_yet] = SetOfStrings.union(
+            listSets[i],
+            newList[j]
+          );
         }
       }
       return listSets;
-
     }
-
-
-    // Input validation
-    if (size >= n) {
-      alert("size out of bounds;")
-        return "none";
-    }
-
-
-    var retSet = new SetOfStrings();
-
-    const listElements = this.getAll();
-
-    for (var j = 0; j < n - size; j++) {
-      var setToAdd = new SetOfStrings();
-      setToAdd.add(item); // Put current item in
-
-      var elemsToAdd = listElements.slice(j, j + size);
-
-      setToAdd.enterList(elemsToAdd);
-
-      var toAdd = true;
-
-      const k = setToAdd.getSize();
-
-      for (let currSet of currList) {
-        if (currSet.getSize() === k) {
-          toAdd = !SetOfStrings.setEqual(currSet, setToAdd);
-        }
-      }
-
-      if (toAdd) {
-        currList.push(setToAdd);
-        retSet.add(setToAdd.setAsText());
-      }
-    }
-    return retSet;
   }
 
   setAll(listElements) {
