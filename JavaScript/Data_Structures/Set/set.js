@@ -89,15 +89,15 @@ class SetOfStrings {
       listSet = this.nGenSet(n);
     }
 
-    listSet.push(empSet);
-    listSet.push(this);
+    // listSet.push(empSet);
+    // listSet.push(this);
 
     // Build the powerset
     const k = listSet.length;
     let toAdd = true;
 
     for (let i = 0; i < k; i++) {
-      curr_size = listSet[i].getSize();
+      const curr_size = listSet[i].getSize();
       for (let j = 0; j < i; j++) {
         toAdd = (toAdd) && !(listSet[j].getSize() === curr_size) && (!SetOfStrings.setEqual(listSet[j], listSet[i]));
         if (toAdd === false) {
@@ -107,7 +107,7 @@ class SetOfStrings {
       if (toAdd === false) {
         continue;
       } else {
-        powSet.add(listSet[i].setAsText);
+        powSet.add(listSet[i].setAsText());
       }
     }
 
@@ -116,6 +116,13 @@ class SetOfStrings {
 
   static union(setA, setB) {
     var unionSet = new SetofStrings();
+    if (setA.getSize() === 0) {
+      return setB;
+    }
+    if (setB.getSize() === 0) {
+      return setA;
+    }
+
     for (item of setA.getAll()) {
       unionSet.add(item);
     }
@@ -128,9 +135,11 @@ class SetOfStrings {
 
   static intersection(setA, setB) {
     var intersectionSet = new SetofStrings();
-    for (item of setA.getAll()) {
-      if (setB.hasElement(item)) {
-        intersectionSet.add(item);
+    if (!(setA.getSize() === 0 || setB.getSize() === 0)) {
+      for (item of setA.getAll()) {
+        if (setB.hasElement(item)) {
+          intersectionSet.add(item);
+        }
       }
     }
 
@@ -193,10 +202,10 @@ class SetOfStrings {
     const n = this.getSize();
 
     // Input validation
-    if (size >= n) {
-      alert("size out of bounds;");
-      return "none";
-    }
+    // if (size >= n) {
+    //   alert("size out of bounds;");
+    //   return "none";
+    // }
 
     const listElements = this.getAll();
 
@@ -210,7 +219,7 @@ class SetOfStrings {
       }
     } else {
       const num_sets_yet = listSets.length;
-      const newList = new Array();
+      var newList = new Array();
       newList = this.nGenSet(size - 1);
       const num_new_sets = newList.length;
       for (let i = 0; i < num_sets_yet; i++) {
