@@ -86,31 +86,33 @@ class SetOfStrings {
     // Create all possible subsets using helper function
     const n = this.getSize();
     if (n >= 1) {
-      listSet = this.nGenSet(n);
-    }
+      var listSet = this.nGenSet(n);
 
-    // listSet.push(empSet);
-    // listSet.push(this);
+      // listSet.push(empSet);
+      // listSet.push(this);
 
-    // Build the powerset
-    const k = listSet.length;
-    let toAdd = true;
+      // Build the powerset
+      console.log(listSet);
+      const k = listSet.length;
+      let toAdd = true;
 
-    for (let i = 0; i < k; i++) {
-      const curr_size = listSet[i].getSize();
-      for (let j = 0; j < i; j++) {
-        toAdd = (toAdd) && !(listSet[j].getSize() === curr_size) && (!SetOfStrings.setEqual(listSet[j], listSet[i]));
+      for (let i = 0; i < k; i++) {
+        const curr_size = listSet[i].getSize();
+        for (let j = 0; j < i; j++) {
+          toAdd = (toAdd) && ((!listSet[j].getSize() === curr_size) ||(!SetOfStrings.setEqual(listSet[j], listSet[i])));
+          if (toAdd === false) {
+            break;
+          }
+        }
         if (toAdd === false) {
-          break;
+          continue;
+        } else {
+          powSet.add(listSet[i].setAsText());
         }
       }
-      if (toAdd === false) {
-        continue;
-      } else {
-        powSet.add(listSet[i].setAsText());
-      }
     }
 
+    powSet.add(empSet.setAsText());
     return powSet
   }
 
@@ -212,15 +214,19 @@ class SetOfStrings {
     let listSets = new Array();
 
     // Rewrite: requires n >= 1
-    if (size === 1) {
+    if ((n - size + 1) === 1) {
       for (let i = 0; i < n; i++) {
         listSets[i] = new SetOfStrings();
         listSets[i].add(listElements[i]);
       }
-    } else {
+    } else if ((n - size + 1) === n) {
+      const num_sets_yet = listSets.length;
+      listSets[num_sets_yet] = this;
+    }
+    else {
       const num_sets_yet = listSets.length;
       var newList = new Array();
-      newList = this.nGenSet(size - 1);
+      newList = this.nGenSet(size - 1, listSets);
       const num_new_sets = newList.length;
       for (let i = 0; i < num_sets_yet; i++) {
         for (let j = 0; j < num_new_sets; j++) {
@@ -230,8 +236,8 @@ class SetOfStrings {
           );
         }
       }
-      return listSets;
     }
+    return listSets;
   }
 
   setAll(listElements) {
