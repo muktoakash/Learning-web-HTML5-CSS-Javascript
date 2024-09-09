@@ -215,14 +215,21 @@ class SetOfStrings {
         }
       }
       else if ((setSize > 1) && (setSize < n)) {
-          var num_sets_yet = listSets.length;
+        const num_sets_yet = listSets.length;
+        var counter = num_sets_yet - 1;
+
+        var newSet = new SetOfStrings();
+
 
           for (let i = 1; i <= n; i++) {
-            while (listSets[num_sets_yet-1].getSize() === setSize - 1) {
-              listSets.push(SetOfStrings.union(listSets[i], listSets[num_sets_yet - 1]));
-              num_sets_yet--;
+            while (listSets[counter].getSize() === setSize - 1) {
+              newSet = SetOfStrings.union(listSets[i], listSets[counter]);
+              if (newSet.getSize() === setSize) {
+                listSets.push(newSet);
+              }
+              counter--;
             }
-            num_sets_yet = listSets.length;
+            counter = num_sets_yet - 1;
           }
       }
       else {
