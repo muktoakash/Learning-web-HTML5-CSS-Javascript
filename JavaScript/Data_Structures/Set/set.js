@@ -80,13 +80,12 @@ class SetOfStrings {
     // All contents are string representations of sets
 
     var powSet = new SetOfStrings(); // Set to return
-    var empSet = new SetOfStrings(); // empty set
+    // var empSet = new SetOfStrings(); // empty set
     var listSet = new Array(); // list of all sets in the Power Set
 
     // Create all possible subsets using helper function
     const n = this.getSize();
-    if (n >= 1) {
-      var listSet = this.nGenSet(n);
+      var listSet = this.nGenSet();
 
       // listSet.push(empSet);
       // listSet.push(this);
@@ -110,14 +109,11 @@ class SetOfStrings {
           powSet.add(listSet[i].setAsText());
         }
       }
-    }
-
-    powSet.add(empSet.setAsText());
     return powSet
   }
 
   static union(setA, setB) {
-    var unionSet = new SetofStrings();
+    var unionSet = new SetOfStrings();
     if (setA.getSize() === 0) {
       return setB;
     }
@@ -125,10 +121,10 @@ class SetOfStrings {
       return setA;
     }
 
-    for (item of setA.getAll()) {
+    for (var item of setA.getAll()) {
       unionSet.add(item);
     }
-    for (item of setB.getAll()) {
+    for (var item of setB.getAll()) {
       unionSet.add(item);
     }
 
@@ -136,9 +132,9 @@ class SetOfStrings {
   }
 
   static intersection(setA, setB) {
-    var intersectionSet = new SetofStrings();
+    var intersectionSet = new SetOfStrings();
     if (!(setA.getSize() === 0 || setB.getSize() === 0)) {
-      for (item of setA.getAll()) {
+      for (var item of setA.getAll()) {
         if (setB.hasElement(item)) {
           intersectionSet.add(item);
         }
@@ -149,7 +145,7 @@ class SetOfStrings {
   }
 
   static AdiffB(setA, setB) {
-    var diffSet = new SetofStrings();
+    var diffSet = new SetOfStrings();
     for (const item of setA.getAll()) {
       if (! setB.hasElement(item)) {
         diffSet.add(item);
@@ -161,7 +157,7 @@ class SetOfStrings {
 
   static cartesianProduct(setA, setB) {
     var newItem ;
-    var newSet = new SetofStrings();
+    var newSet = new SetOfStrings();
     for (const itemA of setA.getAll()){
       for (const itemB of setB.getAll()){
         newItem = `(${itemA}, ${itemB})`;
@@ -191,7 +187,7 @@ class SetOfStrings {
     return (setA.isSubset(setB) && setB.isSubset(setA));
   }
 
-  nGenSet(size) {
+  nGenSet() {
     // Generate all size-subsets of this
     // containing given element
     // Sometimes the return would be size-1 subset,
@@ -203,38 +199,35 @@ class SetOfStrings {
 
     const n = this.getSize();
 
-    // Input validation
-    // if (size >= n) {
-    //   alert("size out of bounds;");
-    //   return "none";
-    // }
-
     const listElements = this.getAll();
 
     let listSets = new Array();
 
-    // Rewrite: requires n >= 1
-    if ((n - size + 1) === 1) {
-      for (let i = 0; i < n; i++) {
-        listSets[i] = new SetOfStrings();
-        listSets[i].add(listElements[i]);
+    for (var setSize = 0; setSize <= n; setSize++) {
+      if (setSize === 0) {
+        const empSet = new SetOfStrings();
+        listSets[0] = empSet;
       }
-    } else if ((n - size + 1) === n) {
-      const num_sets_yet = listSets.length;
-      listSets[num_sets_yet] = this;
-    }
-    else {
-      const num_sets_yet = listSets.length;
-      var newList = new Array();
-      newList = this.nGenSet(size - 1, listSets);
-      const num_new_sets = newList.length;
-      for (let i = 0; i < num_sets_yet; i++) {
-        for (let j = 0; j < num_new_sets; j++) {
-          listSets[i + j + num_sets_yet] = SetOfStrings.union(
-            listSets[i],
-            newList[j]
-          );
+      else if (setSize === 1) {
+        for (let i = 1; i <= n; i++) {
+          listSets[i] = new SetOfStrings();
+          listSets[i].add(listElements[i-1]);
         }
+      }
+      else if ((setSize > 1) && (setSize < n)) {
+          var num_sets_yet = listSets.length;
+
+          for (let i = 1; i <= n; i++) {
+            while (listSets[num_sets_yet-1].getSize() === setSize - 1) {
+              listSets.push(SetOfStrings.union(listSets[i], listSets[num_sets_yet - 1]));
+              num_sets_yet--;
+            }
+            num_sets_yet = listSets.length;
+          }
+      }
+      else {
+          const k = listSets.length;
+          listSets[k] = this;
       }
     }
     return listSets;
