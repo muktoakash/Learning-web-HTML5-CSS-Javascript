@@ -104,6 +104,7 @@ class SetOfStrings {
           }
         }
         if (toAdd === false) {
+          toAdd = true;
           continue;
         } else {
           powSet.add(listSet[i].setAsText());
