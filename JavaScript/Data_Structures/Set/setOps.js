@@ -41,7 +41,16 @@ displayResults = () => {
     BdiffA = SetOfStrings.AdiffB(setB, setA);
     AcrossB = SetOfStrings.cartesianProduct(setA, setB);
 
-    document.querySelector("#setOpsUnion").innerHTML = displaySet(AcupB);
+    document.querySelector("#setOpsUnion").innerHTML = "A" + "&cup;" + "B is " + displaySet(AcupB);
+    document.querySelector("#setOpsIntersection").innerHTML = "A" + "&cap;" + "B is " + displaySet(AcapB);
+    document.querySelector("#setOpsDiff").innerHTML =
+      "<div>A" + "&#8726;" + "B is " + displaySet(AdiffB) + "</div>" +
+        "<div>B" + "&#8726;" + "A is " + displaySet(BdiffA) + "</div>" +
+        "<div>A" + "&#9651;" + "B is " + displaySet(SetOfStrings.union(AdiffB,BdiffA)) + "</div>"
+      ;
+    document.querySelector("#setOpsCart").innerHTML =
+        "<div>" + "A" + "&times;" + "B is " + displaySet(AcrossB) + "</div>" +
+        "<div>" + "B" + "&times;" + "A is " + displaySet(SetOfStrings.cartesianProduct(setB, setA)) + "</div>";
 
 }
 
