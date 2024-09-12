@@ -244,7 +244,9 @@ class SetOfStrings {
 
   enterList(listElements) {
     for (var element of listElements) {
-      this.add(element);
+      if (element !== '') {
+       this.add(element);
+      }
     }
   }
 }
