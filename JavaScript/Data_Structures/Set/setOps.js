@@ -5,9 +5,18 @@ const setA = new SetOfStrings();
 const setB = new SetOfStrings();
 
 document.querySelector("#createSetOps").addEventListener("click", () => {
-    let setAInput = document.getElementById("insertSetA").value;
+    let setAInput = document.querySelector("#insertSetA").value;
     let setAList = setAInput.split(",");
     setAList = setAList.map(x => x.trim());
-    console.log(setAList);
+    setA.enterList(setAList);
+
+    document.querySelector("#setADisp").textContent = "A = " + setA.setAsText();
+
+    let setBInput = document.querySelector("#insertSetB").value;
+    let setBList = setBInput.split(",");
+    setBList = setBList.map(x => x.trim());
+    setB.enterList(setBList);
+
+    document.querySelector("#setBDisp").textContent = "B = " + setB.setAsText();
 }
 )
