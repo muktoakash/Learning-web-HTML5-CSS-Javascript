@@ -79,19 +79,16 @@ class SetOfStrings {
     // Must contain every subset of this
     // All contents are string representations of sets
 
-    var powSet = new SetOfStrings(); // Set to return
-    // var empSet = new SetOfStrings(); // empty set
-    var listSet = new Array(); // list of all sets in the Power Set
+      var powSet = new SetOfStrings(); // Set to return
 
-    // Create all possible subsets using helper function
-    const n = this.getSize();
+      var listSet = new Array(); // list of all sets in the Power Set
+
+      // Create all possible subsets using helper function
+      const n = this.getSize();
       var listSet = this.nGenSet();
 
-      // listSet.push(empSet);
-      // listSet.push(this);
-
       // Build the powerset
-      console.log(listSet);
+      // console.log(listSet);
       const k = listSet.length;
       let toAdd = true;
 
@@ -190,13 +187,6 @@ class SetOfStrings {
 
   nGenSet() {
     // Generate all size-subsets of this
-    // containing given element
-    // Sometimes the return would be size-1 subset,
-    // which ruins a small amount of efficiency,
-    // but something that will be ignored at this point.
-    //  May be fixed on a later date
-
-    // side-effect: modifies currList
 
     const n = this.getSize();
 
