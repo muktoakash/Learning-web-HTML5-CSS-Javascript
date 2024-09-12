@@ -125,8 +125,9 @@ function displayAll() {
 }
 
 function clearSet() {
-  document.getElementById("pSetVisualOutput").textContent = "";
-  document.getElementById("clearSetButton").disabled = true;
+    document.getElementById("pSetVisualOutput").textContent = "";
+    document.getElementById("clearSetButton").disabled = true;
+    resetPowSet();
 }
 
 // Clear the visualization when button is clicked
