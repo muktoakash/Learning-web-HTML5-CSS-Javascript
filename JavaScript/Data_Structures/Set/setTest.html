@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <b id="bCreateSet">Set Creation:</b>
+                <strong id="bCreateSet">Set Creation:</strong>
                 <br>
                 <button type="button" id="createSet">Initialize Empty Set</button>
                 <button type="button" id="destroySet" disabled="true">Delete Current Set</button>
@@ -25,7 +25,7 @@
                 <form action="" id="manipulateSet">
                     <!-- Get current Set size : Automatic-->
                     <p id="pHeightSet">
-                        <label for="heightSet">Current Set Size<Set/label>
+                        <label for="heightSet">Current Set Size</label>
                         <input type="text" id="heightSet" placeholder="Uninitialized Set" name="currSetHeight">
                     </p>
                     <!-- Insert Elements : Button-->
@@ -67,7 +67,42 @@
                     </p>
                 </form>
             </div>
-            <div class="col"></div>
+            <div class="col">
+                <strong>Set Operations:</strong>
+
+                <p id="setOpIntro">Test set union, insersection, difference, Cartesian product, subset and superset relations, set equality.</p>
+                <p id="setUp">Initialize sets A and B by entering a list of elements, each separated be a comma. All whitespaces will be ignored. Duplicate elements will be inserted only on the first instance.</p>
+
+                <form action="" id="setOps">
+                    <p id="pInsertSetA">
+                        <label for="insertSetA">Set A = &#123;</label>
+                        <input type="text" id="setA" placeholder="e.g. a, b, c, etc." name="currSetA">
+                        <span>&#125;.</span>
+                    </p>
+                    <p id="pInsertSetB">
+                        <label for="insertSetB">Set B = &#123;</label>
+                        <input type="text" id="setB" placeholder="e.g. a, b, c, etc." name="currSetB">
+                        <span>&#125;.</span>
+                    </p>
+                    <p id="setOpsVisual">
+                        <button id="createSetOps">Display results of set operations</button>
+                    </p>
+                    <p id="setOpsUnion">
+                    </p>
+                    <p id="setOpsIntersection">
+                    </p>
+                    <p id="setOpsDiff">
+                    </p>
+                    <p id="setOpsCart">
+                    </p>
+                    <p id="setOpsSubset">
+                    </p>
+                    <p id="setOpsSuper">
+                    </p>
+                    <p id="setOpsEqual">
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
 
