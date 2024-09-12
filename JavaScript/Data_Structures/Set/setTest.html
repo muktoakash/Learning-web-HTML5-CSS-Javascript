@@ -12,56 +12,65 @@
 <body>
     <h1 id="hTestSet">Tesing Set Implementation</h1>
 
-    <b id="bCreateSet">Set Creation:</b>
-    <button type="button" id="createSet">Initialize Empty Set</button>
-    <button type="button" id="destroySet" disabled="true">Delete Current Set</button>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <b id="bCreateSet">Set Creation:</b>
+                <br>
+                <button type="button" id="createSet">Initialize Empty Set</button>
+                <button type="button" id="destroySet" disabled="true">Delete Current Set</button>
 
-    <p id="pIntroFormSet"> <span id="remove">Set needs to be initialized. Then</span> <span id="introFormSet">use the form below to insert, remove, visualize, and find the cardinality of the set.</span> </p>
+                <p id="pIntroFormSet"> <span id="remove">Set needs to be initialized. Then</span> <span id="introFormSet">use the form below to insert, remove, visualize, and find the cardinality of the set.</span> </p>
 
-    <form action="" id="manipulateSet">
-        <!-- Get current Set size : Automatic-->
-        <p id="pHeightSet">
-            <label for="heightSet">Current Set Size<Set/label>
-            <input type="text" id="heightSet" placeholder="Uninitialized Set" name="currSetHeight">
-        </p>
-        <!-- Insert Elements : Button-->
-         <p id="pPushSet">
-            <label for="pushSet">Item to insert</label>
-            <input type="text" id="pushSet" placeholder="Uninitialized Set" placeholder="Item" name="pushSetItem">
-            <button type="button" id="pushSetButton" disabled="true">Insert!</button>
-            <p id="pSetInsert"></p>
-        </p>
-        <!-- Peek at Setthe top : Automatic-->
-         <!-- <p id="pPeekSet">
-            <label for="peekSet">Check if item in Set</label>
-            <input type="text" id="top" name="peekSetTop" placeholder="Uninitialized Set">
-        </p> -->
-        <!-- Remove an element : Button-->
-         <p id="pPopSet">
-            <label for="popSet">Remove Set Item</label>
-            <input type="text" id="popSet" placeholder="Uninitialized Set" placeholder="Item" name="popSetItem">
-            <button type="button" id="popSetButton" disabled="true">Remove!</button>
-            <p id="pSetRemove"></p>
-        </p>
-        <!-- Peek at the entire Set : Button-->
-         <p id="pSetVisual">
-            <button type="button" id="allSetButton" disabled="true">Visualize the Entire Set</button>
-            <button type="button" id="clearSetButton" disabled="true">Clear the Visualization</button>
-            <p id="pSetVisualOutput"></p>
-        </p>
+                <form action="" id="manipulateSet">
+                    <!-- Get current Set size : Automatic-->
+                    <p id="pHeightSet">
+                        <label for="heightSet">Current Set Size<Set/label>
+                        <input type="text" id="heightSet" placeholder="Uninitialized Set" name="currSetHeight">
+                    </p>
+                    <!-- Insert Elements : Button-->
+                    <p id="pPushSet">
+                        <label for="pushSet">Item to insert</label>
+                        <input type="text" id="pushSet" placeholder="Uninitialized Set" placeholder="Item" name="pushSetItem">
+                        <button type="button" id="pushSetButton" disabled="true">Insert!</button>
+                        <p id="pSetInsert"></p>
+                    </p>
+                    <!-- Peek at Setthe top : Automatic-->
+                    <!-- <p id="pPeekSet">
+                        <label for="peekSet">Check if item in Set</label>
+                        <input type="text" id="top" name="peekSetTop" placeholder="Uninitialized Set">
+                    </p> -->
+                    <!-- Remove an element : Button-->
+                    <p id="pPopSet">
+                        <label for="popSet">Remove Set Item</label>
+                        <input type="text" id="popSet" placeholder="Uninitialized Set" placeholder="Item" name="popSetItem">
+                        <button type="button" id="popSetButton" disabled="true">Remove!</button>
+                        <p id="pSetRemove"></p>
+                    </p>
+                    <!-- Peek at the entire Set : Button-->
+                    <p id="pSetVisual">
+                        <button type="button" id="allSetButton" disabled="true">Visualize the Entire Set</button>
+                        <button type="button" id="clearSetButton" disabled="true">Clear the Visualization</button>
+                        <p id="pSetVisualOutput"></p>
+                    </p>
 
-        <p id="pPowSet">
-            <h2>A power set based on the current set elements.</h2>
-             Once elements have been successfully added or removed, current powerset will be destroyed and a new one needs to be created.
+                    <p id="pPowSet">
+                        <h2>A power set based on the current set elements.</h2>
+                        Once elements have been successfully added or removed, current powerset will be destroyed and a new one needs to be created.
 
-            <div>
-                <button type="button" id="createPowSet" disabled="true">Create Power Set</button>
-                <button type="button" id="visualPowSet" disabled="true">Visualize the Power Set.</button>
-                <p id="pVisPowSet"></p>
-                <button type="button" id="clearVisPowSet" disabled="true">Clear the Power Set visualization.</button>
+                        <div>
+                            <button type="button" id="createPowSet" disabled="true">Create Power Set</button>
+                            <button type="button" id="visualPowSet" disabled="true">Visualize the Power Set.</button>
+                            <p id="pVisPowSet"></p>
+                            <button type="button" id="clearVisPowSet" disabled="true">Clear the Power Set visualization.</button>
+                        </div>
+                    </p>
+                </form>
             </div>
-        </p>
-    </form>
+            <div class="col"></div>
+        </div>
+    </div>
+
 
      <!-- <script type="module" src="./stackTest.js"></script> -->
       <script src="./set.js"></script>
