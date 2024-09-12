@@ -149,7 +149,9 @@ function displayPowSet() {
     var allItems = powSet.setAsText();
     // alert(`${allItems}`);
 
-    document.getElementById("pVisPowSet").textContent = allItems;
+    const nItems = `The powerset has ${powSet.getSize()} element(s): `;
+
+    document.getElementById("pVisPowSet").innerHTML = nItems + "<br>" + allItems;
 }
 
 function resetPowSet() {
