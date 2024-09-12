@@ -52,6 +52,9 @@ displayResults = () => {
         "<div>" + "A" + "&times;" + "B is " + displaySet(AcrossB) + "</div>" +
         "<div>" + "B" + "&times;" + "A is " + displaySet(SetOfStrings.cartesianProduct(setB, setA)) + "</div>";
 
+    document.querySelector("#setOpsSubset").innerHTML = displayRel("subset");
+    document.querySelector("#setOpsSuper").innerHTML = displayRel("superset");
+    document.querySelector("#setOpsEqual").innerHTML = displayRel("equal to");
 }
 
 displaySet = (resultSet) => {
@@ -60,4 +63,20 @@ displaySet = (resultSet) => {
     } else {
         return resultSet.setAsText();
     }
+}
+
+displayRel = (relation) => {
+    var decider = "";
+    var modifier = " of";
+    if ((relation === "subset") && (!setA.isSubset(setB))) {
+        decider = "not ";
+    } else if ((relation === "superset") && (!setA.isSuperSet(setB))) {
+        decider = "not ";
+    } else if ((relation === "equal to") && (!SetOfStrings.setEqual(setA, setB))) {
+        decider = "not ";
+        modifier = "";
+    } else if (relation === "equal to") {
+        modifier = "";
+    }
+    return "A is " + decider + relation + modifier + " B";
 }
