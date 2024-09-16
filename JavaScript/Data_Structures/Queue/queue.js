@@ -4,8 +4,8 @@
 class Queue{
 
     constructor() {
-        this.collection = [];
-        this.size = 0;
+        var this.collection = [];
+        var this.size = 0;
     }
 
     enqueue = (element) => {
@@ -28,5 +28,19 @@ class Queue{
 
     isEmpty = () => {
         return (this.getSize() === 0);
+    }
+
+    print = () => {
+        var retString = "FRONT : "
+        var count = 0;
+        for (var elem of this.collection) {
+            retString += `${elem}`;
+            if (count < this.getSize() - 1) {
+                retString += " -> ";
+            } else {
+                retString += " : END";
+            }
+        }
+        return retString;
     }
 }
