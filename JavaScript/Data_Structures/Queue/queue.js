@@ -4,8 +4,8 @@
 class Queue{
 
     constructor() {
-        var this.collection = [];
-        var this.size = 0;
+        this.collection = [];
+        this.size = 0;
     }
 
     enqueue = (element) => {
