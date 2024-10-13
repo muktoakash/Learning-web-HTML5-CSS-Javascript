@@ -47,16 +47,33 @@ class Queue{
 
 class PriorityQueue(){
     var collection = [];
+    var size = 0;
 
     printPQ = () => {
 
     }
 
-    enque = () => {
+    enque = (element) => {
+        if (this.empty()) {
+            this.collection.push(element);
+        } else {
+            var added = false;
+            for (var i = 0; i < this.collection.length; i++) {
+                if (element[1] < collection[i][1]) { // checking priorities
+                    this.collection.splice(i, 0, element);
+                    added = true;
+                    break;
+                }
+            }
+            if (!added) {
+                this.collection.push(element);
+            }
+        }
+        this.size += 1;
 
     }
 
     dequeue = () => {
-        
+
     }
 }
