@@ -30,7 +30,7 @@ class Queue{
         return (this.getSize() === 0);
     }
 
-    print = () => {
+    printQueue = () => {
         var retString = "FRONT : "
         var count = 0;
         for (var elem of this.collection) {
@@ -42,5 +42,21 @@ class Queue{
             }
         }
         return retString;
+    }
+}
+
+class PriorityQueue(){
+    var collection = [];
+
+    printPQ = () => {
+
+    }
+
+    enque = () => {
+
+    }
+
+    dequeue = () => {
+        
     }
 }
