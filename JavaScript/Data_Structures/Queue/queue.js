@@ -1,5 +1,6 @@
 // ./queue.js
 // Queue and Priority Queue data structure
+// Using JSON for Priority Queue to make it more interesting
 
 class Queue{
 
@@ -46,14 +47,32 @@ class Queue{
 }
 
 class PriorityQueue(){
-    var collection = [];
+    /* Priority Queue PQ implemented using JavaScript Object.
+    The keys are the priorities, the values are the items.
+    Unlike an approach that may use a list of tuples, where
+    the adding needs to be queued by prioriy, here the priority
+    is maintained separately be sorting a list of keys. This may
+    not make much of a performance difference (except for enqueue),
+    but this is my appraoch cause I found it more interesting. */
+
+    var collection = {}; // Using a JS object for the PQ
     var size = 0;
+    var sorted_priorities = [];
+
+    isPQEmpty = () => {
+        return this.size === 0;
+    }
 
     printPQ = () => {
+        if (isPQEmpty()) {
+            return "The Queue is empty."
+        }
 
     }
 
     enque = (element) => {
+        const item_key = element[1];
+        const item_value = element[0]
         if (this.empty()) {
             this.collection.push(element);
         } else {
