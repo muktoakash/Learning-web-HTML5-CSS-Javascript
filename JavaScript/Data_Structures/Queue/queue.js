@@ -64,7 +64,7 @@ class PriorityQueue(){
     }
 
     printPQ = () => {
-        if (isPQEmpty()) {
+        if (this.isPQEmpty()) {
             return "The Queue is empty."
         }
 
@@ -73,7 +73,7 @@ class PriorityQueue(){
     enque = (element) => {
         const item_key = element[1];
         const item_value = element[0]
-        if (this.empty()) {
+        if (this.isPQempty()) {
             this.collection.push(element);
         } else {
             var added = false;
