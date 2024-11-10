@@ -59,6 +59,19 @@ class PriorityQueue(){
     var size = 0;
     var sorted_priorities = [];
 
+    function prioritiesAddAndSort(item_key) {
+        /* Use insertion sort to sort the keys
+        Require: item_key >= 0 (not asserted)*/
+        const index = this.sorted_priorities.indexOf(item_key);
+        if (index === -1 && this.sorted_priorities.length > 0) {
+            var i = this.sorted_priorities.length - 1;
+            while (item_key > sorted_priorities[i] && i > 0) {
+                i -= 1;
+            }
+            this.sorted_priorities.splice(i + 1, 0, item_key);
+        }
+    }
+
     isPQEmpty = () => {
         return this.size === 0;
     }
@@ -73,23 +86,13 @@ class PriorityQueue(){
     enque = (element) => {
         const item_key = element[1];
         const item_value = element[0]
-        if (this.isPQempty()) {
-            this.collection.push(element);
+        if (sorted_priorities.indexOf(item_key) === -1) {
+            this.collection[item_key] = [item_value];
         } else {
-            var added = false;
-            for (var i = 0; i < this.collection.length; i++) {
-                if (element[1] < collection[i][1]) { // checking priorities
-                    this.collection.splice(i, 0, element);
-                    added = true;
-                    break;
-                }
-            }
-            if (!added) {
-                this.collection.push(element);
-            }
+            this.collection[item_key].push(item_value);
         }
         this.size += 1;
-
+        this.sorted_priorities
     }
 
     dequeue = () => {
