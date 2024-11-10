@@ -85,14 +85,21 @@ class PriorityQueue(){
 
     enque = (element) => {
         const item_key = element[1];
-        const item_value = element[0]
+        const item_value = element[0];
         if (this.sorted_priorities.indexOf(item_key) === -1) {
-            this.collection[item_key] = [item_value];
-            this.prioritiesAddAndSort(item_key);
+
         } else {
             this.collection[item_key].push(item_value);
         }
-        this.size += 1;
+        if (this.collection[item_key] === undefined) {
+            this.collection[item_key] = [item_value];
+            this.prioritiesAddAndSort(item_key);
+            this.size += 1;
+        } else if (this.collection[item_key].indexOf(item_value) === -1) {
+            this.collection[item_key].push(item_value);
+            this.prioritiesAddAndSort(item_key);
+            this.size += 1;
+        }
     }
 
     dequeue = () => {
