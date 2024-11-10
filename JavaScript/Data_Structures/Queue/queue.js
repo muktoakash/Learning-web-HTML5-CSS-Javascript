@@ -76,21 +76,40 @@ class PriorityQueue(){
         return this.size === 0;
     }
 
+    isItemPresent = (element) => {
+        const item_key = element[1];
+        const item_value = element[0];
+        if (this.collection[item_key] === undefined;
+            || this.collection[item_key].indexOf(item_value) === -1) {
+            return false;
+        }
+        return true;
+    }
+
     printPQ = () => {
         if (this.isPQEmpty()) {
             return "The Queue is empty."
         }
-
+        var ret_text = "";
+        ret_text = ret_text + "Priorities    |    Items\n";
+        ret_text = ret_text + "------------------------\n";
+        var count = 0;
+        for (var priority of this.sorted_priorities) {
+            ret_text += `${priority}    |    `;
+            for (var item_value of this.collection[priority]) {
+                ret_text += `${item_value},`;
+            }
+            count += 1;
+            if (count !== this.sorted_priorities.length) {
+                ret_text += "\n";
+            }
+        }
+        return ret_text;
     }
 
     enque = (element) => {
         const item_key = element[1];
         const item_value = element[0];
-        if (this.sorted_priorities.indexOf(item_key) === -1) {
-
-        } else {
-            this.collection[item_key].push(item_value);
-        }
         if (this.collection[item_key] === undefined) {
             this.collection[item_key] = [item_value];
             this.prioritiesAddAndSort(item_key);
