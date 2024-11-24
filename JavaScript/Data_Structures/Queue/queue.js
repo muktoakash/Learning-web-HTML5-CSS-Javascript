@@ -11,7 +11,8 @@ class Queue{
 
     destroy = () => {
         // Resets the queue, not the same as freeing the memory.
-        this.constructor();
+        this.collection = [];
+        this.size = 0;
     }
 
     enqueue = (element) => {
@@ -50,6 +51,7 @@ class Queue{
             } else {
                 retString += " : END";
             }
+            count++;
         }
         return retString;
     }
