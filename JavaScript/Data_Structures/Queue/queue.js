@@ -55,9 +55,11 @@ class PriorityQueue(){
     not make much of a performance difference (except for enqueue),
     but this is my appraoch cause I found it more interesting. */
 
-    var collection = {}; // Using a JS object for the PQ
-    var size = 0;
-    var sorted_priorities = [];
+    constructor(){
+        var collection = {}; // Using a JS object for the PQ
+        var size = 0;
+        var sorted_priorities = [];
+    }
 
     function prioritiesAddAndSort(item_key) {
         /* Use insertion sort to sort the keys
