@@ -9,6 +9,11 @@ class Queue{
         this.size = 0;
     }
 
+    destructor = () => {
+        // Resets the queue, not the same as freeing the memory.
+        this.constructor();
+    }
+
     enqueue = (element) => {
         this.collection.push(element);
         this.size++;
