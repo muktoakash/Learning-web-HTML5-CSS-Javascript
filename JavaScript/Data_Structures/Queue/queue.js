@@ -9,7 +9,7 @@ class Queue{
         this.size = 0;
     }
 
-    destructor = () => {
+    destroy = () => {
         // Resets the queue, not the same as freeing the memory.
         this.constructor();
     }
