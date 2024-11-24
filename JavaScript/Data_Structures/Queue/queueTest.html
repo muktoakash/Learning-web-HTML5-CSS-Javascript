@@ -20,25 +20,25 @@
     <form action="" id="manipulateQueue">
         <!-- Get current Queue height : Automatic-->
         <p id="pHeightQueue">
-            <label for="heightQueue">Current Queue Height<Queue/label>
+            <label for="heightQueue">Current Queue Size<Queue/label>
             <input type="text" id="heightQueue" placeholder="Uninitialized Queue" name="currQueueHeight">
         </p>
         <!-- Push Queue Elements : Button-->
          <p id="pPushQueue">
-            <label for="pushQueue">Item to push</label>
+            <label for="pushQueue">Item to push to the back</label>
             <input type="text" id="pushQueue" placeholder="Uninitialized Queue" placeholder="Item" name="pushQueueItem">
-            <button type="button" id="pushQueueButton" disabled="true">Push!</button>
+            <button type="button" id="pushQueueButton" disabled="true">Enqueue!</button>
         </p>
         <!-- Peek at the top : Automatic-->
          <p id="pPeekQueue">
-            <label for="peekQueue">Peek at the top item</label>
+            <label for="peekQueue">Peek at the front item</label>
             <input type="text" id="top" name="peekQueueTop" placeholder="Uninitialized Queue">
         </p>
         <!-- Pop an element : Button-->
          <p id="pPopQueue">
-            <label for="popQueue">Pop the most recent Queue item</label>
+            <label for="popQueue">Serve the front Queue item</label>
             <input type="text" id="popQueue" placeholder="Uninitialized Queue" placeholder="Item" name="popQueueItem">
-            <button type="button" id="popQueueButton" disabled="true">Pop!</button>
+            <button type="button" id="popQueueButton" disabled="true">Deque!</button>
         </p>
         <!-- Peek at the entire Queue : Button-->
          <p id="pQueueVisual">
