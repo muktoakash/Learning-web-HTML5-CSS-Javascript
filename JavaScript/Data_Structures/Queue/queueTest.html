@@ -6,50 +6,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesing Stack</title>
+    <title>Tesing Queue</title>
 </head>
 <body>
-    <h1 id="hTestStack">Tesing Queue Implementation</h1>
+    <h1 id="hTestQueue">Tesing Queue Implementation</h1>
 
-    <b id="bCreateStack">Stack Creation:</b>
-    <button type="button" id="createStack">Initialize Empty Stack</button>
-    <button type="button" id="destroyStack" disabled="true">Destroy Current Stack</button>
+    <b id="bCreateQueue">Queue Creation:</b>
+    <button type="button" id="createQueue">Initialize Empty Queue</button>
+    <button type="button" id="destroyQueue" disabled="true">Destroy Current Queue</button>
 
-    <p id="pIntroFormStack"> <span id="remove">Stack needs to be initialized. Then</span> <span id="introFormStack">use the form below to push, pop, peek, and find the height of the stack.</span> </p>
+    <p id="pIntroFormQueue"> <span id="remove">Queue needs to be initialized. Then</span> <span id="introFormQueue">use the form below to push, pop, peek, and find the height of the queue.</span> </p>
 
-    <form action="" id="manipulateStack">
-        <!-- Get current Stack height : Automatic-->
-        <p id="pHeightStack">
-            <label for="heightStack">Current Stack Height<Stack/label>
-            <input type="text" id="heightStack" placeholder="Uninitialized Stack" name="currStackHeight">
+    <form action="" id="manipulateQueue">
+        <!-- Get current Queue height : Automatic-->
+        <p id="pHeightQueue">
+            <label for="heightQueue">Current Queue Height<Queue/label>
+            <input type="text" id="heightQueue" placeholder="Uninitialized Queue" name="currQueueHeight">
         </p>
-        <!-- Push Stack Elements : Button-->
-         <p id="pPushStack">
-            <label for="pushStack">Item to push</label>
-            <input type="text" id="pushStack" placeholder="Uninitialized Stack" placeholder="Item" name="pushStackItem">
-            <button type="button" id="pushStackButton" disabled="true">Push!</button>
+        <!-- Push Queue Elements : Button-->
+         <p id="pPushQueue">
+            <label for="pushQueue">Item to push</label>
+            <input type="text" id="pushQueue" placeholder="Uninitialized Queue" placeholder="Item" name="pushQueueItem">
+            <button type="button" id="pushQueueButton" disabled="true">Push!</button>
         </p>
         <!-- Peek at the top : Automatic-->
-         <p id="pPeekStack">
-            <label for="peekStack">Peek at the top item</label>
-            <input type="text" id="top" name="peekStackTop" placeholder="Uninitialized Stack">
+         <p id="pPeekQueue">
+            <label for="peekQueue">Peek at the top item</label>
+            <input type="text" id="top" name="peekQueueTop" placeholder="Uninitialized Queue">
         </p>
         <!-- Pop an element : Button-->
-         <p id="pPopStack">
-            <label for="popStack">Pop the most recent Stack item</label>
-            <input type="text" id="popStack" placeholder="Uninitialized Stack" placeholder="Item" name="popStackItem">
-            <button type="button" id="popStackButton" disabled="true">Pop!</button>
+         <p id="pPopQueue">
+            <label for="popQueue">Pop the most recent Queue item</label>
+            <input type="text" id="popQueue" placeholder="Uninitialized Queue" placeholder="Item" name="popQueueItem">
+            <button type="button" id="popQueueButton" disabled="true">Pop!</button>
         </p>
-        <!-- Peek at the entire Stack : Button-->
-         <p id="pStackVisual">
-            <button type="button" id="allStackButton" disabled="true">Visualize the Entire Stack</button>
-            <button type="button" id="clearStackButton" disabled="true">Clear the Visualization</button>
-            <p id="pStackVisualOutput"></p>
+        <!-- Peek at the entire Queue : Button-->
+         <p id="pQueueVisual">
+            <button type="button" id="allQueueButton" disabled="true">Visualize the Entire Queue</button>
+            <button type="button" id="clearQueueButton" disabled="true">Clear the Visualization</button>
+            <p id="pQueueVisualOutput"></p>
         </p>
     </form>
 
-     <!-- <script type="module" src="./stackTest.js"></script> -->
-      <script src="./stack.js"></script>
-     <script src="./stackTest.js"></script>
+     <!-- <script type="module" src="./queueTest.js"></script> -->
+      <script src="./queue.js"></script>
+     <script src="./queueTest.js"></script>
 </body>
 </html>
