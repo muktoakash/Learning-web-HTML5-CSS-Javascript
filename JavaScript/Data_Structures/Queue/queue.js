@@ -15,16 +15,19 @@ class Queue{
     }
 
     enqueue = (element) => {
+        // pushes an element to the back of the queue
         this.collection.push(element);
         this.size++;
     }
 
     dequeue = (element) => {
+        // Pops element from the front of the queue
         this.size--;
         return this.collection.shift();
     }
 
     front = () => {
+        // Displays element at the front of the queue
         return this.collection[0];
     }
 
@@ -37,6 +40,7 @@ class Queue{
     }
 
     printQueue = () => {
+        // Prints the queue in a pretty format
         var retString = "FRONT : "
         var count = 0;
         for (var elem of this.collection) {
