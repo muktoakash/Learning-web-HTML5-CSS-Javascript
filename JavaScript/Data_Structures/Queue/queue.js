@@ -55,7 +55,7 @@ class Queue{
     }
 }
 
-class PriorityQueue(){
+class PriorityQueue{
     /* Priority Queue PQ implemented using JavaScript Object.
     The keys are the priorities, the values are the items.
     Unlike an approach that may use a list of tuples, where
@@ -70,7 +70,7 @@ class PriorityQueue(){
         var sorted_priorities = [];
     }
 
-    function prioritiesAddAndSort(item_key) {
+    prioritiesAddAndSort = (item_key)  => {
         /* Use insertion sort to sort the keys
         Require: item_key >= 0 (not asserted)*/
         const index = this.sorted_priorities.indexOf(item_key);
@@ -90,7 +90,7 @@ class PriorityQueue(){
     isItemPresent = (element) => {
         const item_key = element[1];
         const item_value = element[0];
-        if (this.collection[item_key] === undefined;
+        if (this.collection[item_key] === undefined
             || this.collection[item_key].indexOf(item_value) === -1) {
             return false;
         }
