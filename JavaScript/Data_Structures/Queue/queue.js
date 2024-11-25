@@ -67,9 +67,9 @@ class PriorityQueue{
     but this is my appraoch cause I found it more interesting. */
 
     constructor(){
-        var collection = {}; // Using a JS object for the PQ
-        var size = 0;
-        var sorted_priorities = [];
+        var this.collection = {}; // Using a JS object for the PQ
+        var this.size = 0;
+        var this.sorted_priorities = [];
     }
 
     prioritiesAddAndSort = (item_key)  => {
@@ -78,7 +78,7 @@ class PriorityQueue{
         const index = this.sorted_priorities.indexOf(item_key);
         if (index === -1 && this.sorted_priorities.length > 0) {
             var i = this.sorted_priorities.length - 1;
-            while (item_key > sorted_priorities[i] && i > 0) {
+            while (item_key > this.sorted_priorities[i] && i > 0) {
                 i -= 1;
             }
             this.sorted_priorities.splice(i + 1, 0, item_key);
