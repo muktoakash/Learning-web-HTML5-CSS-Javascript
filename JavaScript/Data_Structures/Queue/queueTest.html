@@ -65,18 +65,24 @@
         </p>
         <!-- Push PQ Elements : Button-->
          <p id="pPushPQ">
-            <label for="pushPQ">Item to push into place according to priority.</label>
+            Item to push into place according to priority.
+            <label for="pushPQ"><strong>Item: </strong></label>
             <input type="text" id="pushPQ" placeholder="Uninitialized PQ" placeholder="Item" name="pushPQItem">
+            <label for="pushPriority"><strong>Priority Level: </strong></label>
+            <input type="text" id="pushPriority" placeholder="Uninitialized PQ" placeholder="Priority" name="pushPQPriority">
             <button type="button" id="pushPQButton" disabled="true">Enqueue!</button>
         </p>
         <!-- Peek at the top : Automatic-->
          <p id="pPeekPQ">
-            <label for="peekPQ">Peek at the front item and top priority value</label>
+            Peek at the front item and top priority value
+            <label for="peekPQ"><strong>Item</strong></label>
             <input type="text" id="top" name="peekPQTop" placeholder="Uninitialized PQ">
+            <label for="peekPriority"><strong>Top-priority Level:</strong></label>
+            <input type="text" id="topPriority" name="peekPQTopPriority" placeholder="Uninitialized PQ">
         </p>
         <!-- Pop an element : Button-->
          <p id="pPopPQ">
-            <label for="popPQ">Serve the front Priority Queue item</label>
+            <label for="popPQ">Serve the top Priority Queue item</label>
             <input type="text" id="popPQ" placeholder="Uninitialized PQ" placeholder="Item" name="popPQItem">
             <button type="button" id="popPQButton" disabled="true">Dequeue!</button>
         </p>
