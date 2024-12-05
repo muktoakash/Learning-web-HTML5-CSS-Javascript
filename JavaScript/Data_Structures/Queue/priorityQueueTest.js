@@ -21,7 +21,7 @@ var count = 0;
 
 function PQcreation() {
   if (count == 0) {
-    document.getElementById("remove").style.display = "none";
+    document.getElementById("PQremove").style.display = "none";
   }
   count++;
 
@@ -37,7 +37,7 @@ function PQcreation() {
 }
 
 // Destroy the PQ when button is clicked
-document.getElementById("destroyPQ").addEventListener("click", destruction);
+document.getElementById("destroyPQ").addEventListener("click", PQdestruction);
 
 function PQdestruction() {
   newPQ.destroy();
