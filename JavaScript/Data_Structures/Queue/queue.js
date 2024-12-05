@@ -78,6 +78,10 @@ class PriorityQueue{
         this.sorted_priorities = [];
     }
 
+    getSize() {
+        return this.size;
+    }
+
     prioritiesAddAndSort = (item_key)  => {
         /* Use insertion sort to sort the keys
         Require: item_key >= 0 (not asserted)*/

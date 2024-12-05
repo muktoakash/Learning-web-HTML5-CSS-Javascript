@@ -33,7 +33,7 @@ function PQcreation() {
   document.getElementById("allPQButton").disabled = false;
   document.getElementById("createPQ").disabled = true;
 
-  displayForm();
+  displayPQForm();
 }
 
 // Destroy the PQ when button is clicked
