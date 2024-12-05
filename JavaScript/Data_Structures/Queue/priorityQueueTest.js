@@ -76,11 +76,12 @@ const displayPQForm = (popped = null) => {
   var height = newPQ.getSize();
   if (height === 0) {
     document.getElementById("heightPQ").value = height;
-    document.getElementById("top").value = "Empty PQ";
+    document.getElementById("topPQ").value = "Empty PQ";
+    document.getElementById("topPriority").value = "Empty PQ";
     document.getElementById("popPQ").value = "Empty PQ";
   } else {
     document.getElementById("heightPQ").value = height;
-    document.getElementById("top").value = newPQ.front();
+    document.getElementById("topPQ").value = newPQ.front();
     if (popped !== null) {
       document.getElementById("popPQ").value = popped;
     } else {
@@ -90,6 +91,8 @@ const displayPQForm = (popped = null) => {
   }
   document.getElementById("pushPQ").value = "";
   document.getElementById("pushPQ").placeholder = "Push Item to PQ";
+  document.getElementById("pushPriority").placeholder = "Default: 1";
+
 };
 
 // Display all items in the PQ when button is clicked
