@@ -67,9 +67,9 @@ class PriorityQueue{
     but this is my appraoch cause I found it more interesting. */
 
     constructor(){
-        var this.collection = {}; // Using a JS object for the PQ
-        var this.size = 0;
-        var this.sorted_priorities = [];
+        this.collection = {}; // Using a JS object for the PQ
+        this.size = 0;
+        this.sorted_priorities = [];
     }
 
     prioritiesAddAndSort = (item_key)  => {

@@ -1,114 +1,114 @@
 // queueTest.js
-// Does unit test on the Queue data structure in queue.js
+// Does unit test on the PriorityQueue data structure in queue.js
 // with the help of queueTest.html for visualization
 
 // Import
-// import { Queue } from "./queue.js";
+// import { PriortyQueue } from "./queue.js";
 
 // Global Variables
-let newQueue = new Queue();
-const txt = document.getElementById("introFormQueue").textContent;
+let newPQ = new PriorityQueue();
+const PQtxt = document.getElementById("introFormPQ").textContent;
 
 // window.onload = creation();
 
-// Create a new Queue when button is pushed
-let createButton = document.getElementById("createQueue");
-createButton.addEventListener("click", () => {
-  creation();
+// Create a new PQ when button is pushed
+let createPQButton = document.getElementById("createPQ");
+createPQButton.addEventListener("click", () => {
+  PQcreation();
 });
 
 var count = 0;
 
-function creation() {
+function PQcreation() {
   if (count == 0) {
     document.getElementById("remove").style.display = "none";
   }
   count++;
 
-  newTxt = "An empty Queue has been initialized. Now " + txt;
-  document.getElementById("pIntroFormQueue").innerText = newTxt;
-  document.getElementById("destroyQueue").disabled = false;
-  document.getElementById("pushQueueButton").disabled = false;
-  document.getElementById("popQueueButton").disabled = false;
-  document.getElementById("allQueueButton").disabled = false;
-  document.getElementById("createQueue").disabled = true;
+  var newPQTxt = "An empty PQ has been initialized. Now " + PQtxt;
+  document.getElementById("pIntroFormPQ").innerText = newPQTxt;
+  document.getElementById("destroyPQ").disabled = false;
+  document.getElementById("pushPQButton").disabled = false;
+  document.getElementById("popPQButton").disabled = false;
+  document.getElementById("allPQButton").disabled = false;
+  document.getElementById("createPQ").disabled = true;
 
   displayForm();
 }
 
-// Destroy the Queue when button is clicked
-document.getElementById("destroyQueue").addEventListener("click", destruction);
+// Destroy the PQ when button is clicked
+document.getElementById("destroyPQ").addEventListener("click", destruction);
 
-function destruction() {
-  newQueue.destroy();
-  newTxt = "Queue has been destroyed. Create a new Queue. Then " + txt;
-  document.getElementById("pIntroFormQueue").innerText = newTxt;
-  document.getElementById("createQueue").disabled = false;
-  document.getElementById("destroyQueue").disabled = true;
-  document.getElementById("pushQueueButton").disabled = true;
-  document.getElementById("popQueueButton").disabled = true;
-  document.getElementById("allQueueButton").disabled = true;
+function PQdestruction() {
+  newPQ.destroy();
+  newPQTxt = "PQ has been destroyed. Create a new PQ. Then " + PQtxt;
+  document.getElementById("pIntroFormPQ").innerText = newPQTxt;
+  document.getElementById("createPQ").disabled = false;
+  document.getElementById("destroyPQ").disabled = true;
+  document.getElementById("pushPQButton").disabled = true;
+  document.getElementById("popPQButton").disabled = true;
+  document.getElementById("allPQButton").disabled = true;
 
   // Reset the form;
-  document.getElementById("manipulateQueue").reset();
-  clearQueue();
+  document.getElementById("manipulatePQ").reset();
+  clearPQ();
 }
 
-// Push an item to the Queue when button is clicked
-document.getElementById("pushQueueButton").addEventListener("click", pushItem);
+// Push an item to the PQ when button is clicked
+document.getElementById("pushPQButton").addEventListener("click", pushItem);
 
-function pushItem() {
-  var item = document.getElementById("pushQueue").value;
-  newQueue.enqueue(item);
+function pushPQItem() {
+  var item = document.getElementById("pushPQ").value;
+  newPQ.enqueue(item);
   displayForm();
 }
 
-// Pop an item from the Queue when button is clicked
-document.getElementById("popQueueButton").addEventListener("click", popItem);
+// Pop an item from the PQ when button is clicked
+document.getElementById("popPQButton").addEventListener("click", popItem);
 
-function popItem() {
-  const item = newQueue.dequeue();
+function popPQItem() {
+  const item = newPQ.dequeue();
   displayForm(item);
 }
 
 // Dynamically display the form with the current state of the queue
-const displayForm = (popped = null) => {
-  var height = newQueue.getSize();
+const displayPQForm = (popped = null) => {
+  var height = newPQ.getSize();
   if (height === 0) {
-    document.getElementById("heightQueue").value = height;
-    document.getElementById("top").value = "Empty Queue";
-    document.getElementById("popQueue").value = "Empty Queue";
+    document.getElementById("heightPQ").value = height;
+    document.getElementById("top").value = "Empty PQ";
+    document.getElementById("popPQ").value = "Empty PQ";
   } else {
-    document.getElementById("heightQueue").value = height;
-    document.getElementById("top").value = newQueue.front();
+    document.getElementById("heightPQ").value = height;
+    document.getElementById("top").value = newPQ.front();
     if (popped !== null) {
-      document.getElementById("popQueue").value = popped;
+      document.getElementById("popPQ").value = popped;
     } else {
-      document.getElementById("popQueue").value = "";
-      document.getElementById("popQueue").placeholder = "Pop Item from Queue";
+      document.getElementById("popPQ").value = "";
+      document.getElementById("popPQ").placeholder = "Pop Item from PQ";
     }
   }
-  document.getElementById("pushQueue").value = "";
-  document.getElementById("pushQueue").placeholder = "Push Item to Queue";
+  document.getElementById("pushPQ").value = "";
+  document.getElementById("pushPQ").placeholder = "Push Item to PQ";
 };
 
-// Display all items in the Queue when button is clicked
-document.getElementById("allQueueButton").addEventListener("click", displayAll);
+// Display all items in the PQ when button is clicked
+document.getElementById("allPQButton").addEventListener("click", displayAll);
 
-function displayAll() {
+function displayPQAll() {
   var allItems = "";
-  allItems += newQueue.printQueue();
+  allItems += newPQ.printPQ();
 
-  document.getElementById("pQueueVisualOutput").textContent = allItems;
-  document.getElementById("clearQueueButton").disabled = false;
+  document.getElementById("pPQVisualOutput").textContent = allItems;
+  document.getElementById("clearPQButton").disabled = false;
 }
 
 // Clear the visualization when button is clicked
 document
-  .getElementById("clearQueueButton")
-  .addEventListener("click", clearQueue);
+  .getElementById("clearPQButton")
+  .addEventListener("click", clearPQ);
 
-function clearQueue() {
-  document.getElementById("pQueueVisualOutput").textContent = "";
-  document.getElementById("clearQueueButton").disabled = true;
+function clearPQ() {
+  document.getElementById("pPQVisualOutput").textContent = "";
+  document.getElementById("clearPQButton").disabled = true;
 }

@@ -25,7 +25,7 @@ function creation() {
   }
   count++;
 
-  newTxt = "An empty Queue has been initialized. Now " + txt;
+  var newTxt = "An empty Queue has been initialized. Now " + txt;
   document.getElementById("pIntroFormQueue").innerText = newTxt;
   document.getElementById("destroyQueue").disabled = false;
   document.getElementById("pushQueueButton").disabled = false;
