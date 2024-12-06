@@ -59,12 +59,13 @@ class Queue{
 
 class PriorityQueue{
     /* Priority Queue PQ implemented using JavaScript Object.
-    The keys are the priorities, the values are the items.
+    The keys are the priorities, the values are queues of the items
+    for a given priority.
     Unlike an approach that may use a list of tuples, where
     the adding needs to be queued by prioriy, here the priority
     is maintained separately be sorting a list of keys. This may
     not make much of a performance difference (except for enqueue),
-    but this is my appraoch cause I found it more interesting. */
+    but this is my approach cause I found it more interesting. */
 
     constructor(){
         this.collection = {}; // Using a JS object for the PQ
@@ -93,6 +94,7 @@ class PriorityQueue{
             }
             this.sorted_priorities.splice(i + 1, 0, item_key);
         }
+        return index;
     }
 
     isPQEmpty = () => {
@@ -119,9 +121,7 @@ class PriorityQueue{
         var count = 0;
         for (var priority of this.sorted_priorities) {
             ret_text += `${priority}    |    `;
-            for (var item_value of this.collection[priority]) {
-                ret_text += `${item_value},`;
-            }
+            this.collection[priority].printQueue();
             count += 1;
             if (count !== this.sorted_priorities.length) {
                 ret_text += "\n";
@@ -133,14 +133,17 @@ class PriorityQueue{
     enque = (element) => {
         const item_key = element[1];
         const item_value = element[0];
+        let idx = 1;
         if (this.collection[item_key] === undefined) {
-            this.collection[item_key] = [item_value];
-            this.prioritiesAddAndSort(item_key);
+            this.collection[item_key] = new Queue();
+            this.collection[item_key].enqueue(item_value);
+            idx = this.prioritiesAddAndSort(item_key);
             this.size += 1;
         } else if (this.collection[item_key].indexOf(item_value) === -1) {
             this.collection[item_key].push(item_value);
-            this.prioritiesAddAndSort(item_key);
+            idx = this.prioritiesAddAndSort(item_key);
             this.size += 1;
+            return idx;
         }
     }
 
@@ -148,8 +151,8 @@ class PriorityQueue{
         if (!this.isPQEmpty()) {
             const item_key = this.sorted_priorities[0];
             // if more than one item at that priority, return the latest.
-            const item_value = this.collection[item_key].pop();
-            if (this.collection[item_key].length === 0) {
+            const item_value = this.collection[item_key].dequeue();
+            if (this.collection[item_key].getSize() === 0) {
                 // No more items left at this priority
                 this.sorted_priorities.shift();
             }
