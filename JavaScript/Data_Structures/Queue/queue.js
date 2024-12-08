@@ -135,7 +135,7 @@ class PriorityQueue{
         return ret_text;
     }
 
-    enque = (element) => {
+    enqueue = (element) => {
         const item_key = element[1];
         const item_value = element[0];
         let idx = 1;
