@@ -55,16 +55,24 @@ function PQdestruction() {
 }
 
 // Push an item to the PQ when button is clicked
-document.getElementById("pushPQButton").addEventListener("click", pushItem);
+document.getElementById("pushPQButton").addEventListener("click", pushPQItem);
 
 function pushPQItem() {
   var item = document.getElementById("pushPQ").value;
-  newPQ.enqueue(item);
-  displayForm();
+  var priority = document.getElementById("pushPriority").value;
+  if (priority == "") {
+    priority = 1;
+  } else {
+    priority = parseInt(priority);
+  }
+  console.log(item);
+  console.log(priority);
+  newPQ.enqueue([item, priority]);
+  displayPQForm();
 }
 
 // Pop an item from the PQ when button is clicked
-document.getElementById("popPQButton").addEventListener("click", popItem);
+document.getElementById("popPQButton").addEventListener("click", popPQItem);
 
 function popPQItem() {
   const item = newPQ.dequeue();
@@ -73,15 +81,17 @@ function popPQItem() {
 
 // Dynamically display the form with the current state of the queue
 const displayPQForm = (popped = null) => {
-  var height = newPQ.getSize();
-  if (height === 0) {
-    document.getElementById("heightPQ").value = height;
+  var PQheight = newPQ.getSize();
+  if (PQheight === 0) {
+    document.getElementById("heightPQ").value = PQheight;
     document.getElementById("topPQ").value = "Empty PQ";
     document.getElementById("topPriority").value = "Empty PQ";
     document.getElementById("popPQ").value = "Empty PQ";
   } else {
-    document.getElementById("heightPQ").value = height;
-    document.getElementById("topPQ").value = newPQ.front();
+    document.getElementById("heightPQ").value = PQheight;
+    var topPrior = newPQ.sorted_priorities[0];
+    document.getElementById("topPQ").value = newPQ.collection[topPrior].front();
+    document.getElementById("topPriority").value = topPrior;
     if (popped !== null) {
       document.getElementById("popPQ").value = popped;
     } else {
