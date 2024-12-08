@@ -106,16 +106,6 @@ class PriorityQueue{
         return this.getSize() === 0;
     }
 
-    isItemPresent = (element) => {
-        const item_key = element[1];
-        const item_value = element[0];
-        if (this.collection[item_key] === undefined
-            || this.collection[item_key].indexOf(item_value) === -1) {
-            return false;
-        }
-        return true;
-    }
-
     printPQ = () => {
         if (this.isPQEmpty()) {
             return "The Queue is empty."
