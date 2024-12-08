@@ -139,8 +139,8 @@ class PriorityQueue{
             this.collection[item_key].enqueue(item_value);
             idx = this.prioritiesAddAndSort(item_key);
             this.size += 1;
-        } else if (this.collection[item_key].indexOf(item_value) === -1) {
-            this.collection[item_key].push(item_value);
+        } else {
+            this.collection[item_key].enqueue(item_value);
             idx = this.prioritiesAddAndSort(item_key);
             this.size += 1;
             return idx;
