@@ -65,8 +65,6 @@ function pushPQItem() {
   } else {
     priority = parseInt(priority);
   }
-  console.log(item);
-  console.log(priority);
   newPQ.enqueue([item, priority]);
   displayPQForm();
 }

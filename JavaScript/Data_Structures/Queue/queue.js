@@ -92,14 +92,13 @@ class PriorityQueue{
             index = 0;
             return index;
         }
-        if (index === -1 && this.sorted_priorities.length > 0) {
+        else if (index === -1 && this.sorted_priorities.length > 0) {
             var i = this.sorted_priorities.length - 1;
             while (item_key > this.sorted_priorities[i] && i > 0) {
                 i -= 1;
             }
             this.sorted_priorities.splice(i + 1, 0, item_key);
         }
-        return index;
     }
 
     isPQEmpty = () => {
@@ -133,13 +132,11 @@ class PriorityQueue{
         if (this.collection[item_key] === undefined) {
             this.collection[item_key] = new Queue();
             this.collection[item_key].enqueue(item_value);
-            idx = this.prioritiesAddAndSort(item_key);
             this.size += 1;
         } else {
             this.collection[item_key].enqueue(item_value);
             idx = this.prioritiesAddAndSort(item_key);
             this.size += 1;
-            return idx;
         }
     }
 
