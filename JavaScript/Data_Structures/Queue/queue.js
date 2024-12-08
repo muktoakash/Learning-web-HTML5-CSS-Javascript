@@ -145,13 +145,14 @@ class PriorityQueue{
 
     dequeue = () => {
         if (!this.isPQEmpty()) {
-            const item_key = this.sorted_priorities[0];
+            const item_key = this.sorted_priorities[this.sorted_priorities.length - 1];
             // if more than one item at that priority, return the latest.
             const item_value = this.collection[item_key].dequeue();
             if (this.collection[item_key].getSize() === 0) {
                 // No more items left at this priority
                 this.sorted_priorities.shift();
             }
+            this.size--;
             return item_value;
         }
         // trying to dequeue from an empty PQ results in undefined.
