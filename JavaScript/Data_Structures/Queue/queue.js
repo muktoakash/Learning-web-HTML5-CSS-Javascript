@@ -114,7 +114,7 @@ class PriorityQueue{
         ret_text = ret_text + "Priorities    |    Items<br>";
         ret_text = ret_text + "------------------------<br>";
         var count = 0;
-        for (var priority of this.sorted_priorities) {
+        for (var priority of this.sorted_priorities.reverse()) {
             ret_text +=
               `${priority}` + " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |";
             ret_text += this.collection[priority].printQueue();
