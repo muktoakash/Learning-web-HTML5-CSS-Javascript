@@ -86,7 +86,12 @@ class PriorityQueue{
     prioritiesAddAndSort = (item_key)  => {
         /* Use insertion sort to sort the keys
         Require: item_key >= 0 (not asserted)*/
-        const index = this.sorted_priorities.indexOf(item_key);
+        let index = this.sorted_priorities.indexOf(item_key);
+        if (this.sorted_priorities.length === 0) {
+            this.sorted_priorities.push(item_key);
+            index = 0;
+            return index;
+        }
         if (index === -1 && this.sorted_priorities.length > 0) {
             var i = this.sorted_priorities.length - 1;
             while (item_key > this.sorted_priorities[i] && i > 0) {
