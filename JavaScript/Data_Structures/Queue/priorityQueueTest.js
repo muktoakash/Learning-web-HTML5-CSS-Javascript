@@ -106,13 +106,13 @@ const displayPQForm = (popped = null) => {
 };
 
 // Display all items in the PQ when button is clicked
-document.getElementById("allPQButton").addEventListener("click", displayAll);
+document.getElementById("allPQButton").addEventListener("click", displayPQAll);
 
 function displayPQAll() {
-  var allItems = "";
-  allItems += newPQ.printPQ();
+  var allPQItems = "";
+  allPQItems += newPQ.printPQ();
 
-  document.getElementById("pPQVisualOutput").textContent = allItems;
+  document.getElementById("pPQVisualOutput").innerHTML = allPQItems;
   document.getElementById("clearPQButton").disabled = false;
 }
 
