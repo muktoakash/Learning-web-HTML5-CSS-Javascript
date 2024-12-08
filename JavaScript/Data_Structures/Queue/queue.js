@@ -103,7 +103,7 @@ class PriorityQueue{
     }
 
     isPQEmpty = () => {
-        return this.size === 0;
+        return this.getSize() === 0;
     }
 
     isItemPresent = (element) => {
@@ -121,15 +121,15 @@ class PriorityQueue{
             return "The Queue is empty."
         }
         var ret_text = "";
-        ret_text = ret_text + "Priorities    |    Items\n";
-        ret_text = ret_text + "------------------------\n";
+        ret_text = ret_text + "Priorities    |    Items<br>";
+        ret_text = ret_text + "------------------------<br>";
         var count = 0;
         for (var priority of this.sorted_priorities) {
             ret_text += `${priority}    |    `;
             this.collection[priority].printQueue();
             count += 1;
             if (count !== this.sorted_priorities.length) {
-                ret_text += "\n";
+                ret_text += "<br>";
             }
         }
         return ret_text;
