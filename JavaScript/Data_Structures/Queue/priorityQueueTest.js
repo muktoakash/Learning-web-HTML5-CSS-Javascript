@@ -105,6 +105,7 @@ const displayPQForm = (popped = null) => {
   }
   document.getElementById("pushPQ").value = "";
   document.getElementById("pushPQ").placeholder = "Push Item to PQ";
+  document.getElementById("pushPriority").value = "";
   document.getElementById("pushPriority").placeholder = "Default: 1";
 
 };
