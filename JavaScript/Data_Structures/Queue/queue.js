@@ -89,12 +89,10 @@ class PriorityQueue{
         let index = this.sorted_priorities.indexOf(item_key);
         if (this.sorted_priorities.length === 0) {
             this.sorted_priorities.push(item_key);
-            index = 0;
-            return index;
         }
         else if (index === -1 && this.sorted_priorities.length > 0) {
             var i = this.sorted_priorities.length - 1;
-            while (item_key > this.sorted_priorities[i] && i > 0) {
+            while (item_key < this.sorted_priorities[i] && i > 0) {
                 i -= 1;
             }
             this.sorted_priorities.splice(i + 1, 0, item_key);
@@ -128,14 +126,14 @@ class PriorityQueue{
     enqueue = (element) => {
         const item_key = element[1];
         const item_value = element[0];
-        let idx = 1;
         if (this.collection[item_key] === undefined) {
+            this.prioritiesAddAndSort(item_key);
             this.collection[item_key] = new Queue();
             this.collection[item_key].enqueue(item_value);
             this.size += 1;
         } else {
             this.collection[item_key].enqueue(item_value);
-            idx = this.prioritiesAddAndSort(item_key);
+            this.prioritiesAddAndSort(item_key);
             this.size += 1;
         }
     }
@@ -147,7 +145,7 @@ class PriorityQueue{
             const item_value = this.collection[item_key].dequeue();
             if (this.collection[item_key].getSize() === 0) {
                 // No more items left at this priority
-                this.sorted_priorities.shift();
+                this.sorted_priorities.pop();
             }
             this.size--;
             return item_value;
