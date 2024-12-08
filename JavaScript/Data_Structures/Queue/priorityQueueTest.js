@@ -76,7 +76,7 @@ document.getElementById("popPQButton").addEventListener("click", popPQItem);
 
 function popPQItem() {
   const item = newPQ.dequeue();
-  displayForm(item);
+  displayPQForm(item);
 }
 
 // Dynamically display the form with the current state of the queue
@@ -86,10 +86,14 @@ const displayPQForm = (popped = null) => {
     document.getElementById("heightPQ").value = PQheight;
     document.getElementById("topPQ").value = "Empty PQ";
     document.getElementById("topPriority").value = "Empty PQ";
-    document.getElementById("popPQ").value = "Empty PQ";
+    if (popped !== null) {
+      document.getElementById("popPQ").value = popped;
+    } else {
+      document.getElementById("popPQ").value = "Empty PQ";
+    }
   } else {
     document.getElementById("heightPQ").value = PQheight;
-    var topPrior = newPQ.sorted_priorities[0];
+    var topPrior = newPQ.sorted_priorities[newPQ.sorted_priorities.length - 1];
     document.getElementById("topPQ").value = newPQ.collection[topPrior].front();
     document.getElementById("topPriority").value = topPrior;
     if (popped !== null) {
