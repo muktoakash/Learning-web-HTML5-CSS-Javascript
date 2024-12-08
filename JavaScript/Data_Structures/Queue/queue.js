@@ -125,8 +125,9 @@ class PriorityQueue{
         ret_text = ret_text + "------------------------<br>";
         var count = 0;
         for (var priority of this.sorted_priorities) {
-            ret_text += `${priority}    |    `;
-            this.collection[priority].printQueue();
+            ret_text +=
+              `${priority}` + " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |";
+            ret_text += this.collection[priority].printQueue();
             count += 1;
             if (count !== this.sorted_priorities.length) {
                 ret_text += "<br>";
