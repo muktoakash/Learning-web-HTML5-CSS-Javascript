@@ -6,6 +6,7 @@ const btn = document.getElementById("buttonSearch");
 const input = document.getElementById("inputSearch");
 const listMovies = document.getElementById("imageList");
 const clearButton = document.getElementById("clear")
+const pDisplay = document.getElementById("results")
 
 // Event handler for search button
 btn.addEventListener('click', async () => {
@@ -14,7 +15,7 @@ btn.addEventListener('click', async () => {
         clearDisplay();
 
         data = await getMoviesData(searchTerm);
-        displayUpdate(data);
+        displayUpdate(data, searchTerm);
     }
     catch (e) {
         console.log(e);
@@ -39,7 +40,8 @@ async function getMoviesData(searchTerm) {
 }
 
 // display modifier function
-displayUpdate = (data) => {
+displayUpdate = (data, searchTerm) => {
+    pDisplay.innerHTML = `Now showing results for <strong>${searchTerm}</strong>: <br>`;
     for (title of data) {
         var listItem = document.createElement('LI');
         var imageItem = document.createElement('IMG');
@@ -54,7 +56,8 @@ displayUpdate = (data) => {
 // Reset display
 clearDisplay = () => {
     input.value = "";
-    listMovies.innerHTML = "<ul></ul>"
+    pDisplay.innerHTML = "";
+    listMovies.innerHTML = "<ul></ul>";
 }
 
 // Add event handler for clear button
