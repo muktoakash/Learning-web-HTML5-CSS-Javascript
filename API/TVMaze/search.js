@@ -10,6 +10,7 @@ const listMovies = document.getElementById("imageList")
 btn.addEventListener('click', async () => {
     try {
         const searchTerm = input.value;
+        clearDisplay();
 
         data = await getMoviesData(searchTerm);
         displayUpdate(data);
@@ -46,7 +47,11 @@ displayUpdate = (data) => {
             listItem.append(imageItem);
             listMovies.append(listItem);
         }
-
     }
+}
 
+// Reset display
+clearDisplay = () => {
+    input.value = "";
+    listMovies.innerHTML = "<ul></ul>"
 }
