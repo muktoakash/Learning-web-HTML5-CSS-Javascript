@@ -38,5 +38,15 @@ async function getMoviesData(searchTerm) {
 
 // display modifier function
 displayUpdate = (data) => {
+    for (title of data) {
+        var listItem = document.createElement('LI');
+        var imageItem = document.createElement('IMG');
+        if (title.show.image) {
+            imageItem.src = title.show.image.medium;
+            listItem.append(imageItem);
+            listMovies.append(listItem);
+        }
+
+    }
 
 }
