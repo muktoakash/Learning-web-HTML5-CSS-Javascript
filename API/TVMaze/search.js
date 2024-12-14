@@ -7,10 +7,34 @@ const input = document.getElementById("inputSearch");
 
 // Event handler for button
 btn.addEventListener('click', async () => {
-    const searchTerm = input.value;
+    try {
+        const searchTerm = input.value;
+
+        data = await getMoviesData(searchTerm);
+        displayUpdate(data);
+    }
+    catch (e) {
+        console.log(e);
+    }
+
 
 })
 
 // async function to handle API
+async function getMoviesData(searchTerm) {
+    try {
+        resp = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
+        return resp.data;
+    }
+    catch (e) {
+        console.log('Trouble getting Movies')
+        return null;
+    }
+
+
+}
 
 // display modifier function
+displayUpdate = (data) => {
+
+}
