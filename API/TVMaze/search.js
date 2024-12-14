@@ -4,9 +4,10 @@
 // Select form elements
 const btn = document.getElementById("buttonSearch");
 const input = document.getElementById("inputSearch");
-const listMovies = document.getElementById("imageList")
+const listMovies = document.getElementById("imageList");
+const clearButton = document.getElementById("clear")
 
-// Event handler for button
+// Event handler for search button
 btn.addEventListener('click', async () => {
     try {
         const searchTerm = input.value;
@@ -55,3 +56,6 @@ clearDisplay = () => {
     input.value = "";
     listMovies.innerHTML = "<ul></ul>"
 }
+
+// Add event handler for clear button
+clearButton.addEventListener('click', clearDisplay)
