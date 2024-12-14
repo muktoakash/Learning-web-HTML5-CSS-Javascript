@@ -43,9 +43,9 @@ async function getMoviesData(searchTerm) {
 displayUpdate = (data, searchTerm) => {
     pDisplay.innerHTML = `Now showing results for <strong>${searchTerm}</strong>: <br>`;
     for (title of data) {
-        var listItem = document.createElement('LI');
-        var imageItem = document.createElement('IMG');
         if (title.show.image) {
+            var listItem = document.createElement("LI");
+            var imageItem = document.createElement("IMG");
             imageItem.src = title.show.image.medium;
             listItem.append(imageItem);
             listMovies.append(listItem);
