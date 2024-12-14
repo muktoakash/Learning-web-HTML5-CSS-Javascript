@@ -4,6 +4,7 @@
 // Select form elements
 const btn = document.getElementById("buttonSearch");
 const input = document.getElementById("inputSearch");
+const listMovies = document.getElementById("imageList")
 
 // Event handler for button
 btn.addEventListener('click', async () => {
@@ -23,7 +24,8 @@ btn.addEventListener('click', async () => {
 // async function to handle API
 async function getMoviesData(searchTerm) {
     try {
-        resp = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
+        const config = { params: { q: searchTerm } };
+        resp = await axios.get(`https://api.tvmaze.com/search/shows`, config)
         return resp.data;
     }
     catch (e) {
