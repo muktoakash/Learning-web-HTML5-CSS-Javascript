@@ -1,4 +1,4 @@
-// ./queue.js
+// Queue/queue.js
 // Queue and Priority Queue data structure
 // Using JSON for Priority Queue to make it more interesting
 

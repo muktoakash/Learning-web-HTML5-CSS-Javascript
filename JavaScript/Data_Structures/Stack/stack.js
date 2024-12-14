@@ -1,3 +1,5 @@
+// Stack/stacke.js
+
 class Stack {
     constructor() {
         this.size = 0;

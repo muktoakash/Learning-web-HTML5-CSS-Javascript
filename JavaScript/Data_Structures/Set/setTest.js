@@ -1,4 +1,4 @@
-// stackTest.js
+// Set/stackTest.js
 // Does unit test on the Set data structure in stack.js
 // with the help of stackTest.html for visualization
 

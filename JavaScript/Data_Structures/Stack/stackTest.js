@@ -1,4 +1,4 @@
-// stackTest.js
+// Stack/stackTest.js
 // Does unit test on the Stack data structure in stack.js
 // with the help of stackTest.html for visualization
 
@@ -20,14 +20,14 @@ createButton.addEventListener("click", () => {
 var count = 0;
 
 function creation() {
-    
+
 
     if (count == 0) {
         document.getElementById("remove").style.display = "none";
     }
     count++;
-    
-    
+
+
     newTxt = "An empty Stack has been initialized. Now " + txt;
     document.getElementById("pIntroFormStack").innerText = newTxt;
     document.getElementById("destroyStack").disabled = false;
@@ -109,7 +109,7 @@ function displayAll() {
     document.getElementById("clearStackButton").disabled = false;
 }
 
-// Clear the visualization when button is clicked   
+// Clear the visualization when button is clicked
 document.getElementById("clearStackButton").addEventListener("click", clearStack);
 
 function clearStack() {

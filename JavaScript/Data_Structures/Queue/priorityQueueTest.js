@@ -1,4 +1,4 @@
-// queueTest.js
+// Queue/queueTest.js
 // Does unit test on the PriorityQueue data structure in queue.js
 // with the help of queueTest.html for visualization
 
