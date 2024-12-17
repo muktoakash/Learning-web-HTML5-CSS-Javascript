@@ -17,14 +17,8 @@ class BST {
     constructor(root = null) {
         var this.root = root;
     }
-    add(data) {
-        const node = this.root;
-        if (node == null) {
-            this.root = new Node(data);
-            return;
-        }
-        else {
-            const searchTree = function (node) {
+
+    const searchTree = function (node) {
                 if (data < node.data) {
                     if (node.left === null) {
                         node.left = new Node(data);
@@ -45,7 +39,15 @@ class BST {
                 else {
                     return null;
                 }
-            };
+    };
+
+    add = (data) => {
+        const node = this.root;
+        if (node == null) {
+            this.root = new Node(data);
+            return;
+        }
+        else {
             return searchTree(node);
         }
     }
