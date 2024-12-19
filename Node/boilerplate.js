@@ -8,7 +8,10 @@ const projectName = process.argv[2] || 'Project';
 const fs = require('fs');
 
 try {
-
+    fs.mkdirSync(projectName);
+    fs.writeFile(`${projectName}/${projectName}.html`)
+    fs.writeFile(`${projectName}/${projectName}.css`)
+    fs.writeFile(`${projectName}/${projectName}.js`)
 }
 catch (e) {
     console.log(e);
