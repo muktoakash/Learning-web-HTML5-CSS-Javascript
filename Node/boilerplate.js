@@ -9,9 +9,9 @@ const fs = require('fs');
 
 try {
     fs.mkdirSync(projectName);
-    fs.writeFile(`${projectName}/${projectName}.html`)
-    fs.writeFile(`${projectName}/${projectName}.css`)
-    fs.writeFile(`${projectName}/${projectName}.js`)
+    fs.writeFileSync(`${projectName}/${projectName}.html`, '')
+    fs.writeFileSync(`${projectName}/${projectName}.css`, '')
+    fs.writeFileSync(`${projectName}/${projectName}.js`, '')
 }
 catch (e) {
     console.log(e);
