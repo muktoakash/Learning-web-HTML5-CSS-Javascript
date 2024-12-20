@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Elements with JavaScript</title>
+    <link rel="stylesheet" href="position.css">
+</head>
+<body>
+    <h1>Positioning Elements</h1>
+    <div id="buttons">
+        <button type="button" name="left" onclick="pos(-1, 0);">Left</button>
+        <button type="button" name="right" onclick="pos(1, 0);">Right</button>
+        <button type="button" name="up" onclick="pos(0, -1);">Up</button>
+        <button type="button" name="down" onclick="pos(0, 1);">Down</button>
+        <button type="button" name="hide" onclick="hideSquare();">Hide</button>
+        <button type="button" name="show" onclick="showSquare();">Show</button>
+    </div>
+    <hr>
+    <div id="square">
+        This square can be moved or hidden.
+    </div>
+
+    <script src="./position.js"></script>
+</body>
+</html>

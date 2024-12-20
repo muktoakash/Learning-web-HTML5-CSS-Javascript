@@ -1,0 +1,31 @@
+div {
+    height: 300px;
+    width: 60%;
+    max-width: 500px;
+    margin: 1rem auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.scroll, .fixed, .local {
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5581c4b2e4b0d4bd126fd4f1/1561495739127-MVTZ3T8VQETHC36G47PY/OurBeautifulAdventure-LakeGarda-Italy-Blog-0737.jpg?format=500w');
+}
+.scroll{
+    background-attachment: scroll;
+}
+.fixed{
+    background-attachment: fixed;
+}
+.local{
+    background-attachment: local;
+}
+
+.inner {
+    width: 100%;
+    height: 600px;
+    overflow-y: hidden;
+}
+
+.addscrollbar {
+    margin-bottom: 50rem;
+}

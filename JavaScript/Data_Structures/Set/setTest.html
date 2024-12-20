@@ -1,0 +1,118 @@
+<!-- Set/setTest.html -->
+<!-- Dynamically creates and manipulates a set to test the SetOfStrings class functionality. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesing Set</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <h1 id="hTestSet">Tesing Set Implementation</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <strong id="bCreateSet">Set Creation:</strong>
+                <br>
+                <button type="button" id="createSet">Initialize Empty Set</button>
+                <button type="button" id="destroySet" disabled="true">Delete Current Set</button>
+
+                <p id="pIntroFormSet"> <span id="remove">Set needs to be initialized. Then</span> <span id="introFormSet">use the form below to insert, remove, visualize, and find the cardinality of the set.</span> </p>
+
+                <form action="" id="manipulateSet">
+                    <!-- Get current Set size : Automatic-->
+                    <p id="pHeightSet">
+                        <label for="heightSet">Current Set Size</label>
+                        <input type="text" id="heightSet" placeholder="Uninitialized Set" name="currSetHeight">
+                    </p>
+                    <!-- Insert Elements : Button-->
+                    <p id="pPushSet">
+                        <label for="pushSet">Item to insert</label>
+                        <input type="text" id="pushSet" placeholder="Uninitialized Set" placeholder="Item" name="pushSetItem">
+                        <button type="button" id="pushSetButton" disabled="true">Insert!</button>
+                        <p id="pSetInsert"></p>
+                    </p>
+                    <!-- Peek at Setthe top : Automatic-->
+                    <!-- <p id="pPeekSet">
+                        <label for="peekSet">Check if item in Set</label>
+                        <input type="text" id="top" name="peekSetTop" placeholder="Uninitialized Set">
+                    </p> -->
+                    <!-- Remove an element : Button-->
+                    <p id="pPopSet">
+                        <label for="popSet">Remove Set Item</label>
+                        <input type="text" id="popSet" placeholder="Uninitialized Set" placeholder="Item" name="popSetItem">
+                        <button type="button" id="popSetButton" disabled="true">Remove!</button>
+                        <p id="pSetRemove"></p>
+                    </p>
+                    <!-- Peek at the entire Set : Button-->
+                    <p id="pSetVisual">
+                        <button type="button" id="allSetButton" disabled="true">Visualize the Entire Set</button>
+                        <button type="button" id="clearSetButton" disabled="true">Clear the Visualization</button>
+                        <p id="pSetVisualOutput"></p>
+                    </p>
+
+                    <p id="pPowSet">
+                        <h2>Power set based on the current set elements.</h2>
+                        Once elements have been successfully added or removed, current powerset will be destroyed and a new one needs to be created.
+
+                        <div>
+                            <button type="button" id="createPowSet" disabled="true">Create Power Set</button>
+                            <button type="button" id="visualPowSet" disabled="true">Visualize the Power Set.</button>
+                            <p id="pVisPowSet"></p>
+                            <button type="button" id="clearVisPowSet" disabled="true">Clear the Power Set visualization.</button>
+                        </div>
+                    </p>
+                </form>
+            </div>
+            <div class="col">
+                <strong>Set Operations:</strong>
+
+                <p id="setOpIntro">Test set union, insersection, difference, Cartesian product, subset and superset relations, set equality.</p>
+                <p id="setUp">Initialize sets A and B by entering a list of elements, each separated be a comma. All whitespaces will be ignored. Duplicate elements will be inserted only on the first instance.</p>
+
+                <form action="" id="setOps">
+                    <p id="pInsertSetA">
+                        <label for="insertSetA">Set A = &#123;</label>
+                        <input type="text" id="insertSetA" placeholder="e.g. a, b, c, etc." name="currSetA">
+                        <span>&#125;.</span>
+                    </p>
+                    <p id="pInsertSetB">
+                        <label for="insertSetB">Set B = &#123;</label>
+                        <input type="text" id="insertSetB" placeholder="e.g. a, b, c, etc." name="currSetB">
+                        <span>&#125;.</span>
+                    </p>
+                    <p id="setOpsVisual">
+                        <button id="createSetOps" type="button">Display results of set operations</button>
+                    </p>
+                    <p id="setADisp"></p>
+                    <p id="setBDisp"></p>
+                    <p id="setOpsUnion">
+                    </p>
+                    <p id="setOpsIntersection">
+                    </p>
+                    <p id="setOpsDiff">
+                    </p>
+                    <p id="setOpsCart">
+                    </p>
+                    <p id="setOpsSubset">
+                    </p>
+                    <p id="setOpsSuper">
+                    </p>
+                    <p id="setOpsEqual">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- <script type="module" src="./stackTest.js"></script> -->
+    <script src="./set.js"></script>
+    <script src="./setTest.js"></script>
+    <script src="./setOps.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

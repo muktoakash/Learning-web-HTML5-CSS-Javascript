@@ -1,0 +1,102 @@
+<!-- Queue/queueTest.html -->
+<!-- Dynamically creates and manipulates a queue to test the Queue class functionality. -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesing Queue</title>
+</head>
+<body>
+    <h1 id="hTestQueue">Tesing Queue Implementation</h1>
+
+    <b id="bCreateQueue">Queue Creation:</b>
+    <button type="button" id="createQueue">Initialize Empty Queue</button>
+    <button type="button" id="destroyQueue" disabled="true">Destroy Current Queue</button>
+
+    <p id="pIntroFormQueue"> <span id="remove">Queue needs to be initialized. Then</span> <span id="introFormQueue">use the form below to enqueue, dequeue, peek at the front, and find the height of the queue.</span> </p>
+
+    <form action="" id="manipulateQueue">
+        <!-- Get current Queue height : Automatic-->
+        <p id="pHeightQueue">
+            <label for="heightQueue">Current Queue Size<Queue/label>
+            <input type="text" id="heightQueue" placeholder="Uninitialized Queue" name="currQueueHeight">
+        </p>
+        <!-- Push Queue Elements : Button-->
+         <p id="pPushQueue">
+            <label for="pushQueue">Item to push to the back</label>
+            <input type="text" id="pushQueue" placeholder="Uninitialized Queue" placeholder="Item" name="pushQueueItem">
+            <button type="button" id="pushQueueButton" disabled="true">Enqueue!</button>
+        </p>
+        <!-- Peek at the top : Automatic-->
+         <p id="pPeekQueue">
+            <label for="peekQueue">Peek at the front item</label>
+            <input type="text" id="top" name="peekQueueTop" placeholder="Uninitialized Queue">
+        </p>
+        <!-- Pop an element : Button-->
+         <p id="pPopQueue">
+            <label for="popQueue">Serve the front Queue item</label>
+            <input type="text" id="popQueue" placeholder="Uninitialized Queue" placeholder="Item" name="popQueueItem">
+            <button type="button" id="popQueueButton" disabled="true">Dequeue!</button>
+        </p>
+        <!-- Peek at the entire Queue : Button-->
+         <p id="pQueueVisual">
+            <button type="button" id="allQueueButton" disabled="true">Visualize the Entire Queue</button>
+            <button type="button" id="clearQueueButton" disabled="true">Clear the Visualization</button>
+            <p id="pQueueVisualOutput"></p>
+        </p>
+    </form>
+
+
+    <h1 id="hTestPQ">Tesing Priority Queue Implementation</h1>
+
+    <b id="bCreatePQ">Priority Queue Creation:</b>
+    <button type="button" id="createPQ">Initialize Empty Priority Queue</button>
+    <button type="button" id="destroyPQ" disabled="true">Destroy Current Priority Queue</button>
+
+    <p id="pIntroFormPQ"> <span id="PQremove">Priority Queue needs to be initialized. Then</span> <span id="introFormPQ">use the form below to enqueue, dequeue, peek, and find the height of the Priority Queue.</span> </p>
+
+    <form action="" id="manipulatePQ">
+        <!-- Get current PQ height : Automatic-->
+        <p id="pHeightPQ">
+            <label for="heightPQ">Current Priority Queue Size<label>
+            <input type="text" id="heightPQ" placeholder="Uninitialized PQ" name="currPQHeight">
+        </p>
+        <!-- Push PQ Elements : Button-->
+         <p id="pPushPQ">
+            Item to push into place according to priority.
+            <label for="pushPQ"><strong>Item: </strong></label>
+            <input type="text" id="pushPQ" placeholder="Uninitialized PQ" placeholder="Item" name="pushPQItem">
+            <label for="pushPriority"><strong>Priority Level: </strong></label>
+            <input type="text" id="pushPriority" placeholder="Uninitialized PQ" placeholder="Priority" name="pushPQPriority">
+            <button type="button" id="pushPQButton" disabled="true">Enqueue!</button>
+        </p>
+        <!-- Peek at the top : Automatic-->
+         <p id="pPeekPQ">
+            Peek at the front item and top priority value
+            <label for="peekPQ"><strong>Item</strong></label>
+            <input type="text" id="topPQ" name="peekPQTop" placeholder="Uninitialized PQ">
+            <label for="peekPriority"><strong>Top-priority Level:</strong></label>
+            <input type="text" id="topPriority" name="peekPQTopPriority" placeholder="Uninitialized PQ">
+        </p>
+        <!-- Pop an element : Button-->
+         <p id="pPopPQ">
+            <label for="popPQ">Serve the top Priority Queue item</label>
+            <input type="text" id="popPQ" placeholder="Uninitialized PQ" placeholder="Item" name="popPQItem">
+            <button type="button" id="popPQButton" disabled="true">Dequeue!</button>
+        </p>
+        <!-- Peek at the entire PQ : Button-->
+         <p id="pPQVisual">
+            <button type="button" id="allPQButton" disabled="true">Visualize the Entire Priority Queue</button>
+            <button type="button" id="clearPQButton" disabled="true">Clear the Visualization</button>
+            <p id="pPQVisualOutput"></p>
+        </p>
+    </form>
+
+     <!-- <script type="module" src="./queueTest.js"></script> -->
+     <script src="./queue.js"></script>
+     <script src="./queueTest.js"></script>
+     <script src="priorityQueueTest.js"></script>
+</body>
+</html>

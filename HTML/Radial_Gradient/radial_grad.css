@@ -1,0 +1,46 @@
+h1{
+    color: purple;
+}
+
+.container{
+    display: flex;
+}
+
+/* .grad{
+    background-image: radial-gradient(
+        orange, white);
+        border: solid 1px black;
+        margin: 1rem;
+        float: left;
+} */
+.one {
+    background-image: radial-gradient(
+        at bottom left,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        white
+    );
+    width: 30rem;
+    height: 30rem;
+}
+.two {
+    background-image: radial-gradient(
+        at bottom right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        pink
+    );
+    width: 30rem;
+    height: 30rem;
+
+}

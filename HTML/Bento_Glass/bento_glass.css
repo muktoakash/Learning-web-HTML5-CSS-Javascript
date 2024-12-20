@@ -1,0 +1,137 @@
+/* bento_glass.css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./assets/background.jpg) center;
+    background-size: cover;
+    flex-direction: column;
+}
+
+h1{
+    color: white;
+}
+
+.container{
+    /* background-color: white; */
+    width: 1200px;
+    height: 800px;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.col{
+    border: 2px solid #ffffff10;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(50px);
+    border-radius: 1em;
+    display: flex;
+    flex: auto;
+    gap: 1em;
+}
+
+.row{
+    border: 2px solid #ffffff10;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(50px);
+    border-radius: 1em;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    gap: 1em;
+}
+
+#outer-1{
+    border: none;
+    background: none;
+    backdrop-filter: none;
+    flex:2;
+    display: flex;
+    flex-direction: column;
+}
+#outer-2{
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    flex: 1;
+    flex-direction: column;
+}
+#outer-3{
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    flex: 1;
+    flex-direction: column;
+}
+
+#inner-11{
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    flex-direction: row;
+}
+#inner-12{
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    flex-direction: column;
+}
+
+.box:hover{
+    transform: scale(1.02);
+    border: 2px solid #ffffff50;
+    transition: 0.3s ease-in-out;
+}
+
+footer{
+    color:white
+}
+a{
+    color: white;
+}
+
+@media(max-width: 1024px){
+    .container{
+        max-width: 1000px;
+        max-height: 1000px;
+        flex-direction: column;
+    }
+    #outer-1{
+        flex-direction: row;
+    }
+    #outer-2{
+        flex-direction: row;
+    }
+    #outer-3{
+        flex-direction: row;
+    }
+    #inner-11{
+        flex: 2;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 650px){
+    .container{
+        max-width: 500px;
+        max-height: 550px;
+        gap: 0.5em;
+    }
+    .row {
+        gap: 0.5em;
+    }
+    .col {
+        gap: 0.5em;
+    }
+}

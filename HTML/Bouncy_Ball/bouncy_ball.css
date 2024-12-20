@@ -1,0 +1,22 @@
+.ball {
+    position: relative;
+    left: 0%;
+    background-color: #ffb33a;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
+    -webkit-animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounce {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: calc(100% - 20rem);
+    }
+}
