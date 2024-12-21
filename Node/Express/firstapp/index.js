@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
 
 })
 
+app.get('/part/:pathway', (req, res) => {
+    const { pathway } = req.params;
+    res.send(`<h1>Now browsing the path ${pathway}</h1>`);
+})
 app.post('/', (req, res) => {
     res.send("This was a homepage post req");
 })
