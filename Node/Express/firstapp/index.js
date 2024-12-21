@@ -1,4 +1,4 @@
-const firstapp = require('express');
+const express = require("express");
 const app = express();
 
 // app.use((req, res) = {
@@ -23,6 +23,7 @@ app.post('*', (req, res) => {
 
 })
 
-app.listen(8080, () = {
+app.listen(8080, () => {
+    console.log("Listening on port 8080");
 
 })
