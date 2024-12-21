@@ -6,7 +6,7 @@ const app = express();
 // })
 
 app.get('/', (req, res) => {
-    res.send("This is the homepage");
+    res.send("Welcome to the homepage");
 
 })
 
