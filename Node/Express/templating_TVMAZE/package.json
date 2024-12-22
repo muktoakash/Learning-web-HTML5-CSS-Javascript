@@ -9,6 +9,7 @@
   "author": "Mukto Akash",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
   }
