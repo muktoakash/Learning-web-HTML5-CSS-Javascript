@@ -26,6 +26,11 @@ app.get('/', (req, res) => {
     res.render('home.ejs');
 })
 
+app.get('/results', (req, res) => {
+    console.log('Request successful!');
+    res.render('results.ejs');
+})
+
 app.listen(3000, () => {
     console.log('LISTENING ON PORT 3000');
 })
