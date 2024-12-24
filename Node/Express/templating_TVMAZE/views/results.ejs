@@ -2,4 +2,15 @@
 
 <%- include('partials/searchForm') %>
 
+<% if (searchTerm) {%>
+    <h2>Showing results for <%= searchTerm%></h2>
+    <section>
+        <p id="results"></p>
+        <ul id="imageList">
+
+        </ul>
+    </section>
+<% } else %>
+    <h2> Nothing Searched so Nothing Found!</h2>
+
 <%- include('partials/foot') %>
