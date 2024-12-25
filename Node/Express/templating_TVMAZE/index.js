@@ -12,6 +12,7 @@ const axios = require('axios');
 
 
 var slugify = require("slugify");
+const { strict } = require('assert');
 // slugify('some string', {
 //   replacement: '-',  // replace spaces with replacement character, defaults to `-`
 //   remove: undefined, // remove characters that match regex, defaults to `undefined`
@@ -36,6 +37,8 @@ app.get('/results', (req, res) => {
 
     const searchTerm = req.query.inputSearch;
 
+    var slug = 'no-results';
+
     // / async function to handle API
     async function getMoviesData(searchTerm) {
         try {
@@ -52,6 +55,8 @@ app.get('/results', (req, res) => {
     if (searchTerm) {
         try {
             result = getMoviesData(searchTerm);
+            slug = slugify(searchTerm, { lower: true, strict: true })
+            // console.log(slug);
             result.then((data) => {
                 // console.log(data);
                 res.render('results.ejs', { searchTerm, data });
