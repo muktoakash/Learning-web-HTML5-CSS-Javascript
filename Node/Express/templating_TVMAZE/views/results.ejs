@@ -3,7 +3,7 @@
 <%- include('partials/searchForm') %>
 
 <% if (searchTerm) {%>
-    <% if (data) { %>
+    <% if (data.length !== 0) { %>
         <h2>Showing results for <%= searchTerm%></h2>
         <section>
             <div class="container text-center">
@@ -19,7 +19,7 @@
             </div>
         </section>
     <% } else {%>
-        <p id="results">No results found for <%= searchTerm %></p>
+        <h2 id="results">No results found for <%= searchTerm %></h2>
     <% } %>
 
 <% } else { %>
