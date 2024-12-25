@@ -11,8 +11,8 @@
                 <% for (title of data) { %>
                     <%if (title.show.image) { %>
                         <li>
-                            <%= title.show.image.medium %>
-                            <!-- <img src="title.show.image.medium;" alt=""> -->
+                            <!-- <%= title.show.image.medium %> -->
+                            <img src="<%= title.show.image.medium; %>" alt="">
                         </li>
                     <% } %>
                 <% } %>
