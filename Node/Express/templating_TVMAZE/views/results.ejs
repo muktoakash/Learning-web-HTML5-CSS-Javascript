@@ -6,17 +6,17 @@
     <% if (data) { %>
         <h2>Showing results for <%= searchTerm%></h2>
         <section>
-            <p id="results"></p>
-            <ul id="imageList">
-                <% for (title of data) { %>
-                    <%if (title.show.image) { %>
-                        <li>
-                            <!-- <%= title.show.image.medium %> -->
-                            <img src="<%= title.show.image.medium; %>" alt="">
-                        </li>
+            <div class="container text-center">
+                <div class="row row-cols-4">
+                    <% for (title of data) { %>
+                        <%if (title.show.image) { %>
+                            <div class="col mb-5">
+                                <img src="<%= title.show.image.medium; %>" alt="">
+                            </div>
+                        <% } %>
                     <% } %>
-                <% } %>
-            </ul>
+                </div>
+            </div>
         </section>
     <% } else {%>
         <p id="results">No results found for <%= searchTerm %></p>
