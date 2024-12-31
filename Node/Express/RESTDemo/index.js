@@ -16,6 +16,13 @@ app.get("/", (req, res) => {
   res.render("home.ejs");
 });
 
-app.listen(3000, () => {
-  console.log("LISTENING ON PORT 3000");
-});
+app.get('/tacos', (req, res) => {
+    res.send("GET /tacos response");
+})
+
+app.post('/tacos', (req, res) => {
+    res.send("POST /tacos response");
+})
+app.listen(3000, () = {
+    console.log("ON PORT 3000!");
+})
